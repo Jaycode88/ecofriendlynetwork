@@ -33,6 +33,15 @@ By Joe Seabrook
 ### Color by color:
 
 ### Typography
+I researched sustainable fonts on [Coconut Design](https://coconutdesign.eu/sustainable-website-fonts-and-the-proper-use-of-them/).
+
+I chose Allan as my Headings font. This font appealed to me when I came accross it.
+
+I chose Roboto for text due to its clear readabilty ans suitable contrast to the Allan Headings.
+
+All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
+
+As a best practice, I have also included Sans Serif as a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
 ## User Stories
 As a user, I want to easily navigate through the website to find sustainable products, so I can make environmentally conscious choices.
