@@ -1,0 +1,226 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Waidzeit Freedom Whisky Sunglasses",
+      "description": "These drop-shaped whisky sunglasses are very popular. The wooden elements of the sunglasses are handmade from exquisite whisky barrels, which were used to mature famous Austrian and English whisky. The name Freedom fits very well to these Waidzeit sunglasses, as they represent the spirit of freedom and wild nature. The wooden sunglasses are extremely light and comfortable to wear. Furthermore, you can have the sunglasses adjusted according to your vision.",
+      "price": 159.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/274069-9dc83962-80fe-46ac-8c1a-d312e0fd30a2",
+      "image": "DP0709201205510679M.webp"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001600425",
+      "name": "Nwelle Pro Kit",
+      "description": "The NwellePro Hair Range helps to address several of the needs of both Afro-textured and Eurasian hair. The range was created by Dermatologists from South Africa, (Prof Ncoza Dlova ) and New York (Dr Achiamah Oseitutu) who are specialists in Hair disorders and have decades of experience in medically and surgically treating scalp conditions and hair loss. The kit contains: Softening Shampoo, Detangling Conditioner & Nourishing Moisturiser",
+      "price": 78.99,
+      "category": 2,
+      "rating": 4.6,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/292117-e3a16f0c-199c-46d4-8089-950f4bfcb3d6",
+      "image": "DP0113201617034987M.webp"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001730010",
+      "name": "Shade™ All-Natural Sunscreen",
+      "description": "Award winning product Shade™ All-Natural Sunscreen is an effective, natural mineral sunscreen. With only 4 ingredients to moisturise and protect skin from the broadest spectrum of damaging UVA and UVB rays, Shade™ has been developed to keep your skin naturally healthy whilst blocking rays that can burn and cause sun damage. Suitable for all skin types and all ages.",
+      "price": 10.00,
+      "category": 3,
+      "rating": 4.7,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/319177-ee0d8c3c-92e1-4db6-8438-efefbdcdcb19",
+      "image": "DP1230201417013175M.webp"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001890157",
+      "name": "Mixed Stretch Ponytail Black Hairband Set",
+      "description": "Black mixed stretch hairbands are ideal for all hairstyles. Quickly tie your hair back in a ponytail or be adventurous trying different up-dos. Works well with thick hair types.",
+      "price": 3.50,
+      "category": 4,
+      "rating": 3,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/292109-7266bdb5-5eaa-4415-88cf-59279733f09a",
+      "image": "DP0716201503423610M.webp"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002111605",
+      "name": "Waidzeit Wine Princess Rosé",
+      "description": "Delicate and charming is this barrique wine watch with the appropriate name. Its rose-colored mother-of-pearl dial with rose elements and crystal stones underline the elegance of this barrique wooden watch from Waidzeit. In addition, the stainless steel ring, as well as the two hands, complete the design in a harmonious way. Each barrique Wine Princess has its own special charm, as it is produced from original barrique wine barrels, which have been used for wine maturation in France and Austria. Now, a completely new, sustainable and innovative approach has been taken, resulting in beautiful feminine timepieces. Each wine watch has its own story to tell and is a perfect choice for every nature and wine lover!",
+      "price": 199.99,
+      "category": 5,
+      "rating": 5,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/274122-a8e0566c-dc25-4d3d-873e-b89b89789211",
+      "image": "DP1115201210371197C.webp"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002260206",
+      "name": "DIY Beeswax Wrap Kit",
+      "description": "Now you can make our wonderfully sticky beeswax wraps at home using our signature formula wax, resin mix block. This kit allowed you to create three medium size food wraps with a minimum of fuss. Why bother sourcing all the ingredients you need in bulk online and trying to work out what amount of what wax, resin or oil to use. We’ve done all the hard work for you , so you can get on with being creative and making something that you can use again and again. Beeswax food wraps are a great way to save you from using single use plastics and foils to wrap food to keep it fresh. Our DIY beeswax wrap kit gives you everything you need in one purchase, saving time, money and carbon footprint before you’ve even made them.",
+      "price": 12.99,
+      "category": 6,
+      "rating": 4.7,
+      "image_url": "https://cdn.shopify.com/s/files/1/0277/1448/6352/products/image_1f1a9a5e-e29f-4d9b-9b69-dbff559c43d5.jpg?v=1620035161",
+      "image": "DP0624201520422666C.webp"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002440521",
+      "name": "ECOtanka™ Water Bottle",
+      "description": "These beautiful, durable, practical and hygienic reusable drinks bottles are made from the highest quality 18/8 304 stainless steel. You can have single wall or thermal for keeping hot drinks hot or cold drinks cold. They even have wide mouths to allow for effective cleaning and adding ice to your drinks.",
+      "price": 14.50,
+      "category": 7,
+      "rating": 4.4,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/319173-950cd8a8-2390-4dd2-9ab2-10f614a5170b",
+      "image": "DP0226201317034754M.webp"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002601115",
+      "name": "Waidzeit Element Bracelet Women Walnut",
+      "description": "Our Waidzeit bracelet for women made of walnut wood and stainless steel is an elegant jewellery bracelet with silver refinements. Besides, an additional element in stainless steel can also be engraved individually at any time. The element bracelet is an excellent addition to your Waidzeit wristwatch or even solo an undeniable eye-catcher. Furthermore, an exquisite gift box is also included free of charge.",
+      "price": 79.99,
+      "category": 8,
+      "rating": 4.5,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/274061-babb7399-dc95-499b-9a1c-75c5347a2d4c",
+      "image": "DP0926201317071162M.webp"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002690715",
+      "name": "Waidzeit Forest View Sunglasses Ebony",
+      "description": "These Forest View sunglasses made of ebony impress with their beautiful, minimalistic design and possess an incredible lightness while wearing it. Our Forest View sunglasses are very functional and at the same time, they provide a special touch and thus complete your outfit. ",
+      "price": 139.99,
+      "category": 1,
+      "rating": 4.7,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/274064-3203f695-09ed-4f7c-842b-02df67b07a1a_small",
+      "image": "DP1020201517025390M.webp"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002701115",
+      "name": "Nwelle Pro Step 3 Nourishing Moisturiser 250ml",
+      "description": "Nwelle Pro Moisturiser is a Leave-In conditioning treatment to prevent breakage. FORMULATED BY LEADING DERMATOLOGISTS IN SA AND USA Quality through research (pH 5.5)",
+      "price": 26.99,
+      "category": 2,
+      "rating": 4.4,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/292120-aade4739-1a4c-421d-8cec-29db6dfc1c1e",
+      "image": "DP0418201317011949M.webp"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002761055",
+      "name": "Natural Sierra Pumice Stone",
+      "description": "Natural Sierra Pumice Stone block gently but swiftly smoothes away hardened skin in seconds. Our most basic pumice, it is a staple accessory for maintaining soft hands and feet!",
+      "price": 7.99,
+      "category": 3,
+      "rating": 4,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/292112-640cfe7f-ceaf-434c-8647-e4c681b3a0cd",
+      "image": "0900631B81B0C2D9M.webp"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002820069",
+      "name": "Gardeners Gift Set",
+      "description": "Thoughtful and eco-friendly gift for gardeners. Each gift set contains a bag of wildflower seed bombs and a Lavender or Tomato Leaf scented candle. ",
+      "price": 16.99,
+      "category": 4,
+      "rating": 4.6,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/21623-c291b8d3-769f-4884-82d6-7957c6c3ffc3",
+      "image": "DP0510201317010521M.webp"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002820147",
+      "name": "Waidzeit Grapevine Wine Barrel Mesh Gentlemen watch",
+      "description": "This Barrique masterpiece inherited its name from grapevines and is a piece for men with exquisite taste. The case is handcrafted out of oak wood that previously served as a wine barrel in France and Austria and now functions as an extraordinary piece of art. A unique detail about this piece is its cork-shaped crown that moves the silver watch hands. Furthermore, the exquisite mesh strap is very comfortable to wear. This wooden watch with its urban style is the perfect addition for business as well as casual outfits - an absolute eye-catcher!",
+      "price": 159.00,
+      "category": 5,
+      "rating": 3.2,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/274077-45ffb21b-72c8-4278-b8b5-dbfd1bc8988a",
+      "image": "DP0430201405053680M.webp"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002910572",
+      "name": "Bergamot and Grosso Lavender Washing up Liquid 500ml",
+      "description": "Our chemical free, plant powered Washing Up Liquid is formulated to not only smell divine – thanks to its perfect blend of four pure organic essential oils - but to also deliver on performance. Our foam boosting ingredient derived from coconut provides excellent cleaning and our paraben free preservatives helps prevent microbial growth on dishes.",
+      "price": 9.99,
+      "category": 6,
+      "rating": 4.7,
+      "image_url": "https://cdn.shopify.com/s/files/1/0573/5907/3431/products/IMG_06657.png?v=1628013751",
+      "image": "0900631B81C9387BM.webp"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002990740",
+      "name": "Siocolat Organic Vegan Sugar Free Low Calorie Chocolate Drink",
+      "description": "Indulge in this delicious concoction of organic cacao, organic coconut milk and natural stevia leaf. Less than 70 calories per cup. Rich in fibre and protein. Siocolat is dedicated to chocolate that extends beyond its flavour. Our primary objective is to produce sugar-free chocolate products made from high-quality organic ingredients. We develop products that are suitable for individuals with diabetes and those who aim to reduce their consumption of sugar. Can be enjoyed hot or cold. Siocolat allocates a portion of its profits to the Share the Meal Programme, which aims to provide food and livelihood support to Filipino farmers who have been adversely affected by climate-related disasters. ",
+      "price": 6.99,
+      "category": 7,
+      "rating": 4.8,
+      "image_url": "https://cdn.shopify.com/s/files/1/0787/7194/5806/files/1694425655774.png?v=1698331293",
+      "image": "DP1029201317111469M.webp"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5003050248",
+      "name": "Waidzeit Element Bracelet UNISEX Black with bog oak",
+      "description": "This special element bracelet for women and men made of dark bog oak and black brushed stainless steel impresses with its uniqueness. Due to the complex processing of the bog oak, this element bracelet carries the soul of ancient oak trunks that have lain in bogs and marshlands over centuries. The colour combination of dark bog oak with black stainless steel is particularly beautiful and mystical. Besides, an additional element in stainless steel can also be engraved individually at any time. The element bracelet is an excellent addition to your Waidzeit wristwatch or even solo an absolute eye-catcher. Furthermore, an exquisite gift box is also included free of charge.",
+      "price": 89.99,
+      "category": 8,
+      "rating": 4.4,
+      "image_url": "https://vgang.fra1.cdn.digitaloceanspaces.com/main/public/products/274055-d2fa4cca-0386-4a2c-b323-f47a6fd26ed6",
+      "image": "DP0918201520303373C.webp"
+    }
+  }
+]
