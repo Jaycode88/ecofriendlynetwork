@@ -1,12 +1,9 @@
-/* font imports */
-@import url('https://fonts.googleapis.com/css2?family=Allan&family=Roboto:wght@300&display=swap');
-
 html {
     height: 100%;
 }
 
 body {
-    background: url(/media/homebackground.webp) no-repeat center center fixed;  
+   background: url(/media/homebackground.webp) no-repeat center center fixed; 
    background-size: cover;
    height: calc(100vh - 164px);
    color: #555;
@@ -46,7 +43,6 @@ body {
     background: #678760;
     color: #d3d4d5;
 }
-
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -89,6 +85,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-green {
+    background: #678760;
 }
 
 /* -------------------------------- Media Queries */

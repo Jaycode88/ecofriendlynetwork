@@ -89,6 +89,7 @@ For the documentation of all testing,Please see [TESTING.md](TESTING.md)
 ### Content
 
 ### Media
+The home page image was from [Freepik](https://www.freepik.com/) by [jcomp](https://www.freepik.com/author/jcomp)
 
 ### Tools and Technologies used
 
