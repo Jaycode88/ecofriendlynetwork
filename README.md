@@ -29,6 +29,8 @@ By Joe Seabrook
 
 ## UX
 ### Color Scheme
+I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme(as seen below)
+![screenshot](documentation/colourscheme.webp)
 
 ### Color by color:
 
