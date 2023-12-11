@@ -1,0 +1,116 @@
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=Allan&family=Roboto:wght@300&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url(/media/homebackground.webp) no-repeat center center fixed;  
+   background-size: cover;
+   height: calc(100vh - 164px);
+   color: #555;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'Allan', serif;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #fb9b27;
+    color: #d3d4d5;
+    min-width: 260px;
+}
+
+.btn-orange {
+    background: #fb9b27;
+    color: #d3d4d5;
+}
+
+.btn-green {
+    background: #678760;
+    color: #d3d4d5;
+}
+
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-orange:hover,
+.btn-orange:active,
+.btn-orange:focus {
+    background: #fcc15d;
+    color: #000;
+}
+
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
+    background: #d3d4d5;
+    color: #678760;
+}
+
+.nav-i:hover,
+.nav-i:active,
+.nav-i:focus {
+    color: #d3d4d5 !important;
+}
+
+.text-orange {
+    color: #fb9b27 !important;
+}
+
+.text-grey {
+    color: #d3d4d5 !important;
+}
+
+.text-green {
+    color: #678760 !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
