@@ -48,7 +48,7 @@
                                         <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -75,7 +75,6 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
@@ -131,23 +130,51 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+    $(document).ready(function() {
+        // Increment quantity on click
+        $(document).on('click', '.increment-qty', function(event) {
+            event.preventDefault();
+            updateQuantity($(this), 1);
+        });
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        // Decrement quantity on click
+        $(document).on('click', '.decrement-qty', function(event) {
+            event.preventDefault();
+            updateQuantity($(this), -1);
+        });
 
-        $.post(url, data)
-         .done(function() {
+        // Remove item and reload on click
+        $(document).on('click', '.remove-item', function() {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('_')[1];
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken}
+            $.post(url, data)
+                .done(function() {
              location.reload();
-         });
-    })
+            });
+        });
+   
+
+        function updateQuantity(button, change) {
+            var itemId = button.data('item_id');
+            var inputField = $('#id_qty_' + itemId);
+            var currentQuantity = parseInt(inputField.val());
+
+            // Calculate the new quantity by adding the change
+            var newQuantity = currentQuantity
+
+            console.log('Updating quantity:', newQuantity);
+
+            // Ensure the new quantity is within the valid range
+            if (newQuantity >= inputField.attr('min') && newQuantity <= inputField.attr('max')) {
+                inputField.val(newQuantity);
+
+                // Submit the form to update the quantity
+                button.closest('form').submit();
+            }
+        }
+    });
 </script>
+
 {% endblock %}
