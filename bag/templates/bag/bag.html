@@ -128,8 +128,29 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(itemId) {
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 98;
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
+
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
     $(document).ready(function() {
         // Increment quantity on click
         $(document).on('click', '.increment-qty', function(event) {
@@ -148,33 +169,51 @@
             var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('_')[1];
             var url = `/bag/remove/${itemId}/`;
-            var data = {'csrfmiddlewaretoken': csrfToken}
+            var data = {'csrfmiddlewaretoken': csrfToken};
             $.post(url, data)
                 .done(function() {
-             location.reload();
-            });
+                    location.reload();
+                });
         });
-   
 
+        // Combine both functions into one
         function updateQuantity(button, change) {
             var itemId = button.data('item_id');
             var inputField = $('#id_qty_' + itemId);
             var currentQuantity = parseInt(inputField.val());
 
-            // Calculate the new quantity by adding the change
-            var newQuantity = currentQuantity
-
-            console.log('Updating quantity:', newQuantity);
+            // Calculate the new quantity based on increment or decrement
+            var newQuantity = currentQuantity + (change > 0 ? 1 : -1);
 
             // Ensure the new quantity is within the valid range
             if (newQuantity >= inputField.attr('min') && newQuantity <= inputField.attr('max')) {
                 inputField.val(newQuantity);
 
+                // Calculate and update the subtotal for this item
+                var productPrice = parseFloat('{{ item.product.price }}');
+                var subtotal = (productPrice * newQuantity).toFixed(2);
+                $('#subtotal_' + itemId).text('£' + subtotal);
+
                 // Submit the form to update the quantity
                 button.closest('form').submit();
+
+                // handle enabler disable
+                var itemId = $(this).data('item_id');
+                handleEnableDisable(itemId);
+
+                // Recalculate and update the bag total
+                recalculateBagTotal();
             }
         }
+
+        function recalculateBagTotal() {
+            var total = 0;
+            $('.subtotal').each(function() {
+                total += parseFloat($(this).text().replace('£', ''));
+            });
+            $('#bag-total').text('£' + total.toFixed(2));
+        }
+
     });
 </script>
-
 {% endblock %}
