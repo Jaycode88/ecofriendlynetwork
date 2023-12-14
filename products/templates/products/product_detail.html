@@ -94,5 +94,29 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+{% include 'products/includes/quantity_buttons_script.html' %}
+<script type="text/javascript">
+// Increment quantity
+    $('.increment-qty').click(function(e) {
+       e.preventDefault();
+       console.log('increment button clicked');
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       console.log(`currentValue : ${currentValue}`);
+       $(closestInput).val(currentValue + 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
+
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+       e.preventDefault();
+       console.log('decrement button clicked');
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue - 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
+</script>
 {% endblock %}
