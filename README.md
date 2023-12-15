@@ -147,26 +147,31 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 As a best practice, I have also included Sans Serif as a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
 ## User Stories
-As a user, I want to easily navigate through the website to find sustainable products, so I can make environmentally conscious choices.
-Acceptance Criteria: The website should have clear categories, filters, and a search function to help users quickly locate eco-friendly products.
+### As a new user
 
-As a shopper, I want detailed product descriptions and information about the sustainability practices of the brand, so I can make informed purchasing decisions.
-Acceptance Criteria: Each product page should include information on materials used, manufacturing processes, and any relevant eco-certifications.
+- I want to easily navigate the website, so that I can find the products I'm interested in without confusion.
 
-As a customer, I want a seamless and secure checkout process, so I can complete my purchase efficiently.
-Acceptance Criteria: The checkout process should be intuitive, with secure payment options, order confirmation, and transparent shipping and return policies.
+- I want to see clear product descriptions and images, so that I know exactly what I'm buying.
 
-As a user, I want to receive updates on promotions, new eco-friendly products, and sustainability initiatives, so I can stay engaged with the brand.
-Acceptance Criteria: Provide an option for users to subscribe to a newsletter and receive regular updates on new products, promotions, and the brand's sustainability efforts.
+-  I want to easily create an account, so that I can manage my orders and save my preferences.
 
-As a shopper, I want to be able to create and manage a user account, track my orders, and save my favorite products for future reference.
-Acceptance Criteria: The website should have a user account system with features such as order history, order tracking, and the ability to create a wishlist.
+- I want to learn about the sustainability of the products, so that I can make informed decisions about my purchases.
 
-As a mobile user, I want the website to be responsive and user-friendly on my smartphone or tablet, so I can shop conveniently on the go.
-Acceptance Criteria: The website should be optimized for various screen sizes, ensuring a seamless and intuitive experience on mobile devices.
+- I want a seamless and secure checkout process, so I can complete my purchase efficiently.
 
-As a customer, I want to be able to easily contact customer support for assistance or inquiries related to products, orders, or sustainability practices.
-Acceptance Criteria: Provide accessible contact information, such as a customer support email or chat, and ensure timely and helpful responses.
+### As a returning user
+
+-  I want to be able to manage a user account and track my orders.
+
+- I want the website to be responsive and user-friendly on my smartphone or tablet, so I can shop conveniently on the go.
+
+-  I want to receive updates on promotions, new eco-friendly products, and sustainability initiatives, so I can stay engaged with the brand.
+
+### As a site owner
+
+- I want to easily update product listings and information, so that the website stays current and accurate.
+
+- I want to implement effective marketing strategies, so that I can attract new customers and retain existing ones.
 
 ## Wireframes
 
