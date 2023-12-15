@@ -14,78 +14,122 @@ By Joe Seabrook
 ### The 5 Planes
 
 - **Purpose of the website?**
-Eco Friendly Network is an innovative e-commerce store dedicated to revolutionizing the way we approach consumerism, with a staunch commitment to environmental sustainability. Our platform's primary purpose is to bridge the gap between the growing demand for eco-friendly products and the global need for sustainable living practices. By meticulously curating a diverse range of environmentally responsible products, we aim to make sustainable choices readily accessible and convenient for everyone. Eco Friendly Network isn’t just about buying and selling; it's a catalyst for change, fostering a digital space where conscious consumerism thrives and where every transaction contributes positively to the wellbeing of our planet. Our focus lies in creating a seamless, informative, and empowering online shopping experience that aligns with the values of those who care deeply about their environmental footprint, thereby setting a new standard in the realm of eco-conscious e-commerce.
+    
+    Eco Friendly Network is an innovative e-commerce store dedicated to revolutionizing the way we approach consumerism, with a staunch commitment to environmental sustainability. Our platform's primary purpose is to bridge the gap between the growing demand for eco-friendly products and the global need for sustainable living practices. By meticulously curating a diverse range of environmentally responsible products, we aim to make sustainable choices readily accessible and convenient for everyone. Eco Friendly Network isn’t just about buying and selling; it's a catalyst for change, fostering a digital space where conscious consumerism thrives and where every transaction contributes positively to the wellbeing of our planet. Our focus lies in creating a seamless, informative, and empowering online shopping experience that aligns with the values of those who care deeply about their environmental footprint, thereby setting a new standard in the realm of eco-conscious e-commerce.
 
 - **Target audience?**
-The Eco Friendly Network is specifically designed to cater to a diverse yet focused group of consumers who are united by their commitment to environmental sustainability. Our target audience encompasses:
+
+    The Eco Friendly Network is specifically designed to cater to a diverse yet focused group of consumers who are united by their commitment to environmental sustainability. Our target audience encompasses:
 
     - **Environmentally Conscious Consumers:**
-     Individuals who are actively seeking to reduce their ecological footprint through sustainable living choices. They prioritize products that are eco-friendly, ethically sourced, and have a minimal environmental impact.
+    
+        Individuals who are actively seeking to reduce their ecological footprint through sustainable living choices. They prioritize products that are eco-friendly, ethically sourced, and have a minimal environmental impact.
 
-     - **Eco-Friendly Lifestyle Adopters:**
-     People who are in the process of transitioning to a more sustainable lifestyle. They are looking for accessible, affordable, and practical eco-friendly alternatives to everyday products.
+    - **Eco-Friendly Lifestyle Adopters:**
+    
+        People who are in the process of transitioning to a more sustainable lifestyle. They are looking for accessible, affordable, and practical eco-friendly alternatives to everyday products.
 
-     - **Ethical Shoppers:**
-     Customers who make purchasing decisions based on the social and environmental impact of products. They support brands and platforms that align with their values of ethical production, fair trade, and responsible business practices.
+    - **Ethical Shoppers:**
+    
+        Customers who make purchasing decisions based on the social and environmental impact of products. They support brands and platforms that align with their values of ethical production, fair trade, and responsible business practices.
 
-     - **Tech-Savvy Shoppers:**
-     A demographic that prefers the convenience of online shopping and is inclined towards platforms that offer a seamless, user-friendly digital experience.
+    - **Tech-Savvy Shoppers:**
+    
+        A demographic that prefers the convenience of online shopping and is inclined towards platforms that offer a seamless, user-friendly digital experience.
 
-By understanding and catering to these key segments, Eco Friendly Network aims to create a meaningful impact in the sphere of sustainable consumerism, making it easy and appealing for individuals to make choices that are good for them and the planet.
+    By understanding and catering to these key segments, Eco Friendly Network aims to create a meaningful impact in the sphere of sustainable consumerism, making it easy and appealing for individuals to make choices that are good for them and the planet.
 
 - **Value to the user?**
-Eco Friendly Network provides distinct value to our users through our focused selection of eco-friendly personal accessories and home essentials. Here's how we deliver value:
+
+    Eco Friendly Network provides distinct value to our users through our focused selection of eco-friendly personal accessories and home essentials. Here's how we deliver value:
 
     - **Curated Eco-Friendly Selection:**
-    Our platform specializes in a carefully chosen range of sustainable products, specifically in personal accessories like watches, bracelets, sunglasses, and home essentials in kitchenware, and bath & beauty products. This focus ensures that every item we offer aligns with eco-conscious values and practices.
 
-    -**Quality and Sustainability:**
-    Each product in our collection is selected for its quality and sustainable attributes. Whether it's a bamboo watch or a biodegradable beauty product, we ensure that our items meet high standards of both functionality and eco-friendliness.
+        Our platform specializes in a carefully chosen range of sustainable products, specifically in personal accessories like watches, bracelets, sunglasses, and home essentials in kitchenware, and bath & beauty products. This focus ensures that every item we offer aligns with eco-conscious values and practices.
+
+    - **Quality and Sustainability:**
+    
+        Each product in our collection is selected for its quality and sustainable attributes. Whether it's a bamboo watch or a biodegradable beauty product, we ensure that our items meet high standards of both functionality and eco-friendliness.
 
     - **Personal Accessory and Home Essential Focus:**
-    By specializing in specific categories, we provide users with a targeted shopping experience. Our range of personal accessories and home essentials caters to everyday needs, ensuring that users can easily incorporate sustainability into their daily lives.
+    
+        By specializing in specific categories, we provide users with a targeted shopping experience. Our range of personal accessories and home essentials caters to everyday needs, ensuring that users can easily incorporate sustainability into their daily lives.
 
-    -**Contribution to a Greener Future:**
-    Every purchase made on our platform is a step towards a more sustainable future. Users are not just buying a product; they are making a conscious choice to support environmentally friendly practices and reduce their ecological footprint.
+    - **Contribution to a Greener Future:**
+    
+        Every purchase made on our platform is a step towards a more sustainable future. Users are not just buying a product; they are making a conscious choice to support environmentally friendly practices and reduce their ecological footprint.
 
-- **What makes a good experience ?**
-At Eco Friendly Network, we believe that a good user experience is fundamental to our mission and success. Here are the key elements that we focus on to ensure a positive and memorable experience for our users:
+    - **What makes a good experience ?**
+    
+        At Eco Friendly Network, we believe that a good user experience is fundamental to our mission and success. Here are the key elements that we focus on to ensure a positive and memorable experience for our users:
 
     - **Intuitive Navigation and Design:**
-    A clean, user-friendly website design is crucial. Our platform is structured for ease of navigation, allowing users to effortlessly browse through categories of personal accessories, kitchen items, and bath & beauty products. This straightforward approach helps users find what they're looking for without hassle.
+    
+        A clean, user-friendly website design is crucial. Our platform is structured for ease of navigation, allowing users to effortlessly browse through categories of personal accessories, kitchen items, and bath & beauty products. This straightforward approach helps users find what they're looking for without hassle.
 
     - **High-Quality Product Imagery and Descriptions:**
-    We understand the importance of accurately representing our products. High-resolution images and detailed descriptions give users a clear understanding of what they are purchasing, aiding in making informed decisions.
+    
+        We understand the importance of accurately representing our products. High-resolution images and detailed descriptions give users a clear understanding of what they are purchasing, aiding in making informed decisions.
 
     - **Secure and Efficient Checkout Process:**
-    A smooth and secure checkout process is vital. We employ robust security measures to protect user data, coupled with an efficient checkout process to make transactions quick and hassle-free.
+    
+        A smooth and secure checkout process is vital. We employ robust security measures to protect user data, coupled with an efficient checkout process to make transactions quick and hassle-free.
 
 - **What we shouldn't do?**
-In our pursuit to offer an exceptional and sustainable shopping experience at Eco Friendly Network, there are certain practices we consciously avoid:
+
+    In our pursuit to offer an exceptional and sustainable shopping experience at Eco Friendly Network, there are certain practices we consciously avoid:
 
     - **Overwhelming Our Users:**
-    We steer clear of cluttering our platform with excessive product options or information. Keeping our range focused and our presentation clean ensures users can find what they need without feeling overwhelmed.
+    
+        We steer clear of cluttering our platform with excessive product options or information. Keeping our range focused and our presentation clean ensures users can find what they need without feeling overwhelmed.
 
     - **Undermining Privacy and Security:**
-    We do not compromise on the privacy and security of our user data. Avoiding practices that could put user information at risk is a top priority.
+    
+        We do not compromise on the privacy and security of our user data. Avoiding practices that could put user information at risk is a top priority.
 
     - **Inconsistency in Values:**
-    We avoid stocking products that don't align with our core values of sustainability and ethical responsibility. Every item we sell must contribute positively to our mission.
+    
+        We avoid stocking products that don't align with our core values of sustainability and ethical responsibility. Every item we sell must contribute positively to our mission.
 
     - **Inadequate Product Descriptions and Imagery:**
-    We avoid vague descriptions and low-quality images. Clear, accurate, and detailed product presentations are crucial for informed purchasing decisions.
+    
+        We avoid vague descriptions and low-quality images. Clear, accurate, and detailed product presentations are crucial for informed purchasing decisions.
 
     - **Making False Claims:**
-    We strictly avoid exaggerating or misrepresenting the sustainability of our products. Honesty and transparency in how products are sourced and their impact are paramount.
+    
+        We strictly avoid exaggerating or misrepresenting the sustainability of our products. Honesty and transparency in how products are sourced and their impact are paramount.
 
-By consciously steering clear of these practices, Eco Friendly Network aims to build trust, ensure user satisfaction, and uphold our commitment to promoting sustainable consumer choices.
+    By consciously steering clear of these practices, Eco Friendly Network aims to build trust, ensure user satisfaction, and uphold our commitment to promoting sustainable consumer choices.
 
 ### The Why
 
+Eco Friendly Network was born out of a recognition of the urgent need for sustainable consumer habits in our daily lives. In a world increasingly burdened by environmental challenges, we understand the powerful role that individual choices can play. Our platform bridges the gap between eco-conscious consumers and high-quality, sustainable products. We believe that making environmentally responsible choices should be straightforward and rewarding. By offering a curated selection of personal accessories and home essentials, we demonstrate that living sustainably does not mean compromising on style or quality. Eco Friendly Network is committed to showing that a sustainable lifestyle can be accessible, desirable, and a positive force for change in the world.
+
 ### The Business Goal
+
+Our primary business goal at Eco Friendly Network is to establish and grow as a leading online destination for sustainable personal accessories and home essentials. We aim to achieve this by:
+
+- **Expanding Our Product Range:**
+
+    Continuously broadening our selection of high-quality, eco-friendly products to meet the evolving needs and preferences of our customers.
+
+- **Building Customer Loyalty:**
+
+    Fostering strong relationships with our customers through exceptional service, reliability, and a deep understanding of their sustainable living goals.
+
+- **Promoting Sustainability:**
+
+    Actively contributing to the global movement towards environmental sustainability through our business practices and product offerings.
+
+- **Achieving Financial Sustainability:**
+
+    Ensuring the business is financially robust and growing, allowing us to invest further in our mission and expand our impact.
+
+In essence, our goal is to seamlessly blend commercial success with our commitment to sustainability, creating a platform where conscious consumerism is not just encouraged, but celebrated.
 
 ## UX
 ### Color Scheme
+
 I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme(as seen below)
 ![screenshot](documentation/colourscheme.webp)
 
