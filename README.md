@@ -175,6 +175,34 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 
 ## Wireframes
 
+- **Home page**
+
+    - Mobile
+
+    ![homepage wireframe mobile view](documentation/homepagemobile.webp)
+
+    - Tablet
+
+    ![Homepage wireframe Tablet view](documentation/homepagetablet.webp)
+
+    - Desktop
+
+    ![Homepage wireframe Desktop view](documentation/homepagedesktop.webp)
+
+- **Product page**
+
+    - Mobile
+
+    ![Products page Mobile view](documentation/productsmobile.webp)
+
+    - Tablet
+
+    ![Products page Tablet view](documentation/productstablet.webp)
+
+    - Desktop 
+
+    ![Products page Desktop view](documentation/productsdesktop.webp)
+
 ## High Fidelity Prototype
 
 ## Features
