@@ -43,11 +43,18 @@ card.addEventListener('change', function (event) {
 
 // Handle form submit
 var form = document.getElementById('payment-form');
+var loadingOverlay = document.getElementById('loading-overlay');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
+
+    // Show the loading overlay and center the icon
+    loadingOverlay.style.display = 'flex';
+    loadingOverlay.style.justifyContent = 'center';
+    loadingOverlay.style.alignItems = 'center';
+
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -61,6 +68,10 @@ form.addEventListener('submit', function(ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+
+            // Hide the loading overlay
+            loadingOverlay.style.display = 'none';
+
             card.update({ 'disabled': false});
             $('#submit-button').attr('disabled', false);
         } else {
