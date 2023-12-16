@@ -203,6 +203,20 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 
     ![Products page Desktop view](documentation/productsdesktop.webp)
 
+- **Sign up page**
+
+    - Mobile
+
+    ![Sign up page mobile view](documentation/signupmobile.webp)
+
+    - Tablet
+
+    ![Sign up page tablet view](documentation/signuptablet.webp)
+
+    - Desktop
+
+    ![Sign up page desktop view](documentation/signupdesktop.webp)
+
 ## High Fidelity Prototype
 
 ## Features
