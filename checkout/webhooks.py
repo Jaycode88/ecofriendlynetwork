@@ -9,7 +9,6 @@ import stripe
 
 @require_POST
 @csrf_exempt
-
 def webhook(request):
     """ Listen for webhooks from STripe """
      # Setup
@@ -25,7 +24,7 @@ def webhook(request):
         event = stripe.Webhook.construct_event(
             payload, sig_header, wh_secret
         )
-    except ValeError as e:
+    except ValueError as e:
         #invalid payload
         return HttpResponse(status=400)
     except stripe.error.SignatureVerificationError as e:
@@ -39,7 +38,7 @@ def webhook(request):
 
     # Map webhook events to relevant handler functions 
     event_map = {
-        'payment_intnet.succeeded': handler.handle_payment_intent_succeeded,
+        'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
         'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
     }
 
