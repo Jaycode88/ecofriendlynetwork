@@ -30,18 +30,21 @@ body {
 
 .shop-now-button {
     background: #fb9b27;
-    color: #d3d4d5;
+    border: 2px solid #d3d4d5;
+    color: #000;
     min-width: 260px;
 }
 
 .btn-orange {
     background: #fb9b27;
-    color: #d3d4d5;
+    border: 2px solid #d3d4d5;
+    color: #000;
 }
 
 .btn-green {
     background: #678760;
-    color: #d3d4d5;
+    border: 2px solid #d3d4d5;
+    color: #000;
 }
 
 .shop-now-button:hover,
@@ -52,13 +55,15 @@ body {
 .btn-orange:focus {
     background: #fcc15d;
     color: #000;
+    border: 2px solid #fb9b27;
 }
 
 .btn-green:hover,
 .btn-green:active,
 .btn-green:focus {
     background: #d3d4d5;
-    color: #678760;
+    color: #000;
+    border: 2px solid #678760;
 }
 
 .nav-i:hover,
@@ -89,6 +94,10 @@ body {
 
 .bg-green {
     background: #678760;
+}
+
+.bg-orange {
+    background: #fb9b27;
 }
 
 .overlay {
