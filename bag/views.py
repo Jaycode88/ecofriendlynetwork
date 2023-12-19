@@ -6,8 +6,14 @@ from products.models import Product
 
 def view_bag(request):
     """ A view to return the shopping bag page with contents """
+    template = 'bag/bag.html'
+    context = {
+        'on_bag_page': True,
+    }
 
-    return render(request, 'bag/bag.html')
+    return render(request, template, context)
+
+    return render(request, )
 
 
 def add_to_bag(request, item_id):
