@@ -1,0 +1,25 @@
+Greetings {{ order.full_name }},
+
+We're thrilled to confirm your recent order with Eco Friendly Network! Below, you'll find the details of your eco-conscious purchase:
+
+Order Number: {{ order.order_number }}
+
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+
+Delivery: £{{ order.delivery_cost }}
+
+Grand Total: £{{ order.grand_total }}
+
+Your order is set to arrive at {{ order.street_address1 }}, in the beautiful {{ order.town_or_city }}, {{ order.country }}.
+
+We've carefully noted your contact number as {{ order.phone_number }}.
+
+Should you have any inquiries or need assistance, our team is ready to help. Reach out to us at {{ contact_email }}.
+
+Thank you for choosing to support sustainable living and being a part of our green journey.
+
+Warm regards,
+
+The Eco Friendly Network Team
