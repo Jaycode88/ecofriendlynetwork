@@ -1,1 +1,1 @@
-web: gunicorn ecofriendlynetwork.wsgi:application
+web: gunicorn eco_friendly_network.wsgi:application
