@@ -131,9 +131,53 @@ In essence, our goal is to seamlessly blend commercial success with our commitme
 ### Color Scheme
 
 I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme(as seen below)
-![screenshot](documentation/colourscheme.webp)
+![colourscheme](documentation/colourscheme.webp)
 
 ### Color by color:
+
+ - **Sage Green**
+![SageGreen](documentation/sagegreen.webp)
+
+     - Connection with Nature: Green hues are typically linked with nature, suggesting a sense of growth, renewal, and life. This particular shade of green, reminiscent of natural foliage, can evoke feelings of being grounded and connected to the natural world.
+
+     - Balance and Harmony: Green is considered a color of balance and harmony, derived from its position in the color spectrum being in the middle of warm and cool tones. This shade of sage green, with its balanced mix of green and gray, can reinforce these qualities.
+
+     - Health and Wellness: Often, green is associated with health and wellness. This might be due to its prevalent presence in healthy natural foods and its representation of vitality and freshness.
+
+     - Sophistication and Elegance: The muted quality of this sage green can impart a sense of sophistication and understated elegance. It's often used in interior design to create a chic, yet calming atmosphere.
+
+     - Subtlety and Softness: Unlike brighter or darker greens, this shade is more subtle and soft, which can create a more welcoming and less overwhelming space. It's often favored in design for its versatility and gentle appearance.
+
+- **Tangerine**
+![Tangerine](documentation/tangerine.webp)
+
+    - Energy and Enthusiasm: Bright orange hues are often associated with energy, vibrancy, and excitement. They tend to evoke feelings of enthusiasm and can stimulate activity and social interaction.
+
+    - Attention-Grabbing: Due to its high visibility, orange is used to catch attention and highlight the most important elements in a design. It can be used effectively to draw focus or emphasize key points.
+
+    - Optimism and Positivity: Like other warm colors, orange is often linked with positivity and optimism. It's a color that can uplift moods and bring a sense of brightness and cheerfulness.
+
+    - Creativity and Playfulness: Orange is considered a color that stimulates creativity and playfulness. It's seen as a fun, lively color that can encourage spontaneous and unconventional thinking.
+
+- **Peach**
+![Peach](documentation/peach.webp)
+
+    - Youthfulness: Peach, with its soft and gentle tone, can convey a sense of playfulness and youthfulness. It's often associated with the play and innocence of childhood.
+
+    - Gentleness and Soothing Quality: Unlike more saturated oranges, peach's muted quality gives it a more soothing presence. It's less stimulating and more calming, making it suitable for places where relaxation is key.
+
+    - Nourishment and Comfort: Similar to other warm tones, peach can evoke a sense of nourishment and care, partly because of its resemblance to natural, healthy foods.
+
+- **Silver Grey**
+![SilverGrey](documentation/silvergrey.webp)
+
+    - Neutrality and Balance: Gray is often considered a neutral and balanced color. It doesn't evoke strong emotions, making it a stable and calming presence in design and environment.
+
+    - Modern and Sophisticated: Light gray is frequently associated with modernity and sophistication. It's commonly used in minimalist and contemporary designs, reflecting a sense of sleekness and refined taste.
+
+    - Practicality and Timelessness: Being a classic and practical color, light gray is seen as timeless. It doesn’t go out of style and can be easily integrated into various contexts and design themes.
+
+It's important to note that the psychological impact of color is highly subjective and can vary based on cultural, personal, and situational factors. The interpretation of colors can differ greatly from person to person.
 
 ### Typography
 I researched sustainable fonts on [Coconut Design](https://coconutdesign.eu/sustainable-website-fonts-and-the-proper-use-of-them/).
