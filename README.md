@@ -1,4 +1,4 @@
-# [Eco Friendly network](**Add link to deployed project here**)
+# [Eco Friendly network](https://ecofriendlynetwork-82b71b042579.herokuapp.com/)
 An Eco friendly eccomerce store selling many diffent items. The website was created for people passionat about eco friendly living. The online shop offers products from different brands and it's aim is to encourage people to easy and friendly e-shopping.
 
 **Code Institute - Milestone Project 4**
