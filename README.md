@@ -182,9 +182,35 @@ It's important to note that the psychological impact of color is highly subjecti
 ### Typography
 I researched sustainable fonts on [Coconut Design](https://coconutdesign.eu/sustainable-website-fonts-and-the-proper-use-of-them/).
 
-I chose Allan as my Headings font. This font appealed to me when I came accross it.
+#### Headings & Logo Font
 
-I chose Roboto for text due to its clear readabilty ans suitable contrast to the Allan Headings.
+![AllanFont](documentation/allan.webp)
+
+I chose Allan as my Headings font. This font appealed to me due to its many characteristics and psychological impacts, Including:
+
+- **Bold and Assertive:** Allan is known for its bold strokes, making it assertive and attention-grabbing. This feature is excellent for headings as it draws the reader's eye and establishes a hierarchy in the text.
+
+- **Friendly and Approachable:** Despite its boldness, Allan has a certain roundness and softness to its characters, which can convey a sense of friendliness and approachability. This can make your content feel more inviting to readers.
+
+- **Modern with a Touch of Playfulness:** The font has a modern look with a slight touch of playfulness. This can be great for engaging a wide range of audiences without being too formal or too casual.
+
+- **Excellent Readability:** Allan maintains high readability even in larger sizes, which is crucial for headings. This ensures that titles are easily legible, enhancing the overall user experience and facilitating better content navigation.
+
+- **Aesthetic Appeal:** The stylistic flair of Allan adds a visual interest to the headings, contributing to the overall aesthetic appeal of the web Application.
+
+#### Body Text
+
+![RobotoFont](documentation/roboto.webp)
+
+I chose Roboto for body text due suitable contrast to the Allan Headings, As well as its versatile characteristics and psychological impacts, including:
+
+- **Clarity and Readability:** Roboto is renowned for its high legibility, which is essential for body text. Its clean and unambiguous letterforms ensure that content is easily readable, even in smaller sizes or dense paragraphs.
+
+- **Modern and Minimalist Design:** With its geometric forms and open curves, Roboto has a modern and minimalist aesthetic. This design complements contemporary layouts and interfaces, providing a sleek and up-to-date look.
+
+- **Subtle Personality:** Unlike more decorative fonts, Roboto offers a subtle personality that doesn't overpower the content. Its character lies in its functionality, supporting the text rather than taking center stage.
+
+- **Enhancing User Experience:** Given its legibility and aesthetic neutrality, Roboto enhances the user experience by making the reading process effortless and pleasant, which is crucial for engaging and retaining the audience.
 
 All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
