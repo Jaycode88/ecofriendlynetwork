@@ -174,29 +174,13 @@
             if (newQuantity >= inputField.attr('min') && newQuantity <= inputField.attr('max')) {
                 inputField.val(newQuantity);
 
-                // Calculate and update the subtotal for this item
-                var productPrice = parseFloat('{{ item.product.price }}');
-                var subtotal = (productPrice * newQuantity).toFixed(2);
-                $('#subtotal_' + itemId).text('£' + subtotal);
-
                 // Submit the form to update the quantity
                 button.closest('form').submit();
 
-                // handle enabler disable
+                // handle enable disable
                 var itemId = $(this).data('item_id');
                 handleEnableDisable(itemId);
-
-                // Recalculate and update the bag total
-                recalculateBagTotal();
             }
-        }
-
-        function recalculateBagTotal() {
-            var total = 0;
-            $('.subtotal').each(function() {
-                total += parseFloat($(this).text().replace('£', ''));
-            });
-            $('#bag-total').text('£' + total.toFixed(2));
         }
 
     });
