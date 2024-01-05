@@ -42,6 +42,13 @@
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
+                    {% if request.user.is_authenticated %}
+                        {% if is_favorite %}
+                            <a href="{% url 'remove_from_favorites' product.id %}">Remove from Favorites</a>
+                        {% else %}
+                            <a href="{% url 'add_to_favorites' product.id %}">Add to Favorites</a>
+                        {% endif %}
+                    {% endif %}
                     {% if request.user.is_superuser %}
                         <small class="ml-13">
                             <a href="{% url 'edit_product' product.id %}">Edit</a>
@@ -124,5 +131,6 @@
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
     });
+    
 </script>
 {% endblock %}

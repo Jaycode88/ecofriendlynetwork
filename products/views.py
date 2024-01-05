@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from .models import Product, Favorite
+from .forms import FavoriteForm
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.urls import reverse
+from django.http import JsonResponse
 
-from .models import Product, Category
+from .models import Product, Category, Favorite
 from .forms import ProductForm
 
 
@@ -53,11 +56,20 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    # Initialize an empty list for favorite product IDs
+    favorite_ids = []
+
+    # Check if the user is authenticated
+    if request.user.is_authenticated:
+        # Get the list of favorite product IDs for the logged-in user
+        favorite_ids = Favorite.objects.filter(user=request.user).values_list('product_id', flat=True)
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'favorite_ids': favorite_ids,
     }
 
     return render(request, 'products/products.html', context)
@@ -68,8 +80,16 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Initialize is_favorite as False
+    is_favorite = False
+
+    # Check if the user is authenticated and if the product is in their favorites
+    if request.user.is_authenticated:
+        is_favorite = Favorite.objects.filter(user=request.user, product=product).exists()
+
     context = {
         'product': product,
+        'is_favorite': is_favorite,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -141,3 +161,40 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f'Successfully deleted {product.name}')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_to_favorites(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    _, created = Favorite.objects.get_or_create(user=request.user, product=product)
+    if created:
+        messages.success(request, f'"{product.name}" has been added to your favorites!')
+    else:
+        messages.info(request, f'"{product.name}" is already in your favorites.')
+    return redirect('product_detail', product_id=product_id)
+
+
+@login_required
+def remove_from_favorites(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    deleted, _ = Favorite.objects.filter(user=request.user, product=product).delete()
+    if deleted:
+        messages.success(request, f'"{product.name}" has been removed from your favorites.')
+    else:
+        messages.info(request, f'"{product.name}" was not found in your favorites.')
+    return redirect('product_detail', product_id=product_id)
+
+
+@login_required
+def user_favorites(request):
+    favorites = Favorite.objects.filter(user=request.user).values_list('product', flat=True)
+    favorite_products = Product.objects.filter(id__in=favorites)
+
+    if not favorite_products.exists():
+        messages.info(request, "You haven't added any favorites yet.")
+
+    context = {
+        'products': favorite_products,
+    }
+
+    return render(request, 'products/products.html', context)

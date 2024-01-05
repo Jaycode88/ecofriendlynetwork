@@ -70,6 +70,12 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                            {% if product.id in favorite_ids %}
+                                            <p class="small mt-1 mb-0">
+                                                <i class="fas fa-heart text-red"></i> <!-- Favorite icon -->
+                                                <span class="text-muted">In Favorites</span>
+                                            </p>
+                                            {% endif %}
                                             {% if product.category %}
                                                 <p class="small mt-1 mb-0">
                                                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">

@@ -72,6 +72,10 @@ body {
     color: #d3d4d5 !important;
 }
 
+.text-red {
+    color: #dc3545 !important;
+}
+
 .text-orange {
     color: #fb9b27 !important;
 }
