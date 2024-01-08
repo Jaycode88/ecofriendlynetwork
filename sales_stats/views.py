@@ -16,7 +16,7 @@ def is_superuser(user):
 @user_passes_test(is_superuser)
 def sales_stats(request):
     start_date = request.GET.get('start_date')
-    start_date = parse_date(start_date) if start_date else timezone.make_aware(datetime.datetime(year=2023, month=12, day=1))
+    start_date = parse_date(start_date) if start_date else timezone.make_aware(datetime(year=2023, month=12, day=1))
 
     end_date = request.GET.get('end_date')
     end_date = parse_date(end_date) if end_date else timezone.now()
