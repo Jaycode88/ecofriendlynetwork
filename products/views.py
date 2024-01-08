@@ -85,17 +85,19 @@ def product_detail(request, product_id):
 
     # Initialize is_favorite as False
     is_favorite = False
+    favorites_count = 0  # Initialize favorites count
 
     # Check if the user is authenticated and if the product is in their favorites
     if request.user.is_authenticated:
         is_favorite = Favorite.objects.filter(user=request.user, product=product).exists()
     
     if request.user.is_superuser:
-        products_with_favorites = Product.objects.annotate(favorites_count=Count('favorite'))
+        favorites_count = Favorite.objects.filter(product=product).count()
 
     context = {
         'product': product,
         'is_favorite': is_favorite,
+        'favorites_count': favorites_count,
     }
 
     return render(request, 'products/product_detail.html', context)

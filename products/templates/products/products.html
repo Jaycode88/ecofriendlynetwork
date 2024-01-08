@@ -88,7 +88,6 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
-                                            <br>
                                             {% if request.user.is_superuser %}
                                                 <p><i class="fas fa-heart text-red"></i><small class="text-muted"> Favorited by {{ product.favorites_count }} users</small></p>
                                                 <small class="ml-13">
