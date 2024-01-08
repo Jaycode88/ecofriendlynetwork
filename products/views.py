@@ -21,6 +21,17 @@ def all_products(request):
     sort = None
     direction = None
 
+    products = Product.objects.all()
+
+    if request.user.is_authenticated:
+        # Annotate with favorite counts if the user is a superuser
+        if request.user.is_superuser:
+            products = products.annotate(favorites_count=Count('favorite'))
+        # Get the list of favorite product IDs for the logged-in user
+        favorite_ids = Favorite.objects.filter(user=request.user).values_list('product_id', flat=True)
+    else:
+        favorite_ids = []
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -56,24 +67,12 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    # Initialize an empty list for favorite product IDs
-    favorite_ids = []
-
-    # Check if the user is authenticated
-    if request.user.is_authenticated:
-        # Get the list of favorite product IDs for the logged-in user
-        favorite_ids = Favorite.objects.filter(user=request.user).values_list('product_id', flat=True)
-    
-    if request.user.is_superuser:
-        products_with_favorites = Product.objects.annotate(favorites_count=Count('favorite'))
-    
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
         'favorite_ids': favorite_ids,
-        'products': products_with_favorites,
     }
 
     return render(request, 'products/products.html', context)
@@ -90,6 +89,9 @@ def product_detail(request, product_id):
     # Check if the user is authenticated and if the product is in their favorites
     if request.user.is_authenticated:
         is_favorite = Favorite.objects.filter(user=request.user, product=product).exists()
+    
+    if request.user.is_superuser:
+        products_with_favorites = Product.objects.annotate(favorites_count=Count('favorite'))
 
     context = {
         'product': product,
