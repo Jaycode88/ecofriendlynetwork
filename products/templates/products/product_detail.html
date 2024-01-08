@@ -42,13 +42,15 @@
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
+                    <br>
                     {% if request.user.is_authenticated %}
                         {% if is_favorite %}
-                            <a href="{% url 'remove_from_favorites' product.id %}">Remove from Favorites</a>
+                            <small class="text-muted"><a href="{% url 'remove_from_favorites' product.id %}">Remove from Favorites</a></small>
                         {% else %}
-                            <a href="{% url 'add_to_favorites' product.id %}">Add to Favorites</a>
+                            <small class="text-muted"><a href="{% url 'add_to_favorites' product.id %}">Add to Favorites</a></small>
                         {% endif %}
                     {% endif %}
+                    <br>
                     {% if request.user.is_superuser %}
                         <small class="ml-13">
                             <a href="{% url 'edit_product' product.id %}">Edit</a>

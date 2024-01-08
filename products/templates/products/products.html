@@ -88,6 +88,7 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+                                            <br>
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-13">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a>
