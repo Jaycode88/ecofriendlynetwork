@@ -3,7 +3,7 @@ from django.contrib import messages
 from .models import Product, Favorite
 from .forms import FavoriteForm
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.db.models.functions import Lower
 from django.urls import reverse
 from django.http import JsonResponse
@@ -63,13 +63,17 @@ def all_products(request):
     if request.user.is_authenticated:
         # Get the list of favorite product IDs for the logged-in user
         favorite_ids = Favorite.objects.filter(user=request.user).values_list('product_id', flat=True)
-
+    
+    if request.user.is_superuser:
+        products_with_favorites = Product.objects.annotate(favorites_count=Count('favorite'))
+    
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
         'favorite_ids': favorite_ids,
+        'products': products_with_favorites,
     }
 
     return render(request, 'products/products.html', context)

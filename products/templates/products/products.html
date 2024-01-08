@@ -90,6 +90,7 @@
                                             {% endif %}
                                             <br>
                                             {% if request.user.is_superuser %}
+                                                <p><i class="fas fa-heart text-red"></i><small class="text-muted"> Favorited by {{ product.favorites_count }} users</small></p>
                                                 <small class="ml-13">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a>
                                                     <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
