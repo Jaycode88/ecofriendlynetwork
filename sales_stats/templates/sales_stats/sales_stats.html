@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Sales and Order Stats</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <!-- Time frame and filters selection -->
+            <form method="get" action="{% url 'sales_stats' %}">
+                <!-- Date Range -->
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d' }}">
+    
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d' }}">
+
+            <!-- Product Filter -->
+            <label for="product">Product:</label>
+            <select id="product" name="product">
+                <option value="">All Products</option>
+                {% for product in products %}
+                <option value="{{ product.id }}" {% if product.id == selected_product %} selected {% endif %}>
+                    {{ product.name }}
+                </option>
+                {% endfor %}
+            </select>
+
+            <!-- Category Filter -->
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="">All Categories</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}" {% if category.id == selected_category %} selected {% endif %}>
+                    {{ category.name }}
+                </option>
+                {% endfor %}
+            </select>
+
+            <button class="btn-green" type="submit">Update</button>
+    </form>
+
+    <!-- Display stats -->
+    <div class="sales-data-section">
+        <h2>Sales Data</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Product Name</th>
+                <th>Total Sales</th>
+                <th>Total Revenue</th>
+            </tr>
+            {% for item in sales_data %}
+            <tr>
+                <td>{{ item.product__name }}</td>
+                <td>{{ item.total_sales }}</td>
+                <td>{{ item.total_revenue|floatformat:2 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="favorites-data-section my-4">
+        <h2>Favorites Data</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Product Name</th>
+                <th>Total Favorites</th>
+            </tr>
+            {% for item in favorites_data %}
+            <tr>
+                <td>{{ item.product__name }}</td>
+                <td>{{ item.total_favorites }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
