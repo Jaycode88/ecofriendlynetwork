@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Order Stats</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <!-- Search form for orders -->
+            <form method="get" action="{% url 'manage_orders' %}">
+                <label for="order_number">Order Number:</label>
+                <input type="text" id="order_number" name="order_number" value="{{ order_number }}">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="{{ username }}">
+
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" value="{{ postcode }}">
+
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d' }}">
+
+                <label for="end_date">End Date:</label>
+                <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d' }}">
+
+                <button class="btn-green" type="submit">Search</button>
+            </form>
+
+            <!-- Display order stats -->
+            <div class="order-data-section">
+                <h2>Order Data</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Username</th>
+                        <th>Postcode</th>
+                        <th>Date</th>
+                    </tr>
+                    {% for order in orders %}
+                    <tr>
+                        <td><a href="{% url 'order_detail' order.id %}">{{ order.order_number }}</a></td>
+                        <td>{{ order.user_profile.user.username }}</td>
+                        <td>{{ order.postcode }}</td>
+                        <td>{{ order.date|date:"Y-m-d H:i" }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
