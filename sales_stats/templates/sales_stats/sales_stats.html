@@ -50,33 +50,20 @@
 
     <!-- Display stats -->
     <div class="sales-data-section">
-        <h2>Sales Data</h2>
+        <h2>Sales and Favorites Data</h2>
         <table class="table table-striped">
             <tr>
                 <th>Product Name</th>
+                <th>Total Favorites</th>
                 <th>Total Sales</th>
                 <th>Total Revenue</th>
             </tr>
             {% for item in sales_data %}
             <tr>
-                <td>{{ item.product__name }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.total_favorites }}</td>
                 <td>{{ item.total_sales }}</td>
                 <td>{{ item.total_revenue|floatformat:2 }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-    <div class="favorites-data-section my-4">
-        <h2>Favorites Data</h2>
-        <table class="table table-striped">
-            <tr>
-                <th>Product Name</th>
-                <th>Total Favorites</th>
-            </tr>
-            {% for item in favorites_data %}
-            <tr>
-                <td>{{ item.product__name }}</td>
-                <td>{{ item.total_favorites }}</td>
             </tr>
             {% endfor %}
         </table>

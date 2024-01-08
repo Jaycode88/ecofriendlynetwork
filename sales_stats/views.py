@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.db.models import Sum, Count
+from django.db.models import Sum, Count, Q, Value, DecimalField
+from django.db.models.functions import Coalesce
 from django.utils import timezone
 from django.utils.dateparse import parse_date
+from datetime import datetime
 
 from products.models import Product, Favorite, Category
 from checkout.models import OrderLineItem
@@ -13,45 +15,35 @@ def is_superuser(user):
 @login_required
 @user_passes_test(is_superuser)
 def sales_stats(request):
-    # Convert string to date
     start_date = request.GET.get('start_date')
-    start_date = parse_date(start_date) if start_date else None
+    start_date = parse_date(start_date) if start_date else timezone.make_aware(datetime.datetime(year=2023, month=12, day=1))
+
     end_date = request.GET.get('end_date')
     end_date = parse_date(end_date) if end_date else timezone.now()
 
-    # Filters for product and category
     selected_product = request.GET.get('product')
     selected_category = request.GET.get('category')
 
-    # Fetch all products and categories for the dropdowns
     products = Product.objects.all()
     categories = Category.objects.all()
 
-    # Start building the query for sales data
-    sales_query = OrderLineItem.objects
-    if start_date:
-        sales_query = sales_query.filter(order__date__gte=start_date)
-    if end_date:
-        sales_query = sales_query.filter(order__date__lte=end_date)
+    # Building the query for sales and favorites data combined
+    query_filter = Q(orderlineitem__order__date__gte=start_date, orderlineitem__order__date__lte=end_date) | \
+                   Q(favorite__created__gte=start_date, favorite__created__lte=end_date)
+
     if selected_product:
-        sales_query = sales_query.filter(product_id=selected_product)
+        query_filter &= Q(id=selected_product)
     if selected_category:
-        sales_query = sales_query.filter(product__category_id=selected_category)
+        query_filter &= Q(category_id=selected_category)
 
-    sales_data = sales_query.values('product__name').annotate(total_sales=Sum('quantity'), total_revenue=Sum('lineitem_total'))
-
-    # Aggregate favorites data
-    favorites_query = Favorite.objects
-    if selected_product:
-        favorites_query = favorites_query.filter(product_id=selected_product)
-    if selected_category:
-        favorites_query = favorites_query.filter(product__category_id=selected_category)
-
-    favorites_data = favorites_query.values('product__name').annotate(total_favorites=Count('id'))
+    sales_and_favorites_data = Product.objects.annotate(
+    total_sales=Coalesce(Sum('orderlineitem__quantity', filter=Q(orderlineitem__order__date__gte=start_date, orderlineitem__order__date__lte=end_date)), 0),
+    total_revenue=Coalesce(Sum('orderlineitem__lineitem_total', filter=Q(orderlineitem__order__date__gte=start_date, orderlineitem__order__date__lte=end_date)), 0, output_field=DecimalField()),
+    total_favorites=Coalesce(Count('favorite'), 0)
+    )
 
     context = {
-        'sales_data': sales_data,
-        'favorites_data': favorites_data,
+        'sales_data': sales_and_favorites_data,
         'products': products,
         'categories': categories,
         'selected_product': selected_product,

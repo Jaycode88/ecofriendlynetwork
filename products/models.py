@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-
+from django.utils import timezone
 
 class Category(models.Model):
 
@@ -36,6 +36,7 @@ class Product(models.Model):
 class Favorite(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     product = models.ForeignKey('Product', on_delete=models.CASCADE)
+    created = models.DateTimeField(default=timezone.now)  # Add this line
 
     class Meta:
         unique_together = ('user', 'product')
