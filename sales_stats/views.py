@@ -50,9 +50,7 @@ def sales_stats(request):
                                    filter=Q(orderlineitem__order__date__gte=start_date, 
                                             orderlineitem__order__date__lte=end_date)), 0, 
                               output_field=DecimalField()),
-        total_favorites=Coalesce(Count('favorite', 
-                                       filter=Q(favorite__created__gte=start_date, 
-                                                favorite__created__lte=end_date)), 0)
+        total_favorites=Coalesce(Count('favorite'), 0)
     )
 
     # Applying product filter if selected
