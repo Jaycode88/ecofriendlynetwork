@@ -51,9 +51,14 @@
                 Blog
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="blog-link">
-                <a href="{% url 'blog_list' %}" class="dropdown-item">View Blog</a>
-                {% if request.user.is_superuser %}
-                <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
+                    {% endif %}
+                        <a href="{% url 'blog_list' %}" class="dropdown-item">View Blog</a>
+                        <a href="{% url 'favorite_posts_list' %}"  class="dropdown-item">Favorite Posts</a>
+                {% else %}
+                   <a href="{% url 'blog_list' %}" class="dropdown-item">View Blog</a> 
                 {% endif %}
             </div>
         </li>

@@ -29,6 +29,13 @@
                     </div>
                     <div class="card-footer bg-white border-0">
                         <small class="text-muted">Posted by {{ post.author }} on {{ post.created_on|date:"Y-m-d" }}</small>
+                        {% if request.user.is_authenticated %}
+                            {% if is_favorite %}
+                                <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'remove_from_favorite_posts' post.id %}">Remove from Favorites</a></small></p>
+                            {% else %}
+                                <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'add_to_favorite_posts' post.id %}">Add to Favorites</a></small></p>
+                            {% endif %}
+                        {% endif %}
                         {% if request.user.is_superuser %}
                             <small class="ml-13">
                                 <a href="{% url 'edit_post' post.id %}">Edit</a>

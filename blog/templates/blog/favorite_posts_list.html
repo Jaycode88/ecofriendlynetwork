@@ -1,11 +1,10 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Blog Posts</h2>
+                <h2 class="logo-font">Favorite Blog Posts</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -18,23 +17,14 @@
         <div class="row">
             <div class="blog-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
-                    <div class="col-12 my-auto">
-                        <p class="text-muted mt-3 text-center">Latest Blog Posts</p>
-                    </div>
-                </div>
-                <div class="row">
                     {% for post in posts %}
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="card h-100 border-0">
                                 <a href="{% url 'blog_detail' post.id %}">
                                     {% if post.image %}
-                                        <a href="{% url 'blog_detail' post.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
-                                        </a>
+                                        <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                                     {% else %}
-                                        <a href="{% url 'blog_detail' post.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
-                                        </a>
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                                     {% endif %}
                                 </a>
                                 <div class="card-body">
@@ -59,12 +49,9 @@
                                 </div>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 mb-5"><hr></div>
-                        {% endif %}
                     {% empty %}
                         <div class="col-12">
-                            <p>No blog posts available.</p>
+                            <p class="text-center">You have no favorite posts yet.</p>
                         </div>
                     {% endfor %}
                 </div>

@@ -13,3 +13,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Favorite(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="favorite_posts")
+    posts = models.ManyToManyField(Post)
+
+    def __str__(self):
+        return f"{self.user.username}'s favorite posts"
