@@ -17,31 +17,53 @@ def is_superuser(user):
 @user_passes_test(is_superuser)
 def sales_stats(request):
     start_date = request.GET.get('start_date')
-    start_date = parse_date(start_date) if start_date else timezone.make_aware(datetime(year=2023, month=12, day=1))
-
     end_date = request.GET.get('end_date')
-    end_date = parse_date(end_date) if end_date else timezone.now()
-
     selected_product = request.GET.get('product')
     selected_category = request.GET.get('category')
 
+    # Parsing dates
+    if start_date:
+        start_date = parse_date(start_date)
+        start_date = timezone.make_aware(datetime.combine(start_date, datetime.min.time()))
+    else:
+        start_date = timezone.make_aware(datetime(year=2023, month=12, day=1))
+
+    if end_date:
+        end_date = parse_date(end_date)
+        end_date = timezone.make_aware(datetime.combine(end_date, datetime.max.time()))
+    else:
+        end_date = timezone.now()
+
+    # Getting all products and categories for dropdowns
     products = Product.objects.all()
     categories = Category.objects.all()
 
-    # Building the query for sales and favorites data combined
-    query_filter = Q(orderlineitem__order__date__gte=start_date, orderlineitem__order__date__lte=end_date) | \
-                   Q(favorite__created__gte=start_date, favorite__created__lte=end_date)
+    # Base query
+    query = Product.objects.all()
 
-    if selected_product:
-        query_filter &= Q(id=selected_product)
-    if selected_category:
-        query_filter &= Q(category_id=selected_category)
-
-    sales_and_favorites_data = Product.objects.annotate(
-    total_sales=Coalesce(Sum('orderlineitem__quantity', filter=Q(orderlineitem__order__date__gte=start_date, orderlineitem__order__date__lte=end_date)), 0),
-    total_revenue=Coalesce(Sum('orderlineitem__lineitem_total', filter=Q(orderlineitem__order__date__gte=start_date, orderlineitem__order__date__lte=end_date)), 0, output_field=DecimalField()),
-    total_favorites=Coalesce(Count('favorite'), 0)
+    # Applying date filter
+    query = query.annotate(
+        total_sales=Coalesce(Sum('orderlineitem__quantity', 
+                                 filter=Q(orderlineitem__order__date__gte=start_date, 
+                                          orderlineitem__order__date__lte=end_date)), 0),
+        total_revenue=Coalesce(Sum('orderlineitem__lineitem_total', 
+                                   filter=Q(orderlineitem__order__date__gte=start_date, 
+                                            orderlineitem__order__date__lte=end_date)), 0, 
+                              output_field=DecimalField()),
+        total_favorites=Coalesce(Count('favorite', 
+                                       filter=Q(favorite__created__gte=start_date, 
+                                                favorite__created__lte=end_date)), 0)
     )
+
+    # Applying product filter if selected
+    if selected_product:
+        query = query.filter(id=selected_product)
+
+    # Applying category filter if selected
+    if selected_category:
+        query = query.filter(category_id=selected_category)
+
+    sales_and_favorites_data = query
 
     context = {
         'sales_data': sales_and_favorites_data,
