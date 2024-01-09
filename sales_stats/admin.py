@@ -19,8 +19,10 @@ def download_sales_stats(modeladmin, request, queryset):
     return response
 
 class OrderLineItemAdmin(admin.ModelAdmin):
-    list_display = ['product', 'quantity']
+    list_display = ['order', 'product', 'quantity', 'lineitem_total']
     actions = [download_sales_stats]
+    list_filter = ('order__date',)
+    search_fields = ('order__order_number', 'product__name')
 
 admin.site.register(OrderLineItem, OrderLineItemAdmin)
 
