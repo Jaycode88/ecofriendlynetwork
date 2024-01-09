@@ -29,6 +29,12 @@
                     </div>
                     <div class="card-footer bg-white border-0">
                         <small class="text-muted">Posted by {{ post.author }} on {{ post.created_on|date:"Y-m-d" }}</small>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-13">
+                                <a href="{% url 'edit_post' post.id %}">Edit</a>
+                                <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>
+                            </small>
+                        {% endif %}
                     </div>
                 </div>
             </div>
