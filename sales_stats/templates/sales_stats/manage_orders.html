@@ -19,19 +19,19 @@
             <!-- Search form for orders -->
             <form method="get" action="{% url 'manage_orders' %}">
                 <label for="order_number">Order Number:</label>
-                <input type="text" id="order_number" name="order_number" value="{{ order_number }}">
+                <input type="text" id="order_number" name="order_number" value="{{ order_number|default_if_none:'' }}">
 
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" value="{{ username }}">
+                <input type="text" id="username" name="username" value="{{ username|default_if_none:'' }}">
 
                 <label for="postcode">Postcode:</label>
-                <input type="text" id="postcode" name="postcode" value="{{ postcode }}">
+                <input type="text" id="postcode" name="postcode" value="{{ postcode|default_if_none:'' }}">
 
                 <label for="start_date">Start Date:</label>
-                <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d' }}">
+                <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d'|default_if_none:'' }}">
 
                 <label for="end_date">End Date:</label>
-                <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d' }}">
+                <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d'|default_if_none:'' }}">
 
                 <button class="btn-green" type="submit">Search</button>
             </form>
