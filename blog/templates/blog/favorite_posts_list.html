@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block page_header %}
+    <!-- Header section -->
     <div class="container header-container">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- page title -->
                 <h2 class="logo-font">Favorite Blog Posts</h2>
                 <hr class="w-50 mb-1">
             </div>
@@ -11,16 +13,22 @@
     </div>
 {% endblock %}
 
+<!-- Main content section -->
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="blog-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
+                    <!-- Loop through favorite blog posts -->
                     {% for post in posts %}
+                        <!-- Display a card for each post -->
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="card h-100 border-0">
+                                <!-- Link to the detail page of the blog post -->
                                 <a href="{% url 'blog_detail' post.id %}">
+                                    <!-- Display the blog post image if available, otherwise show a default image -->
                                     {% if post.image %}
                                         <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                                     {% else %}
@@ -28,19 +36,25 @@
                                     {% endif %}
                                 </a>
                                 <div class="card-body">
+                                     <!-- blog post title and excerpt -->
                                     <h5 class="card-title">{{ post.title }}</h5>
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </div>
                                 <div class="card-footer bg-white border-0">
+                                    <!-- post's creation date -->
                                     <small class="text-muted">Posted on {{ post.created_on|date:"Y-m-d" }}</small>
+                                    <!-- Check if the user is authenticated -->
                                     {% if request.user.is_authenticated %}
+                                        <!-- Display a 'Remove from Favorites' link if the post is in favorites, otherwise show 'Add to Favorites' -->
                                         {% if post.id in favorite_post_ids %}
                                             <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'remove_from_favorite_posts' post.id %}">Remove from Favorites</a></small></p>
                                         {% else %}
                                             <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'add_to_favorite_posts' post.id %}">Add to Favorites</a></small></p>
                                         {% endif %}
                                     {% endif %}
+                                    <!-- Check if the user is a superuser (admin) -->
                                     {% if request.user.is_superuser %}
+                                        <!-- Display 'Edit' and 'Delete' links for admin users -->
                                         <small class="ml-13">
                                             <a href="{% url 'edit_post' post.id %}">Edit</a>
                                             <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>
@@ -50,6 +64,7 @@
                             </div>
                         </div>
                     {% empty %}
+                        <!-- Display a message if there are no favorite posts for the user -->
                         <div class="col-12">
                             <p class="text-center">You have no favorite posts yet.</p>
                         </div>

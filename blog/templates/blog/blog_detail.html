@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block page_header %}
+    <!-- Header section -->
     <div class="container header-container">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- page title -->
                 <h2 class="logo-font">{{ post.title }}</h2>
                 <hr class="w-50 mb-1">
             </div>
@@ -12,33 +14,47 @@
     </div>
 {% endblock %}
 
+<!-- Main content section -->
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="blog-detail-container col-10 offset-1 mt-3">
                 <div class="card mb-4">
+                    <!-- Check if the blog post has an image -->
                     {% if post.image %}
+                        <!-- Display the blog post image if available -->
                         <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                     {% else %}
+                        <!-- Display a placeholder image if no image is available -->
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                     {% endif %}
-
+                    
                     <div class="card-body">
+                         <!-- Display the blog post content with safe HTML rendering -->
                         <p class="card-text">{{ post.content|safe }}</p>
                     </div>
                     <div class="card-footer bg-white border-0">
+                        <!-- Display post details like author and creation date -->
                         <small class="text-muted">Posted by {{ post.author }} on {{ post.created_on|date:"Y-m-d" }}</small>
+                        <!-- Check if the user is authenticated -->
                         {% if request.user.is_authenticated %}
+                            <!-- Check if the post is in the user's favorites -->
                             {% if is_favorite %}
+                                <!-- link to remove the post from favorites -->
                                 <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'remove_from_favorite_posts' post.id %}">Remove from Favorites</a></small></p>
                             {% else %}
+                                <!-- link to add the post to favorites -->
                                 <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'add_to_favorite_posts' post.id %}">Add to Favorites</a></small></p>
                             {% endif %}
                         {% endif %}
+                        <!-- Check if the user is a superuser (admin) -->
                         {% if request.user.is_superuser %}
                             <small class="ml-13">
+                                <!-- link to edit the post for superusers -->
                                 <a href="{% url 'edit_post' post.id %}">Edit</a>
+                                <!-- link to delete the post for superusers -->
                                 <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>
                             </small>
                         {% endif %}

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import csv
 from .models import Order, OrderLineItem
 
+# A function to export orders to CSV
 def export_orders_to_csv(modeladmin, request, queryset):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="orders.csv"'
@@ -19,11 +20,12 @@ def export_orders_to_csv(modeladmin, request, queryset):
 
 export_orders_to_csv.short_description = 'Export to CSV'
 
-
+# Customize the display and behavior of OrderLineItem within OrderAdmin
 class OrderLineItemAdminInLine(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
+# OrderAdmin class with various customizations
 class  OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInLine,)
 
@@ -43,6 +45,7 @@ class  OrderAdmin(admin.ModelAdmin):
                     'delivery_cost', 'order_total',
                     'grand_total')
 
+    # Set the default ordering of orders by date in descending order
     ordering = ('-date',)
 
     # Enhanced search fields

@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block page_header %}
+    <!-- Header section -->
     <div class="container header-container">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- Display the page title and subtitle -->
                 <h2 class="logo-font mb-4">Blog Management</h2>
                 <h5 class="text-muted">Add a Blog Post</h5>
                 <hr>
@@ -13,22 +15,33 @@
     </div>
 {% endblock %}
 
+<!-- Main content section -->
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <!-- Form with method 'POST' and 'enctype' set for file uploads -->
                 <form method="POST" action="{% url 'add_post' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
+                    <!-- Loop through form fields -->
                     {% for field in form %}
+                        <!-- Check if the field is not an image field -->
                         {% if field.name != 'image' %}
+                            <!-- Render the field using the 'as_crispy_field' template filter -->
                             {{ field | as_crispy_field }}
                         {% else %}
+                            <!-- Render the image field as is -->
                             {{ field }}
                         {% endif %}
                     {% endfor %}
+
+                    <!-- Form action Buttons -->
                     <div class="text-right">
+                        <!-- Cancel Button -->
                         <a class="btn btn-orange rounded-0" href="{% url 'blog_list' %}">Cancel</a>
+                        <!-- Add post/Submit Button -->
                         <button class="btn btn-green rounded-0" type="submit">Add Post</button>
                     </div>
                 </form>

@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block page_header %}
+    <!-- Header section -->
     <div class="container header-container">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- page title -->
                 <h2 class="logo-font">Blog Posts</h2>
                 <hr class="w-50 mb-1">
             </div>
@@ -12,7 +14,9 @@
     </div>
 {% endblock %}
 
+<!-- Main content section -->
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
@@ -23,34 +27,50 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Loop through the list of blog posts -->
                     {% for post in posts %}
                         <div class="col-12 col-md-6 col-lg-4">
+                            <!-- Display each blog post in a card -->
                             <div class="card h-100 border-0">
+                                <!-- Link to the blog post detail page -->
                                 <a href="{% url 'blog_detail' post.id %}">
+                                    <!-- Check if the blog post has an image -->
                                     {% if post.image %}
+                                        <!-- Display the blog post image if available -->
                                         <a href="{% url 'blog_detail' post.id %}">
                                             <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                                         </a>
                                     {% else %}
+                                        <!-- Display a placeholder image if no image is available -->
                                         <a href="{% url 'blog_detail' post.id %}">
                                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                                         </a>
                                     {% endif %}
                                 </a>
                                 <div class="card-body">
+                                    <!-- Blog post title and excerpt -->
                                     <h5 class="card-title">{{ post.title }}</h5>
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </div>
                                 <div class="card-footer bg-white border-0">
+                                    <!-- post creation date -->
                                     <small class="text-muted">Posted on {{ post.created_on|date:"Y-m-d" }}</small>
+
+                                    <!-- Check if the user is authenticated -->
                                     {% if request.user.is_authenticated %}
+                                        <!-- Check if the post is in the user's favorites -->
                                         {% if post.id in favorite_post_ids %}
+                                            <!-- Display a link to remove the post from favorites -->
                                             <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'remove_from_favorite_posts' post.id %}">Remove from Favorites</a></small></p>
                                         {% else %}
+                                            <!-- Display a link to add the post to favorites -->
                                             <p><i class="fas fa-heart text-red"></i><small class="text-muted"> <a href="{% url 'add_to_favorite_posts' post.id %}">Add to Favorites</a></small></p>
                                         {% endif %}
                                     {% endif %}
+
+                                    <!-- Check if the user is a superuser (admin) -->
                                     {% if request.user.is_superuser %}
+                                    <!-- links to edit and delete the post for superusers -->
                                         <small class="ml-13">
                                             <a href="{% url 'edit_post' post.id %}">Edit</a>
                                             <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>

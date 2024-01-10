@@ -2,10 +2,12 @@
 {% load static %}
 
 {% block extra_css %}
+<!-- Include custom CSS for the checkout App -->
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
+    <!-- Header Container: Left Empty, for positioning of other elements on page -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -14,13 +16,16 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <hr>
+                <!-- Page Heading -->
                 <h2 class="logo-font mb-4">Thank You</h2>
                 <hr>
+                <!-- Page info -->
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
@@ -34,6 +39,7 @@
                         </div>
                     </div>
 
+                    <!-- Display order information -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
@@ -59,6 +65,7 @@
                     </div>
 
                     {% for item in order.lineitems.all %}
+                    <!-- Display order line items -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
@@ -77,6 +84,7 @@
                         </div>
                     </div>
 
+                    <!-- Display delivery address details -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Full Name</p>
@@ -179,6 +187,7 @@
                         </div>
                     </div>
 
+                    <!-- Display billing information -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Grand Total</p>
@@ -193,6 +202,7 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
 				{% if from_profile %}
+                    <!-- Back to profile button if user has come from profile page -->
                     <a href="{% url 'profile' %}" class="btn btn-green rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
@@ -200,6 +210,7 @@
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% elif from_admin %}
+                    <!-- Back to orders button for admin/superusers -->
                     <a href="{% url 'manage_orders' %}" class="btn btn-green rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
@@ -207,6 +218,7 @@
                         <span class="text-uppercase">Back to Orders</span>
                     </a>
                 {% else %}
+                    <!-- Button to go back to products for guests/non-authorised users -->
                     <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-green rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>

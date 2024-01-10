@@ -1,44 +1,55 @@
 {% extends 'base.html' %}
 
 {% block page_header %}
+<!-- Header section -->
 <div class="container header-container">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Order Stats</h2>
+            <!-- page title -->
+            <h2 class="logo-font">Order Data</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
 </div>
 {% endblock %}
 
+<!-- Main content section -->
 {% block content %}
+<!-- Overlay: To Remove background image -->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-10 offset-1">
             <!-- Search form for orders -->
             <form method="get" action="{% url 'manage_orders' %}">
+
+                <!-- Order Number input field with label -->
                 <label for="order_number">Order Number:</label>
                 <input type="text" id="order_number" name="order_number" value="{{ order_number|default_if_none:'' }}">
 
+                <!-- Username input field with label -->
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" value="{{ username|default_if_none:'' }}">
 
+                <!-- Postcode input field with label -->
                 <label for="postcode">Postcode:</label>
                 <input type="text" id="postcode" name="postcode" value="{{ postcode|default_if_none:'' }}">
 
+                <!-- Start Date input field with label -->
                 <label for="start_date">Start Date:</label>
                 <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d'|default_if_none:'' }}">
 
+                <!-- End Date input field with label -->
                 <label for="end_date">End Date:</label>
                 <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d'|default_if_none:'' }}">
 
+                <!-- Search button -->
                 <button class="btn-green" type="submit">Search</button>
             </form>
 
             <!-- Display order stats -->
             <div class="order-data-section">
-                <h2>Order Data</h2>
+                <!-- Table to display order statistics -->
                 <table class="table table-striped">
                     <tr>
                         <th>Order Number</th>
@@ -46,6 +57,7 @@
                         <th>Postcode</th>
                         <th>Date</th>
                     </tr>
+                    <!-- Loop through orders and display order details -->
                     {% for order in orders %}
                     <tr>
                         <td><a href="{% url 'order_detail' order.id %}">{{ order.order_number }}</a></td>

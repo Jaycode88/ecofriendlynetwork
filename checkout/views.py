@@ -17,28 +17,36 @@ import json
 @require_POST
 def cache_checkout_data(request):
     try:
+        # Extract the PaymentIntent ID and set the Stripe API key
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
+
+        # Modify the PaymentIntent metadata to include bag, save_info, and username
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
+        # Return a success HTTP response
         return HttpResponse(status=200)
     except Exception as e:
+        # Handle exceptions and return an error response with a message
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
+    # Get the Stripe public and secret keys from settings
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
+        # Get the bag from the session and populate the order form
         bag = request.session.get('bag', {})
          
         form_data = {
+            # Extract form data from POST request
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
@@ -51,6 +59,7 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
+            # Create a new order and save it with associated bag items
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
@@ -69,6 +78,7 @@ def checkout(request):
                         order_line_item.save()
 
                 except Product.DoesNotExist:
+                    # Handle product not found in the database and return an error message
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
@@ -79,12 +89,14 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
+            # Handle form validation errors and return an error message
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     
     else:
         bag = request.session.get('bag', {})
     if not bag:
+        # Handle empty bag and return a message
         messages.error(request, "There's nothing in your bag at the moment")
         return redirect(reverse('products'))
 
@@ -120,6 +132,7 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
+        # Handle missing Stripe public key and return a warning message
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
 

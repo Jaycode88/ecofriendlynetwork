@@ -4,7 +4,10 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
     class Meta:
+        # Define the form using the Order model
         model = Order
+
+        # Specify the fields to include in the form
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1','street_address2', 
                 'town_or_city', 'postcode',  'country',
@@ -13,8 +16,7 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Customize form field attributes, labels, and placeholders
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -28,13 +30,18 @@ class OrderForm(forms.ModelForm):
             'county': 'County, State or Locality',
         }
 
+        # Set autofocus on the first field
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:
+                    # Add an asterisk to required fields
                     placeholder = f'{placeholders[field]} *'
                 else:
                     placeholder = placeholders[field]
+                # Set placeholder text for the field
                 self.fields[field].widget.attrs['placeholder'] = placeholder
+            # Add a custom CSS class to the field
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            # Remove the auto-generated labels
             self.fields[field].label = False

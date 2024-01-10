@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block page_header %}
+    <!-- Header section -->
     <div class="container header-container">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- page title & sub title -->
                 <h2 class="logo-font mb-4">Blog Management</h2>
                 <h5 class="text-muted">Edit Blog Post</h5>
                 <hr>
@@ -13,21 +15,28 @@
     </div>
 {% endblock %}
 
+<!-- Main content section -->
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <!-- Form for editing a blog post -->
                 <form method="POST" action="{% url 'edit_post' post.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
+                    <!-- Loop through form fields -->
                     {% for field in form %}
+                        <!-- Render form fields using the crispy_forms template tag, except for the 'image' field -->
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
                         {% else %}
                             {{ field }}
                         {% endif %}
                     {% endfor %}
+
                     <div class="text-right">
+                        <!-- Buttons for canceling and updating the post -->
                         <a class="btn btn-orange rounded-0" href="{% url 'blog_detail' post.id %}">Cancel</a>
                         <button class="btn btn-green rounded-0" type="submit">Update Post</button>
                     </div>

@@ -11,11 +11,31 @@ from checkout.models import OrderLineItem, Order
 from .forms import OrderSearchForm
 
 def is_superuser(user):
+    """
+    Check if a user is a superuser.
+
+    Args:
+        user (User): User instance to check.
+
+    Returns:
+        bool: True if the user is a superuser, False otherwise.
+    """
     return user.is_superuser
 
 @login_required
 @user_passes_test(is_superuser)
 def sales_stats(request):
+    """
+    Display sales statistics for products.
+
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The response containing the sales statistics page.
+    """
+
+    # Retrieve filter parameters from GET request
     start_date = request.GET.get('start_date')
     end_date = request.GET.get('end_date')
     selected_product = request.GET.get('product')
@@ -38,10 +58,10 @@ def sales_stats(request):
     products = Product.objects.all()
     categories = Category.objects.all()
 
-    # Base query
+    # Base query for products
     query = Product.objects.all()
 
-    # Applying date filter
+    # Applying date filter and calculating statistics
     query = query.annotate(
         total_sales=Coalesce(Sum('orderlineitem__quantity', 
                                  filter=Q(orderlineitem__order__date__gte=start_date, 
@@ -79,6 +99,17 @@ def sales_stats(request):
 @login_required
 @user_passes_test(is_superuser)
 def manage_orders(request):
+    """
+    Display and manage orders with filters.
+
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The response containing the manage orders page.
+    """
+
+    # Create an order search form
     form = OrderSearchForm(request.GET)
     query = Order.objects.select_related('user_profile')
 
@@ -103,6 +134,7 @@ def manage_orders(request):
         end_date = parse_date(end_date)
         query = query.filter(date__lte=end_date)
 
+    # Retrieve orders based on applied filters
     orders = query.all()
 
     context = {
@@ -120,6 +152,17 @@ def manage_orders(request):
 @login_required
 @user_passes_test(is_superuser)
 def order_detail(request, order_id):
+    """
+    Display order details.
+
+    Args:
+        request (HttpRequest): The request object.
+        order_id (int): ID of the order.
+
+    Returns:
+        HttpResponse: The response containing the order detail page.
+    """
+    
     order = get_object_or_404(Order, id=order_id)
     template = 'checkout/checkout_success.html'
     context = {
