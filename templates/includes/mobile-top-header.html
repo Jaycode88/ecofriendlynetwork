@@ -1,11 +1,13 @@
 <ul>
+    <!-- Mobile Search: Dropdown for site-wide search on mobile devices -->
     <li class="list-inline-item">
       <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
               <div><i class="fas fa-search fa-lg text-green"></i></div>
-              <p class="my-0">Search</p>
+              <p class="my-0" aria-label="Search">Search</p>
           </div>
       </a>
+      <!-- Search Form -->
       <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
           <form class="form" method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
@@ -21,32 +23,40 @@
           </form>
       </div>
   </li>
+  <!-- Mobile User Account: Dropdown for user account options on mobile devices -->
   <li class="list-inline-item dropdown">
       <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
+                <!-- Icon for user account -->
               <div><i class="fas fa-user fa-lg text-green"></i></div>
               <p class="my-0">My Account</p>
           </div>
       </a>
+      <!-- Dropdown for account options -->
       <div class="dropdown-menu border-0" aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
+                <!-- Superuser specific options -->
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                   <a href="{% url 'sales_stats' %}" class="dropdown-item">Product Stats</a>
                   <a href="{% url 'manage_orders' %}" class="dropdown-item">View Orders</a>
               {% endif %}
+              <!-- Options for authenticated users -->
               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'user_favorites' %}" class="dropdown-item">My Favorites</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
           {% else %}
+              <!-- Options for guests (non-authenticated users) -->
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
               <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
           {% endif %}
       </div>
   </li>
+  <!-- Mobile Shopping Bag: Link to view the shopping bag on mobile devices -->
   <li class="list-inline-item">
       <a class="{% if grand_total %}text-orange font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
           <div class="text-center">
+                <!-- Icon for shopping bag and total amount -->
               <div><i class="fas fa-shopping-bag fa-lg text-green"></i></div>
               <p class="my-0">
                   {% if grand_total %}

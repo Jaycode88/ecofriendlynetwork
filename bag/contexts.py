@@ -4,16 +4,26 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 def bag_contents(request):
+    """
+    Calculate and return the context data for the shopping bag.
 
-    bag_items = []
-    total = 0
-    product_count = 0
-    bag = request.session.get('bag', {})
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        dict: A dictionary containing bag-related context data.
+    """
+
+    bag_items = []  # List to store bag items
+    total = 0       # Total price of items in the bag
+    product_count = 0   # Total count of products in the bag
+    bag = request.session.get('bag', {})    # Retrieve bag data from the session
 
     for item_id, quantity in bag.items():
+         # Loop through items in the bag and retrieve product details
         product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
+        total += quantity * product.price   # Calculate subtotal for each item
+        product_count += quantity   # Count the quantity of each product in the bag
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
@@ -22,13 +32,14 @@ def bag_contents(request):
 
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
+        # Calculate delivery cost and remaining amount for free delivery
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        delivery = 0
+        delivery = 0    # Free delivery if total meets the threshold
         free_delivery_delta = 0
     
-    grand_total = delivery + total
+    grand_total = delivery + total  # Calculate the final grand total
     
     context = {
         'bag_items': bag_items,

@@ -1,63 +1,77 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <!-- Navigation Item: All Products -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-orange mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
+            <!-- Dropdown Menu for All Products -->
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <!-- Links to sort products by different criteria -->
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
+        <!-- Navigation Item: Personal Accessories -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-orange mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Personal Accessories
             </a>
+            <!-- Dropdown Menu for Personal Accessories -->
             <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+                <!-- Specific categories as dropdown items -->
                 <a href="{% url 'products' %}?category=sunglasses" class="dropdown-item">Sunglasses</a>
                 <a href="{% url 'products' %}?category=watches" class="dropdown-item">Watches</a>
                 <a href="{% url 'products' %}?category=bracelets" class="dropdown-item">Bracelets</a>
                 <a href="{% url 'products' %}?category=sunglasses,watches,bracelets" class="dropdown-item">All Accessories</a>
             </div>
         </li>
-
+        <!-- Navigation Item: Homeware -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-orange mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Homeware
             </a>
+            <!-- Dropdown Menu for Homeware -->
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+                <!-- Specific categories as dropdown items -->
                 <a href="{% url 'products' %}?category=bath_beauty" class="dropdown-item">Bath &amp; Beauty</a>
                 <a href="{% url 'products' %}?category=kitchen" class="dropdown-item">Kitchen</a>
                 <a href="{% url 'products' %}?category=bath_beauty,kitchen" class="dropdown-item">All Homeware</a>
             </div>
         </li>
-
+        <!-- Navigation Item: Special Offers -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-orange mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
+            <!-- Dropdown Menu for Homeware -->
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+                <!-- Specific categories as dropdown items -->
                 <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
                 <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
                 <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
                 <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
+        <!-- Navigation Item: Blog -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-orange" href="#" id="blog-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog
             </a>
+            <!-- Dropdown Menu for Blog -->
             <div class="dropdown-menu border-0" aria-labelledby="blog-link">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
+                        <!-- Superuser specific options -->
                         <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
                     {% endif %}
+                        <!-- Options for authenticated users -->
                         <a href="{% url 'blog_list' %}" class="dropdown-item">View Blog</a>
                         <a href="{% url 'favorite_posts_list' %}"  class="dropdown-item">Favorite Posts</a>
                 {% else %}
+                    <!-- Options for guests (non-authenticated users) -->
                    <a href="{% url 'blog_list' %}" class="dropdown-item">View Blog</a> 
                 {% endif %}
             </div>

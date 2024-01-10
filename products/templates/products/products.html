@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+    <!-- Header Container: Left Empty, for positioning of other elements on page -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -10,11 +11,15 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- Main Product Heading -->
                 <h2 class="logo-font">Products</h2>
+
+                <!-- Product Categories -->
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-cust text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -23,12 +28,16 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+        <!-- Product Container -->
         <div class="row">
             <div class="product-container col-10 offset-1">
+                <!-- Sorting and Product Count -->
                 <div class="row mt-1 mb-2">
+                    <!-- Sorting Select Box -->
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <!-- Sorting Options -->
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -41,8 +50,10 @@
                             </select>
                         </div>
                     </div>
+                    <!-- Product Count Display -->
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
+                            <!-- Display logic for product count and search terms -->
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
@@ -50,8 +61,11 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Products Grid -->
                 <div class="row">
                     {% for product in products %}
+                        <!-- Individual Product Card -->
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
@@ -63,19 +77,26 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
+                                <!-- Product details, pricing, and links -->
                                 <div class="card-body pb-0">
+                                    <!-- Product Name -->
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
+                                            <!-- Product Pricing -->
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+
+                                            <!-- Favorite Indicator -->
                                             {% if product.id in favorite_ids %}
                                             <p class="small mt-1 mb-0">
                                                 <i class="fas fa-heart text-red"></i> <!-- Favorite icon -->
                                                 <span class="text-muted">In Favorites</span>
                                             </p>
                                             {% endif %}
+
+                                            <!-- Product Category Link -->
                                             {% if product.category %}
                                                 <p class="small mt-1 mb-0">
                                                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -83,11 +104,15 @@
                                                     </a>
                                                 </p>
                                             {% endif %}
+
+                                            <!-- Product Rating -->
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star text-orange mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+
+                                            <!-- Superuser Actions: Edit and Delete Links -->
                                             {% if request.user.is_superuser %}
                                                 <p><i class="fas fa-heart text-red"></i><small class="text-muted"> Favorited by {{ product.favorites_count }} users</small></p>
                                                 <small class="ml-13">
@@ -100,21 +125,25 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Horizontal Rule after every product for extra small screens -->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
                             </div>
-                        {% endif %}                        
+                        {% endif %}
+                        <!-- Horizontal Rule after every 2 products for small to medium screens, hidden on larger screens -->                        
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}
+                        <!-- Horizontal Rule after every 3 products for large screens, hidden on extra large screens -->
                         {% if forloop.counter|divisibleby:3 %}
                             <div class="col-12 d-none d-lg-block d-xl-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}
+                        <!-- Horizontal Rule after every 4 products for extra large screens -->
                         {% if forloop.counter|divisibleby:4 %}
                             <div class="col-12 d-none d-xl-block mb-5">
                                 <hr>
@@ -131,7 +160,7 @@
 {% block postloadjs %}
 {{ block.super }}
 
-<!-- Sorting Select box -->
+<!-- Sorting Select box Script -->
 <script type="text/javascript">
     $('#sort-selector').change(function() {
         var selector = $(this);

@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+    <!-- Header Container: Left Empty, for positioning of other elements on page -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -10,9 +11,11 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
+            <!-- Page Title and Subtitle -->
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4">Product Management</h2>
@@ -21,19 +24,28 @@
             </div>
         </div>
 
+        <!-- Add Product Form -->
         <div class="row">
             <div class="col-12 col-md-6">
+                <!-- Form Method, Action, and Encoding Type -->
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
+                    <!-- Form Fields Loop -->
                     {% for field in form %}
+                        <!-- Field Rendering: Custom handling for the 'image' field -->
                         {% if field.name != 'image' %}
+                            <!-- Crispy Form Field: For better styling and layout -->
                             {{ field | as_crispy_field }}
                         {% else %}
+                            <!-- Raw Field Rendering for Image Upload -->
                             {{ field }}
                         {% endif %}
                     {% endfor %}
+                    <!-- Form Action Buttons -->
                     <div class="text-right">
+                        <!-- Cancel Button -->
                         <a class="btn btn-orange rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <!-- Submit Button -->
                         <button class="btn btn-green rounded-0" type="submit">Add Product</button>
                     </div>
                 </form>
@@ -44,6 +56,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- JavaScript for Image Upload Preview -->
     <script type="text/javascript">
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];

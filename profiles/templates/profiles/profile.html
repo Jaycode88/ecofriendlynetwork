@@ -3,10 +3,12 @@
 
 
 {% block extra_css %}
+    <!-- Linking custom CSS for the profile page -->
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
+    <!-- Header Container: Left Empty, for positioning of other elements on page -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -15,9 +17,11 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Overlay: To Remove background image -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
+            <!-- Profile Heading -->
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4">My Profile</h2>
@@ -25,17 +29,22 @@
             </div>
         </div>
         <div class="row">
+            <!-- Default Delivery Information Section -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Default Delivery Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
+                    <!-- User's Delivery Information Form -->
                     {{ form|crispy }}
                     <button class="btn btn-green rounded-0 text-uppercase float-right">Update Information</button>
                 </form>
             </div>
+
+            <!-- Order History Section -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
                 <div class="order-history table-responsive">
+                    <!-- Table for displaying order history -->
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
@@ -47,6 +56,7 @@
                         </thead>
                         <tbody>
                             {% for order in orders %}
+                                <!-- Iterating over each order to display its details -->
                                 <tr>
                                     <td>
                                         <a href="{% url 'order_history' order.order_number %}"
@@ -56,6 +66,7 @@
                                     </td>
                                     <td>{{ order.date }}</td>
                                     <td>
+                                        <!-- Displaying items in the order -->
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
@@ -77,5 +88,6 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- JavaScript for handling dynamic country fields in the form -->
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

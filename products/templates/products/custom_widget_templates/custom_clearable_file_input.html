@@ -1,18 +1,26 @@
 {% if widget.is_initial %}
+    <!-- Displaying the Current Image if it exists -->
     <p>{{ widget.initial_text }}:</p>
         <a href="{{ widget.value.url }}">
+            <!-- Image Preview: Shows the currently uploaded image -->
             <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="Product image">
         </a>
+    <!-- Checkbox to Remove the Current Image -->
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
+            <!-- Checkbox Input -->
             <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}"{% if widget.attrs.disabled %} disabled{% endif %}>
+            <!-- Label for the Checkbox -->
             <label class="custom-control-label text-danger" for="{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
         </div>
     {% endif %}
     <br>
     {{ widget.input_text }}:
 {% endif %}
+
+<!-- File Input for Image Upload -->
 <span class="btn btn-green rounded-0 btn-file">
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
+<!-- Display Filename after Selection -->
 <strong><p class="text-danger" id="filename"></p></strong>

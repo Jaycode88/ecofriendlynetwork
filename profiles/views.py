@@ -11,17 +11,25 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile. """
+
+    # Retrieves the user's profile or 404 if not found.
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    # Handles form submission for profile updates.
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
+            # Saves the updated profile information.
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
+            # Provides an error message if the form is invalid.
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
+        # Provides a form populated with the user's current profile information.
         form = UserProfileForm(instance=profile)
+    
+    # Retrieves all orders associated with the profile.
     orders = profile.orders.all()
 
     
@@ -33,12 +41,17 @@ def profile(request):
     
     }
 
+    # Renders the profile template with the given context.
     return render(request, template, context)
 
 
 def order_history(request, order_number):
+    """ Display the user's past order confirmation. """
+
+    # Retrieves the specified order or 404 if not found.
     order = get_object_or_404(Order, order_number=order_number)
 
+    # Provides an informational message about the past order.
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
@@ -50,4 +63,5 @@ def order_history(request, order_number):
         'from_profile': True,
     }
 
+    # Renders the checkout success template to display the order details.
     return render(request, template, context)

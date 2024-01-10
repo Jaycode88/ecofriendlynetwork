@@ -5,7 +5,16 @@ from products.models import Product
 from products.models import Product
 
 def view_bag(request):
-    """ A view to return the shopping bag page with contents """
+    """
+    A view to return the shopping bag page with contents.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: Rendered shopping bag page with bag contents.
+    """
+
     template = 'bag/bag.html'
     context = {
         'on_bag_page': True,
@@ -17,7 +26,16 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """
+    Add a quantity of the specified product to the shopping bag.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        item_id (int): The ID of the product to add to the bag.
+
+    Returns:
+        HttpResponse: Redirect to the previous page after adding the product to the bag.
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -37,7 +55,16 @@ def add_to_bag(request, item_id):
 
 
 def adjust_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """
+    Adjust the quantity of the specified product in the shopping bag.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        item_id (int): The ID of the product to adjust.
+    
+    Returns:
+        HttpResponse: Redirect to the shopping bag view after adjusting the quantity.
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -55,7 +82,17 @@ def adjust_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
+    """
+    Remove the specified item from the shopping bag.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        item_id (int): The ID of the product to remove from the bag.
+    
+    Returns:
+        HttpResponse: A response indicating the status of the removal operation.
+    """
+    
     bag = request.session.get('bag', {})
     product = get_object_or_404(Product, pk=item_id)
     try:
