@@ -75,7 +75,7 @@ def add_post(request):
     """
 
     # Check if the user is a superuser
-    if not request.user.is_superuser:
+    if request.user.is_superuser:
         if request.method == 'POST':
             form = PostForm(request.POST, request.FILES)
             if form.is_valid():
