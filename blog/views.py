@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Post, Favorite
 from .forms import PostForm
 
@@ -88,11 +89,8 @@ def add_post(request):
                 return redirect('blog_list')
         else:
             form = PostForm()
-        # Render the add_post template with the form
-        return render(request, 'blog/add_post.html', {'form': form})
-    else:
-        # Redirect regular users to the blog list page
-        return redirect('blog_list')
+    # Render the add_post template with the form
+    return render(request, 'blog/add_post.html', {'form': form})
 
 @login_required
 def edit_post(request, pk):
@@ -114,15 +112,14 @@ def edit_post(request, pk):
             form = PostForm(request.POST, request.FILES, instance=post)
             if form.is_valid():
                 form.save()
-                # Redirect to the updated blog post's detail page
+                # Redirect to the updated blog post's detail page with toast 
+                messages.success(request, 'Blog post updated successfully')
                 return redirect('blog_detail', pk=pk)
         else:
             form = PostForm(instance=post)
-        # Render the edit_post template with the form and the post being edited
-        return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
-    else:
-        # Redirect regular users to the blog list page
-        return redirect('blog_list')
+    # Render the edit_post template with the form and the post being edited
+    return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
+
 
 @login_required
 def delete_post(request, pk):
@@ -143,11 +140,9 @@ def delete_post(request, pk):
         post = get_object_or_404(Post, pk=pk)
         # Delete Post
         post.delete()
-        # Redirect to the blog list page after successful deletion
-        return redirect('blog_list')
-    else:
-        # Redirect regular users to the blog list page
-        return redirect('blog_list')
+    # Redirect to the blog list page after successful deletion with toast
+    messages.success(request, 'Blog post deleted successfully')
+    return redirect('blog_list')
 
 @login_required
 def add_to_favorite_posts(request, pk):
@@ -166,7 +161,8 @@ def add_to_favorite_posts(request, pk):
     favorite, created = Favorite.objects.get_or_create(user=request.user)
     # Add the post to the user's favorite posts
     favorite.posts.add(post)
-     # Redirect to the blog post's detail page
+    # Redirect to the blog post's detail page with toast
+    messages.success(request, 'Added to favorites')
     return redirect('blog_detail', pk=pk)
 
 @login_required
@@ -194,9 +190,9 @@ def favorite_posts_list(request):
         except Favorite.DoesNotExist:
             posts = []
             favorite_post_ids = []
-
     # Render the favorite_posts_list template with the user's favorite posts and favorite_post_ids
     return render(request, 'blog/favorite_posts_list.html', {'posts': posts, 'favorite_post_ids': favorite_post_ids})
+    
 
 
 @login_required
@@ -223,5 +219,6 @@ def remove_from_favorite_posts(request, pk):
     except Favorite.DoesNotExist:
         pass  # User doesn't have a favorites object, do nothing
 
-     # Redirect to the blog list page after removing from favorites
+    # Redirect to the blog list page after removing from favorites
+    messages.success(request, 'Blog post removed from favourites')
     return redirect('blog_list')
