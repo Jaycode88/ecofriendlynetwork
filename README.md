@@ -296,7 +296,154 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 
 ## Database Design
 
-### CRUD Functionality
+## CRUD Functionality
+### Sales Stats
+
+- **Sales Statistics(Admin Only)**
+	- **Read Sales Stats (R):**
+		- **Function:** sales_stats
+		- **Description:** Displays sales statistics for products within a certain date range and optionally filtered by product and category.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves and computes sales data using aggregation functions on Product and OrderLineItem models.
+
+- **Order Managment(Admin Only)**
+	- **Read Orders (R):**
+		- **Function:** manage_orders
+		- **Description:** Displays and filters orders based on search criteria such as order number, username, and postcode.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves orders from the Order model based on the applied filters.
+
+	- **Read Order Detail (R):**
+		- **Function:** order_detail
+		- **Description:** Displays the details of a specific order.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves a single Order instance by ID.
+
+### User Profiles
+
+- **User Profile Management:**
+	- **Read Profile (R):**
+		- **Function:** profile
+		- **Description:** Displays the user's profile and order history.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves UserProfile instance and related - Order instances.
+	- **Update Profile (U):**
+		- **Function:** profile (on POST request)
+		- **Description:** Allows users to update their profile information.
+		- **HTTP Method:** POST
+		- **Database Operation:** Updates the user's UserProfile instance in the database.
+	- **Read Order History (R):**
+		- **Function:** order_history
+		- **Description:** Displays a user's past order confirmation for a specific order.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves a single Order instance by order number.
+
+### Products and Favorites
+
+- **Product Management:**
+	- **Read Products (R):**
+		- **Function:** all_products
+		- **Description:** Displays all products, optionally sorted and filtered.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves Product instances, possibly with sorting 	and 	filtering based on query parameters.
+	- **Read Product Detail (R):**
+		- **Function:** product_detail
+		- **Description:** Displays the details of an individual product.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves a single Product instance by ID.
+	- **Create Product (C):**
+		- **Function:** add_product
+		- **Description:** Adds a new product to the store.
+		- **HTTP Method:** POST
+		- **Database Operation:** Inserts a new Product instance into the database.
+	- **Update Product (U):**
+		- **Function:** edit_product
+		- **Description:** Edits an existing product in the store.
+		- **HTTP Method:** POST
+		- **Database Operation:** Updates a Product instance in the database.
+	- **Delete Product (D):**
+		- **Function:** delete_product
+		- **Description:** Deletes a product from the store.
+		- **HTTP Method:** POST
+		- **Database Operation:** Removes a Product instance from the database.
+
+- **Favorite Products (User-specific):**
+	- **Create Favorite (C):**
+		- **Function:** add_to_favorites
+		- **Description:** Adds a product to the user's favorites.
+		- **HTTP Method:** POST
+		- **Database Operation:** Creates a new Favorite instance linking the user to a product.
+	- **Read Favorites (R):**
+		- **Function:** user_favorites
+		- **Description:** Displays the user's favorite products.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves Favorite instances related to the user.
+	- **Delete Favorite (D):**
+		- **Function:** remove_from_favorites
+		- **Description:** Removes a product from the user's favorites.
+		- **HTTP Method:** POST
+		- **Database Operation:** Deletes a Favorite instance from the database.
+
+### Checkout
+
+- **Checkout Process:**
+	- **Create Order (C):**
+		- **Function:** checkout
+		- **Description:** Processes user's bag and payment information to create an order.
+		- **HTTP Method:** POST
+		- **Database Operation:** Inserts a new Order instance and related OrderLineItem instances into the database.
+	- **Read Checkout Success (R):**
+		- **Function:** checkout_success
+		- **Description:** Displays a success message and order details post-checkout.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves an Order instance by order number.
+
+### Blog
+
+- **Blog Post Management:**
+	- **Read Blog List (R):**
+		- **Function:** blog_list
+		- **Description:** Displays a list of all blog posts.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves Post instances from the database.
+	- **Read Blog Detail (R):**
+		- **Function:** blog_detail
+		- **Description:** Displays the details of a specific blog post.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves a single Post instance by primary key.
+	- **Create Blog Post (C):**
+		- **Function:** add_post
+		- **Description:** Adds a new blog post to the blog.
+		- **HTTP Method:** POST
+		- **Database Operation:** Inserts a new Post instance into the database.
+	- **Update Blog Post (U):**
+		- **Function:** edit_post
+		- **Description:** Edits an existing blog post.
+		- **HTTP Method:** POST
+		- **Database Operation:** Updates a Post instance in the database.
+	- **Delete Blog Post (D):**
+		- **Function:** delete_post
+		- **Description:** Deletes a blog post.
+		- **HTTP Method:** POST
+		- **Database Operation:** Removes a Post instance from the database.
+
+- **Favorite Blog Posts (User-specific):**
+	- **Create Favorite Post (C):**
+		- **Function:** add_to_favorite_posts
+		- **Description:** Adds a blog post to the user's list of favorite posts.
+		- **HTTP Method:** POST
+		- **Database Operation:** Updates the Favorite instance to add a Post instance.
+	- **Read Favorite Posts (R):**
+		- **Function:** favorite_posts_list
+		- **Description:** Displays the user's favorite blog posts.
+		- **HTTP Method:** GET
+		- **Database Operation:** Retrieves Favorite instances related to the user and the related Post instances.
+	- **Delete Favorite Post (D):**
+		- **Function:** remove_from_favorite_posts
+		- **Description:** Removes a blog post from the user's list of favorite posts.
+		- **HTTP Method:** POST
+		- **Database Operation:** Updates the Favorite instance to remove a Post instance.
+
 
 ## **TESTING**
 For the documentation of all testing,Please see [TESTING.md](TESTING.md) 
