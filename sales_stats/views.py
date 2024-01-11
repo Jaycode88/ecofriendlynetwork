@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Sum, Count, Q, Value, DecimalField
+from django.contrib import messages
 from django.db.models.functions import Coalesce
 from django.utils import timezone
 from django.utils.dateparse import parse_date
@@ -83,6 +84,10 @@ def sales_stats(request):
 
     sales_and_favorites_data = query
 
+    # Check if the filtered query returns no results and display toast
+    if not sales_and_favorites_data.exists():
+        messages.warning(request, "No data found for the selected criteria.")
+
     context = {
         'sales_data': sales_and_favorites_data,
         'products': products,
@@ -136,6 +141,10 @@ def manage_orders(request):
 
     # Retrieve orders based on applied filters
     orders = query.all()
+
+    # Check if the filtered orders query returns no results and display toast
+    if not orders:
+        messages.warning(request, "No orders found matching your search criteria.")
 
     context = {
         'form': form, 
