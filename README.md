@@ -783,5 +783,35 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 The home page image was from [Freepik](https://www.freepik.com/) by [jcomp](https://www.freepik.com/author/jcomp)
 
 ### Tools and Technologies used
+- [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
+- [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
+- [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
+- [Python 3.9.17](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
+- [Bootstrap 4.6.2](https://getbootstrap.com/) is a is a powerful front-end framework for faster and easier web development, Bootstrap provides ready-to-use components and responsive design templates.
+- [Django 4.2.9](https://www.djangoproject.com/) is a high-level Python web framework that enables rapid development of secure and maintainable websites, streamlining web application development with its pragmatic design.
+- [ElephantSQL](https://www.elephantsql.com/) is a cloud-hosted PostgreSQL database service that offers automated backups, easy scaling, and a user-friendly interface for database management.
+- [SQLite](https://www.sqlite.org/index.html) is an embedded SQL database engine that provides a lightweight disk-based database without requiring a separate server process, facilitating easy setup and simple data management.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Heroku](https://heroku.com) To create and Host the Deployed App.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Figma](https://www.figma.com/) used to create wireframes & high fidelity prototypes.
+- [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
+- [Font Awesome](https://fontawesome.com/) For Icons
+- [Google Fonts](https://fonts.google.com/) for all Fonts.
+- [Diagrams.net](https://draw.io) Used to create database model Flow chart.
+- [W3C Html Validator](https://validator.w3.org/) Used to validate HTML.
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) Used to validate CSS.
+- [JSHint](https://jshint.com/) Used to validate JQuery.
+- [CodeInstitute Python Linter](https://pep8ci.herokuapp.com/) Used to Check Python for PEP-8 Compliance.
+- [WAVE](https://wave.webaim.org/) Used to check accesability.
+- [Responsinator](http://www.responsinator.com/) Used to check responsiveness.
+- [UI.dev](https://ui.dev/amiresponsive) Used to create am I responsive image.
+- [Pytest](https://pypi.org/project/pytest/) Used for Python unit testing.
 
 ### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/)  for his amazing help, advice and support throughout the development of this project.
+- - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
+- I would like to thank freinds for there on going support and reviewing of the Web App.
