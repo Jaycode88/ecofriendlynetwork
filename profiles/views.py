@@ -24,21 +24,20 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
         else:
             # Provides an error message if the form is invalid.
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
     else:
-        # Provides a form populated with the user's current profile information.
+        # Provide form populated with user's profile information.
         form = UserProfileForm(instance=profile)
-    
+
     # Retrieves all orders associated with the profile.
     orders = profile.orders.all()
 
-    
     template = 'profiles/profile.html'
     context = {
         'orders': orders,
         'form': form,
         'on_profile_page': True,
-    
     }
 
     # Renders the profile template with the given context.

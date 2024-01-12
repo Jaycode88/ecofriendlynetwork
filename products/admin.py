@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
 
+
 class ProductAdmin(admin.ModelAdmin):
     """
     Custom admin class for the Product model.
@@ -33,6 +34,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
-# Registering the Product and Category models with their respective admin classes.
+
+# Registering Product & Category models with their admin classes.
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

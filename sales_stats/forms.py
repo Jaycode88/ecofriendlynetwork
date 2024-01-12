@@ -1,5 +1,6 @@
 from django import forms
 
+
 class OrderSearchForm(forms.Form):
     """
     Form for searching orders based on various criteria.
@@ -10,7 +11,7 @@ class OrderSearchForm(forms.Form):
         postcode (CharField): Postcode input field (optional).
         date (DateField): Date input field (optional).
     """
-    
+
     order_number = forms.CharField(required=False)
     username = forms.CharField(required=False)
     postcode = forms.CharField(required=False)

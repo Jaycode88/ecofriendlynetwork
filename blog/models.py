@@ -2,6 +2,7 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
+
 class Post(models.Model):
     """
     Represents a blog post.
@@ -9,11 +10,15 @@ class Post(models.Model):
     Attributes:
         title (str): The title of the blog post (max length 200 characters).
         author (User): The author of the post, linked to the User model.
-        excerpt (str, optional): A short description or excerpt of the blog post (nullable and blank).
+        excerpt (str, optional): A short description or excerpt of the blog
+         post (nullable and blank).
         content (str): The main content of the blog post.
-        image (ImageField, optional): An image associated with the blog post (nullable and blank).
-        created_on (DateTimeField): The date and time when the post was created (auto-generated).
-        updated_on (DateTimeField): The date and time when the post was last updated (auto-generated).
+        image (ImageField, optional): An image associated with the blog
+         post (nullable and blank).
+        created_on (DateTimeField): The date and time when the post was
+         created (auto-generated).
+        updated_on (DateTimeField): The date and time when the post was last
+         updated (auto-generated).
 
     Methods:
         __str__(): Returns the title of the post as its string representation.
@@ -31,20 +36,23 @@ class Post(models.Model):
         """Returns the title of the post as its string representation."""
         return self.title
 
+
 class Favorite(models.Model):
     """
     Represents a user's favorite blog posts.
 
     Attributes:
         user (User): The user who has favorite posts, linked to the User model.
-        posts (ManyToManyField): A many-to-many relationship with the Post model,
-            allowing users to have multiple favorite posts.
+        posts (ManyToManyField): A many-to-many relationship with the
+        Post model, allowing users to have multiple favorite posts.
 
     Methods:
-        __str__(): Returns a string representation of the user's favorite posts, including the user's username.
+        __str__(): Returns a string representation of the user's
+        favorite posts, including the user's username.
 
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="favorite_posts")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="favorite_posts")
     posts = models.ManyToManyField(Post)
 
     def __str__(self):

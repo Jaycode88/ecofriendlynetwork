@@ -1,4 +1,10 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    HttpResponse,
+    get_object_or_404,
+    redirect,
+    render,
+    reverse,
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -14,6 +20,7 @@ import stripe
 
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -21,7 +28,7 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
 
-        # Modify the PaymentIntent metadata to include bag, save_info, and username
+        # Modify PaymentIntent metadata to include bag, save_info & username
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
             'save_info': request.POST.get('save_info'),
@@ -44,7 +51,7 @@ def checkout(request):
     if request.method == 'POST':
         # Get the bag from the session and populate the order form
         bag = request.session.get('bag', {})
-         
+
         form_data = {
             # Extract form data from POST request
             'full_name': request.POST['full_name'],
@@ -77,22 +84,24 @@ def checkout(request):
                         )
                         order_line_item.save()
 
+                # Handle product not found
                 except Product.DoesNotExist:
-                    # Handle product not found in the database and return an error message
+                    # return error message
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in yourbag wasn't in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
             # Handle form validation errors and return an error message
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-    
+
     else:
         bag = request.session.get('bag', {})
     if not bag:
@@ -144,6 +153,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """

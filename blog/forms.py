@@ -1,6 +1,7 @@
 from django import forms
 from .models import Post
 
+
 class PostForm(forms.ModelForm):
     """
     Form for creating and editing blog posts.
@@ -10,7 +11,7 @@ class PostForm(forms.ModelForm):
 
     Attributes:
         Meta (class): A nested class within the form that provides metadata.
-            In this case, it specifies the model to use and the fields to include.
+        In this case, it specifies the model to use and the fields to include.
 
     """
     class Meta:

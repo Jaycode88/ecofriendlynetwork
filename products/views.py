@@ -30,7 +30,8 @@ def all_products(request):
         if request.user.is_superuser:
             products = products.annotate(favorites_count=Count('favorite'))
         # Get the list of favorite product IDs for the logged-in user
-        favorite_ids = Favorite.objects.filter(user=request.user).values_list('product_id', flat=True)
+        favorite_ids = Favorite.objects.filter(
+            user=request.user).values_list('product_id', flat=True)
     else:
         favorite_ids = []
 
@@ -60,12 +61,14 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-        
+
         # Handle empty search results
         if not products.exists():
             messages.warning(request, "Your search returned no results.")
@@ -90,10 +93,11 @@ def product_detail(request, product_id):
     is_favorite = False  # Initialize is_favorite
     favorites_count = 0  # Initialize favorites count
 
-    # Check if the user is authenticated and if the product is in their favorites
+    # Check user is authenticated & if product is in their favorites
     if request.user.is_authenticated:
-        is_favorite = Favorite.objects.filter(user=request.user, product=product).exists()
-    
+        is_favorite = Favorite.objects.filter(
+            user=request.user, product=product).exists()
+
     # Superuser specific feature: count how many users favorited this product
     if request.user.is_superuser:
         favorites_count = Favorite.objects.filter(product=product).count()
@@ -113,25 +117,28 @@ def add_product(request):
 
     # Restrict access to superusers only
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry only store owners can add products to the store')
+        messages.error(
+            request, 'Sorry only store owners can add products to the store')
         return redirect(reverse('home'))
 
     # Handles form submission for adding a new product.
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            # Saves the product and redirects to its detail page on successful form submission.
+            # Saves product, redirects to detail page on successful submission.
             product = form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             # Displays an error message if the form is invalid.
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.')
     else:
         # Provides an empty form for adding a new product.
         form = ProductForm()
-        
-   # Renders the add product template with the form.
+
+    # Renders the add product template with the form.
     template = 'products/add_product.html'
     context = {'form': form}
 
@@ -146,7 +153,7 @@ def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry only store owners can edit products.')
         return redirect(reverse('home'))
-    # Retrieves the product to edit or returns a 404 error if not found.   
+    # Retrieves the product to edit or returns a 404 error if not found.
     product = get_object_or_404(Product, pk=product_id)
 
     # Handles form submission for editing the product.
@@ -159,7 +166,9 @@ def edit_product(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             # Displays an error message if the form is invalid.
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         # Fills the form with the existing product details for editing.
         form = ProductForm(instance=product)
@@ -184,11 +193,12 @@ def delete_product(request, product_id):
         messages.error(request, 'Sorry only store owners can delete products.')
         return redirect(reverse('home'))
 
-    # Retrieves the product to delete or returns a 404 error if not found.   
+    # Retrieves the product to delete or returns a 404 error if not found.
     product = get_object_or_404(Product, pk=product_id)
     product.delete()    # Deletes the selected product.
     messages.success(request, f'Successfully deleted {product.name}')
-    return redirect(reverse('products'))     # Redirects to the products page after deletion.
+    # Redirects to the products page after deletion.
+    return redirect(reverse('products'))
 
 
 @login_required
@@ -196,11 +206,14 @@ def add_to_favorites(request, product_id):
     """ Add a product to the user's favorites """
 
     product = get_object_or_404(Product, id=product_id)
-    _, created = Favorite.objects.get_or_create(user=request.user, product=product)
+    _, created = Favorite.objects.get_or_create(
+        user=request.user, product=product)
     if created:
-        messages.success(request, f'"{product.name}" has been added to your favorites!')
+        messages.success(
+            request, f'"{product.name}" has been added to your favorites!')
     else:
-        messages.info(request, f'"{product.name}" is already in your favorites.')
+        messages.info(
+            request, f'"{product.name}" is already in your favorites.')
     return redirect('product_detail', product_id=product_id)
 
 
@@ -209,19 +222,24 @@ def remove_from_favorites(request, product_id):
     """ Remove a product from the user's favorites """
 
     product = get_object_or_404(Product, id=product_id)
-    deleted, _ = Favorite.objects.filter(user=request.user, product=product).delete()
+    deleted, _ = Favorite.objects.filter(
+        user=request.user, product=product).delete()
+
     if deleted:
-        messages.success(request, f'"{product.name}" has been removed from your favorites.')
+        messages.success(
+            request, f'"{product.name}" has been removed from your favorites.')
     else:
-        messages.info(request, f'"{product.name}" was not found in your favorites.')
+        messages.info(
+            request, f'"{product.name}" was not found in your favorites.')
     return redirect('product_detail', product_id=product_id)
 
 
 @login_required
 def user_favorites(request):
     """ Display the user's favorite products """
-    
-    favorites = Favorite.objects.filter(user=request.user).values_list('product', flat=True)
+
+    favorites = Favorite.objects.filter(user=request.user).values_list(
+            'product', flat=True)
     favorite_products = Product.objects.filter(id__in=favorites)
 
     if not favorite_products.exists():

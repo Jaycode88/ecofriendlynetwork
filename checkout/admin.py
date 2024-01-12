@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import csv
 from .models import Order, OrderLineItem
 
+
 # A function to export orders to CSV
 def export_orders_to_csv(modeladmin, request, queryset):
     response = HttpResponse(content_type='text/csv')
@@ -14,16 +15,21 @@ def export_orders_to_csv(modeladmin, request, queryset):
 
     # Write data
     for order in queryset:
-        writer.writerow([order.order_number, order.date, order.full_name, order.grand_total])
+        writer.writerow(
+            [order.order_number, order.date,
+                order.full_name, order.grand_total])
 
     return response
 
+
 export_orders_to_csv.short_description = 'Export to CSV'
+
 
 # Customize the display and behavior of OrderLineItem within OrderAdmin
 class OrderLineItemAdminInLine(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
+
 
 # OrderAdmin class with various customizations
 class  OrderAdmin(admin.ModelAdmin):
@@ -31,15 +37,15 @@ class  OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('order_number', 'date',
                         'delivery_cost', 'order_total',
-                        'grand_total', 'original_bag', 
+                        'grand_total', 'original_bag',
                         'stripe_pid')
 
     fields = ('order_number', 'user_profile', 'date', 'full_name',
                 'email', 'phone_number', 'country',
                 'postcode', 'town_or_city', 'street_address1',
                 'street_address2', 'county', 'delivery_cost',
-                'order_total', 'grand_total', 'original_bag', 
-                        'stripe_pid')
+                'order_total', 'grand_total', 'original_bag',
+                'stripe_pid')
 
     list_display = ('order_number', 'date', 'full_name',
                     'delivery_cost', 'order_total',
@@ -49,10 +55,11 @@ class  OrderAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
     # Enhanced search fields
-    search_fields = ('order_number', 'full_name', 'email', 
-                     'phone_number', 'postcode', 'town_or_city', 
+    search_fields = ('order_number', 'full_name', 'email',
+                     'phone_number', 'postcode', 'town_or_city',
                      'street_address1', 'street_address2')
 
     actions = [export_orders_to_csv]
+
 
 admin.site.register(Order, OrderAdmin)

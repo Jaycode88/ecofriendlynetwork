@@ -32,8 +32,6 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <!-- Display each blog post in a card -->
                             <div class="card h-100 border-0">
-                                <!-- Link to the blog post detail page -->
-                                <a href="{% url 'blog_detail' post.id %}">
                                     <!-- Check if the blog post has an image -->
                                     {% if post.image %}
                                         <!-- Display the blog post image if available -->
@@ -46,7 +44,6 @@
                                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                                         </a>
                                     {% endif %}
-                                </a>
                                 <div class="card-body">
                                     <!-- Blog post title and excerpt -->
                                     <h5 class="card-title">{{ post.title }}</h5>

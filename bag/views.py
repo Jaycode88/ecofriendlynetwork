@@ -1,8 +1,14 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404,
+    HttpResponse)
 from django.contrib import messages
 from products.models import Product
 
 from products.models import Product
+
 
 def view_bag(request):
     """
@@ -34,7 +40,8 @@ def add_to_bag(request, item_id):
         item_id (int): The ID of the product to add to the bag.
 
     Returns:
-        HttpResponse: Redirect to the previous page after adding the product to the bag.
+        HttpResponse: Redirect to the previous page after adding
+        the product to the bag.
     """
 
     product = get_object_or_404(Product, pk=item_id)
@@ -44,13 +51,14 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'Updated {product.name} in your bag to {bag[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} in your bag to {bag[item_id]}')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
-    
+
     return redirect(redirect_url)
 
 
@@ -61,18 +69,20 @@ def adjust_bag(request, item_id):
     Args:
         request (HttpRequest): The HTTP request object.
         item_id (int): The ID of the product to adjust.
-    
+
     Returns:
-        HttpResponse: Redirect to the shopping bag view after adjusting the quantity.
+        HttpResponse: Redirect to the shopping bag view after
+        adjusting the quantity.
     """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-    
+
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag.pop(item_id)
         messages.success(request, f'Removed {product.name} from your bag')
@@ -88,15 +98,16 @@ def remove_from_bag(request, item_id):
     Args:
         request (HttpRequest): The HTTP request object.
         item_id (int): The ID of the product to remove from the bag.
-    
+
     Returns:
-        HttpResponse: A response indicating the status of the removal operation.
+        HttpResponse: A response indicating the status of the
+        removal operation.
     """
-    
+
     bag = request.session.get('bag', {})
     product = get_object_or_404(Product, pk=item_id)
     try:
-    
+
         bag.pop(item_id)
         messages.success(request, f'Removed {product.name} from your bag')
         request.session['bag'] = bag

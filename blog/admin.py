@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Post
 
+
 class PostAdmin(admin.ModelAdmin):
     """
     Custom admin class for the Post model.
@@ -15,6 +16,7 @@ class PostAdmin(admin.ModelAdmin):
 
     # Filtering options based on the creation date.
     list_filter = ('created_on',)
+
 
 # Registering the Post model with its custom admin class.
 admin.site.register(Post, PostAdmin)

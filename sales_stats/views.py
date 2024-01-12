@@ -11,6 +11,7 @@ from products.models import Product, Favorite, Category
 from checkout.models import OrderLineItem, Order
 from .forms import OrderSearchForm
 
+
 def is_superuser(user):
     """
     Check if a user is a superuser.
@@ -22,6 +23,7 @@ def is_superuser(user):
         bool: True if the user is a superuser, False otherwise.
     """
     return user.is_superuser
+
 
 @login_required
 @user_passes_test(is_superuser)
@@ -45,13 +47,15 @@ def sales_stats(request):
     # Parsing dates
     if start_date:
         start_date = parse_date(start_date)
-        start_date = timezone.make_aware(datetime.combine(start_date, datetime.min.time()))
+        start_date = timezone.make_aware(
+            datetime.combine(start_date, datetime.min.time()))
     else:
         start_date = timezone.make_aware(datetime(year=2023, month=12, day=1))
 
     if end_date:
         end_date = parse_date(end_date)
-        end_date = timezone.make_aware(datetime.combine(end_date, datetime.max.time()))
+        end_date = timezone.make_aware(
+            datetime.combine(end_date, datetime.max.time()))
     else:
         end_date = timezone.now()
 
@@ -64,14 +68,31 @@ def sales_stats(request):
 
     # Applying date filter and calculating statistics
     query = query.annotate(
-        total_sales=Coalesce(Sum('orderlineitem__quantity', 
-                                 filter=Q(orderlineitem__order__date__gte=start_date, 
-                                          orderlineitem__order__date__lte=end_date)), 0),
-        total_revenue=Coalesce(Sum('orderlineitem__lineitem_total', 
-                                   filter=Q(orderlineitem__order__date__gte=start_date, 
-                                            orderlineitem__order__date__lte=end_date)), 0, 
-                              output_field=DecimalField()),
-        total_favorites=Coalesce(Count('favorite'), 0)
+        total_sales=Coalesce(
+            Sum('orderlineitem__quantity',
+                filter=Q(
+                    orderlineitem__order__date__gte=start_date,
+                    orderlineitem__order__date__lte=end_date
+                )
+                ),
+            0
+        ),
+
+        total_revenue=Coalesce(
+            Sum('orderlineitem__lineitem_total',
+                filter=Q(
+                    orderlineitem__order__date__gte=start_date,
+                    orderlineitem__order__date__lte=end_date
+                )
+                ),
+            0,
+            output_field=DecimalField()
+        ),
+
+        total_favorites=Coalesce(
+            Count('favorite'),
+            0
+        )
     )
 
     # Applying product filter if selected
@@ -144,19 +165,21 @@ def manage_orders(request):
 
     # Check if the filtered orders query returns no results and display toast
     if not orders:
-        messages.warning(request, "No orders found matching your search criteria.")
+        messages.warning(
+            request, "No orders found matching your search criteria.")
 
     context = {
-        'form': form, 
-        'orders': orders, 
-        'order_number': order_number, 
-        'username': username, 
+        'form': form,
+        'orders': orders,
+        'order_number': order_number,
+        'username': username,
         'postcode': postcode,
         'start_date': start_date,
         'end_date': end_date
     }
 
     return render(request, 'sales_stats/manage_orders.html', context)
+
 
 @login_required
 @user_passes_test(is_superuser)
@@ -171,7 +194,7 @@ def order_detail(request, order_id):
     Returns:
         HttpResponse: The response containing the order detail page.
     """
-    
+
     order = get_object_or_404(Order, id=order_id)
     template = 'checkout/checkout_success.html'
     context = {
