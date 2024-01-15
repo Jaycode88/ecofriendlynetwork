@@ -214,6 +214,7 @@ I chose Roboto for body text due suitable contrast to the Allan Headings, As wel
 
 All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
+![Sans Serif](documentation/sanserif.webp)
 As a best practice, I have also included Sans Serif as a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
 ## User Stories
@@ -778,9 +779,13 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 
 ## Credits
 ### Content
+All Product descriptions were provided by [VGANG](https://vgang.io/)
+All other worded content was originally created by myself and then edited and improved with suggestions from [ChatGPT](https://openai.com/chatgpt)
 
 ### Media
 The home page image was from [Freepik](https://www.freepik.com/) by [jcomp](https://www.freepik.com/author/jcomp)
+All Product images were provided by [VGANG](https://vgang.io/)
+All Blog post images and the favicon were created with [DALL-E](https://openai.com/dall-e-2)
 
 ### Tools and Technologies used
 - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
