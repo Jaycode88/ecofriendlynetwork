@@ -292,6 +292,131 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 
 ## Features
 ### Existing Features
+- **Navigation Bar**	
+	- The navigation bar is a central feature that enhances the user experience by providing easy access to key functionalities and content within Eco Friendly Network. Whether on a desktop or a mobile device, users can seamlessly navigate through the application with the help of this feature.
+	- The Nav Bar consist of:
+	- The Brand Logo text: which when clicked directs the user to the homepage 
+	- A product search form along with product category and blog viewing options
+	-  A shopping bag subtotal and link
+	-  A My acccount drop down menu (containing links to profile and other options)
+	- A Text banner Advertising the free delivery amount.
+	- A Mobile nav view for smaller screens containing all above options in a more condensed form
+
+![Nav Bar Desktop](documentation/navbardesktop.webp)
+![Nav Bar Mobile](documentation/navbarmobile.webp)
+
+- **Sign Up/Sign In**
+	- The sign Up page/form enables members to become members of the site with ability to save an address as well as favorite products and blog posts.
+	- contains links for sign in
+
+![Sign Up](documentation/signup.webp)
+	- The sign in page enables users to access their accounts
+	- Contains links for forgotten password and sign up
+
+![Sign In](documentation/signin.webp)
+
+- **My Profile**
+	- Allows users to view & update default information
+	- Displays user's list of placed orders
+
+![My Profile](documentation/profile.webp)
+
+- **Products View**
+	- This page displays products in a grid layout suitable for the viewing device.
+	- This page is used to display All products aswell as category and search selections
+	- This view is also used to display a list of the users favorite products accessible via the "My Account" menu.
+	- All results in this view can be sorted via many factors contained in the "sort by" menu
+	- Each product contains tags providing rating, category and wether the product is in their favorites
+	- For superusers only, It also displays the total amount of favorites a product has by users as well as links to edit and delete a product
+
+![products](documentation/products.webp)
+
+- **Product Detail Page**
+	- This page provides the user with a description of a product aswell as the information tags that were included on the products page
+	- Here user's can find the link to add and remove the product from their favorites
+	- Includes a quantiy selector input with the option to add the item to the bag or return to the products view
+	
+![Product Detail](documentation/productdetail.webp)
+
+- **Shopping Bag**
+	- This provides a place for customers to review their purchases before commiting to checkout
+	- This page displays a list of products the User has added to their bag
+	- Each product line item consists of the product thumbnail image, Title Price, Quantity with selection/Remove and line total/sub total
+	- The Quantity selector automatically updates totals without the need for the use to click an update button, This was implemented for ease of use
+	- After the list of items the bag total, delivery cost and grand total is displayed followed by the procced to checkout and back to shopping buttons
+	- If the Free delivery amaount is not reached a note is displayed to advise the customer of what they need to spend to get free delivery.
+
+![Shopping Bag](documentation/shopbag.webp)
+
+- **CheckOut**
+	- This page the user with an order summary and an order form to complete with  payment.
+	- The order form is prefilled with the users address infrmation if they have an account.
+	- Payment is processed with stripe, Includes webhook to ensure no orders can be lost during the payment process.
+	- Has buttons to return to bag and complete order, with a warning that the card will be charged.
+	- This page has a loading over-lay So that the payment process can not be interupted by clicks on the page.
+
+![CheckOut](documentation/checkout.webp)
+
+- **Order Confirmation**
+	- This page displays an ordery complete summary after a succesful checkout
+	- Button to return to shop to see latest deals.
+
+![Order Confirmation](documentation/ordersummary.webp)
+
+- **Blog List**
+	- This page provides a list of all blog posts in a grid layout suitable for the viewong device
+	- This page is also used to display the user's favorite blogs which is accesible via the blog dropdown menu.
+	- Each blog tile contains an Image, The blog title and excepert as well as the date posted and the author.
+	- Link and icon displayed for users to add blog to favorites.
+	- Links for superuser's only to edit and delete posts
+
+![Blog List](documentation/blog.webp)
+
+- **Blog Detail**
+	- This page shows the blog in a larger view, It provides the full blog article rather than just the excerpt.
+	- Has the same links and information tags as on the blog list page
+
+![Blog Detail](documentation/blogdetail.webp)
+
+- **Toast Meassages**
+	- Toast messages are displayed for many different event types including Success, Error , Info and Warning
+	- Toast messages provide great functionality in informing the user of errors or succesful tasks.
+
+![Toasts](documentation/toast.webp)
+
+#### Super User Only Features
+- **Add & Edit Products**
+	- This form allows super users to add and edit products.
+	- The Edit Product form is the same as the Add Product form except it is prefilled with the selected products information.
+	- The Add product form can be accessed via the "My Account" dropdown nav menu
+	- The Edit Product form can be accessed via clicking on the links on the product list and detail pages
+
+![Add/Edit Products](AddLinkHere)
+
+- **Add & Edit Blog Posts**
+	- This form allows super users to add and edit blog posts.
+	- The content section for the blog post enables blogs to be written in HTML format To aquire the correct spacing/paragraphing required. Any content not written with HTML structuring will be displayed as on continuous piece with no paragraph seperation or sub headings etc.
+	- The Edit Blog form is the same as Add Blog except it is prefilled with the selected blogs content.
+	- The Add Blog page can be accessed via the "Blog" dropdown nav menu
+	- The Edit Blog page can be accessed via the links on the blog list & detail pages
+
+![Add/Edit Blog](documentation/addblog.webp)
+
+- **View Orders**
+	- This page is accessible via the "My Account" dropdown nav menu
+	- This page allows superusers to search and filter all customer orders
+	- If a Order in the list is selected the super user is taken to the order reciept page with a button to return to the orders view.
+	- This page was implemented so super users had a user friendly place to view and search orders.
+
+![View Orders](documentation/orders.webp)
+
+- **Products Statistics page**
+	- This page is accessible via the "My Account" dropdown nav menu
+	- This page allows superusers to search and filter all products via category, product and dates, Returning the Statistics for the options selected.
+	- The Favorites column Is not affected via date selection It simply shows how many users have the product saved as favorite at the time of viewing the page
+	- This page was implemented to give Admin an accessible area where they can get required statistics helping them make stock decisions such as wether to discontinue a product or discount etc.
+
+![Product Statistics](documentation/productstats.webp)
 
 ### Future Features
 
