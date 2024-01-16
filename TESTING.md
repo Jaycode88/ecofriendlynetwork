@@ -31,6 +31,12 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
     - [Blog Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F3%2F)
     ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
 
+    - [Profile](to discuss)
+
+    - [Add Product](TBC)
+
+    - [Edit Product](TBC)
+
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
@@ -45,6 +51,14 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 ```
 /* jshint esversion: 11, jquery: true */
 ```
+
+- **Results**
+
+    - Countryfield.js
+    ![Countryfield JS Valid](documentation/countryfieldjsvalid.webp)
+
+    - add_product.html
+    ![Add_product JS Valid](documentation/addproductscriptvalid.webp)
 
 ### PEP8
 
@@ -76,6 +90,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Bugs
 ### Fixed Bugs
-When Attempting to create the functionality for the shopping bag to be updated upon the click of the increment or decrement button being pushed rather than needing a submit button: I cam accross great difficulty in that when i was pressing the increment or decrement buttons the no. of items value would increment or decrement by 2 rather than 1 When i tried to fix this I would get varying results mainly the buttons not disabling and enabling correctly or the increment and decrements going in values of 2. After a lot of time debugging I realised it was due to using the quantity input script in the bag template as I was changing the function it was nessacerry to completely  rewrite the code for the bag template and leave the quantity input script for the product details page only.
+When Attempting to create the functionality for the shopping bag to be updated upon the click of the increment or decrement button being pushed rather than needing a submit button: I came accross great difficulty in that when i was pressing the increment or decrement buttons the no. of items value would increment or decrement by 2 rather than 1 When i tried to fix this I would get varying results mainly the buttons not disabling and enabling correctly or the increment and decrements going in values of 2. After a lot of time debugging I realised it was due to using the quantity input script in the bag template as I was changing the function it was nessacerry to completely  rewrite the code for the bag template and leave the quantity input script for the product details page only.
 
 ## Unfixed Bugs
