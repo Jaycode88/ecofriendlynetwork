@@ -904,13 +904,13 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 
 ## Credits
 ### Content
-All Product descriptions were provided by [VGANG](https://vgang.io/)
-All other worded content was originally created by myself and then edited and improved with suggestions from [ChatGPT](https://openai.com/chatgpt)
+- All Product descriptions were provided by [VGANG](https://vgang.io/)
+- All other worded content was originally created by myself and then edited and improved with suggestions from [ChatGPT](https://openai.com/chatgpt)
 
 ### Media
-The home page image was from [Freepik](https://www.freepik.com/) by [jcomp](https://www.freepik.com/author/jcomp)
-All Product images were provided by [VGANG](https://vgang.io/)
-All Blog post images and the favicon were created with [DALL-E](https://openai.com/dall-e-2)
+- The home page image was from [Freepik](https://www.freepik.com/) by [jcomp](https://www.freepik.com/author/jcomp)
+- All Product images were provided by [VGANG](https://vgang.io/)
+- All Blog post images and the favicon were created with [DALL-E](https://openai.com/dall-e-2)
 
 ### Tools and Technologies used
 - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
