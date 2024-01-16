@@ -65,8 +65,6 @@ class Favorite(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     # Link to the product
     product = models.ForeignKey('Product', on_delete=models.CASCADE)
-    # Timestamp for when the favorite was added
-    created = models.DateTimeField(default=timezone.now)
 
     class Meta:
         # Ensures a user can only favorite a product once
