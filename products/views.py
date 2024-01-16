@@ -242,6 +242,9 @@ def user_favorites(request):
             'product', flat=True)
     favorite_products = Product.objects.filter(id__in=favorites)
 
+    if request.user.is_superuser:
+        favorite_products = favorite_products.annotate(favorites_count=Count('favorite'))
+
     if not favorite_products.exists():
         messages.info(request, "You haven't added any favorites yet.")
 
