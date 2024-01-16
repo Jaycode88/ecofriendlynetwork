@@ -11,6 +11,26 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 - **Results:**
 
+    - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F)
+    ![Home Results Pass](documentation/homehtml.webp)
+
+    - [Sign Up](To be checked)
+
+    - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogin%2F)
+    ![Sign In Results Pass](documentation/signinhtml.webp)
+
+    - [Products](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2F)
+    ![Products Results Pass](documentation/productshtml.webp)
+
+    - [Product Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2F1%2F)
+    ![Product Detail Results Pass](documentation/productdetailhtml.webp)
+
+    - [Blog](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F)
+    ![Blog Results Pass](documentation/bloghtml.webp)
+
+    - [Blog Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F3%2F)
+    ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
+
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
