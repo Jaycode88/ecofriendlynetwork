@@ -1,6 +1,5 @@
 /* jshint esversion: 11, jquery: true */
 
-
 /**
  * Script for handling the default country selection in forms.
  * It sets the default color of the country selector based on whether a country is selected.
