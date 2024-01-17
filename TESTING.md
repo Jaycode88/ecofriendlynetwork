@@ -103,5 +103,12 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 - **Email Confirmation**
     I found that on my deployed site order confirmation emails were not being sent. After much time looking over code and not finding the issue my mentor suggested checking that the webhook endpoint was correct in my Stripe settings. My mentor was right my Stripe webhook endpoint was still set to my site preview rather than my deployed site.
 
+- **Sales Stats Favorites Count**
+    The application was displaying inconsistent counts of how many users had marked a product as a favorite in the sales_stats app compared to the products app. The sales_stats app's count of favorites per product was incorrect, potentially leading to misleading data representation in the sales statistics.
+
+    The discrepancy was caused by the way the total_favorites was calculated in the sales_stats view. Initially, the count of favorites might have included duplicate counts or was affected by other filters applied to the sales data, such as date ranges.
+
+    Therefore the line of code responsible for counting the total number of favorites for each product in the sales_stats view was modified:
+    ![Sales Stats Favorites Fix](documentation/favoritesfix.webp)
 
 ## Unfixed Bugs
