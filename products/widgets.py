@@ -19,5 +19,4 @@ class CustomClearableFileInput(ClearableFileInput):
     input_text = _('')
 
     # Template used to render this widget. Points to a custom HTML template.
-    template_name = 'products/custom_widget_templates/custom_clearable_file_input.html'
-    
+    template_name = 'products/custom_widget_templates/custom_clearable_file_input.html'  # noqa

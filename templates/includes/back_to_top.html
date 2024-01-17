@@ -1,4 +1,4 @@
-<div id="back-to-top" class="btt-button shadow-sm rounded-0 border border-black" style="display: none;">
+<div id="back-to-top" class="btt-button shadow-sm rounded-0 border border-black d-none">
     <a  href="#" class="btt-link d-flex h-100" aria-label="Back to Top">
         <!-- Icon for back to top -->
         <i class="fas fa-arrow-up text-green mx-auto my-auto"></i>
@@ -10,9 +10,9 @@
         // Show or hide the back to top button based on scroll position
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
-                $('#back-to-top').fadeIn();
+                $('#back-to-top').removeClass('d-none');
             } else {
-                $('#back-to-top').fadeOut();
+                $('#back-to-top').addClass('d-none');
             }
         });
 
