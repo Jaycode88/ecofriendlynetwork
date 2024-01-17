@@ -5,7 +5,6 @@ html {
 body {
    background: url(/media/homebackground.webp) no-repeat center center fixed; 
    background-size: cover;
-   height: calc(100vh - 164px);
    color: #555;
    font-family: 'Roboto', sans-serif;
 }
@@ -282,6 +281,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .index-main-container {
+        padding-top: 125px;
+    }
 }
 
 /* pad the top when navbar is collapsed on mobile */
@@ -291,6 +294,40 @@ input[name='q']::placeholder {
     }
 
     body {
-        height: calc(100vh - 125px);
+        min-height: 100vh;
+        padding-top: 125px; /* add space for the navbar */
+    }
+}
+
+@media (max-width: 411px) {
+    .header-container {
+        padding-top: 85px;
+    }
+
+    body {
+        min-height: 100vh;
+        padding-top: 85px;
+    }
+}
+
+@media (max-width: 363px) {
+    .header-container {
+        padding-top: 115px;
+    }
+
+    body {
+        min-height: 100vh;
+        padding-top: 115px;
+    }
+}
+
+@media (max-width: 327px) {
+    .header-container {
+        padding-top: 125px;
+    }
+
+    body {
+        min-height: 100vh;
+        padding-top: 125px;
     }
 }
