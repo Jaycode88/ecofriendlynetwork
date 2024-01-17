@@ -89,10 +89,7 @@ def sales_stats(request):
             output_field=DecimalField()
         ),
 
-        total_favorites=Coalesce(
-            Count('favorite'),
-            0
-        )
+        total_favorites=Count('favorite', distinct=True)
     )
 
     # Applying product filter if selected
