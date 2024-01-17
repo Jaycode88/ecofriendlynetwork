@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required, user_passes_test
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.db.models import Sum, Count, Q, Value, DecimalField
 from django.contrib import messages
 from django.db.models.functions import Coalesce
@@ -12,21 +12,7 @@ from checkout.models import OrderLineItem, Order
 from .forms import OrderSearchForm
 
 
-def is_superuser(user):
-    """
-    Check if a user is a superuser.
-
-    Args:
-        user (User): User instance to check.
-
-    Returns:
-        bool: True if the user is a superuser, False otherwise.
-    """
-    return user.is_superuser
-
-
 @login_required
-@user_passes_test(is_superuser)
 def sales_stats(request):
     """
     Display sales statistics for products.
@@ -37,6 +23,9 @@ def sales_stats(request):
     Returns:
         HttpResponse: The response containing the sales statistics page.
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Access denied. Only superusers can view sales statistics.")
+        return redirect('home')
 
     # Retrieve filter parameters from GET request
     start_date = request.GET.get('start_date')
@@ -120,7 +109,6 @@ def sales_stats(request):
 
 
 @login_required
-@user_passes_test(is_superuser)
 def manage_orders(request):
     """
     Display and manage orders with filters.
@@ -131,6 +119,9 @@ def manage_orders(request):
     Returns:
         HttpResponse: The response containing the manage orders page.
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Access denied. Only superusers can manage orders.")
+        return redirect('home')
 
     # Create an order search form
     form = OrderSearchForm(request.GET)
@@ -179,7 +170,6 @@ def manage_orders(request):
 
 
 @login_required
-@user_passes_test(is_superuser)
 def order_detail(request, order_id):
     """
     Display order details.
@@ -191,6 +181,9 @@ def order_detail(request, order_id):
     Returns:
         HttpResponse: The response containing the order detail page.
     """
+    if not request.user.is_superuser:
+        messages.error(request, "Access denied. Only superusers can view order details.")
+        return redirect('home')
 
     order = get_object_or_404(Order, id=order_id)
     template = 'checkout/checkout_success.html'

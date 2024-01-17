@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Favorite
 from .forms import PostForm
 
@@ -84,21 +84,26 @@ def add_post(request):
     Returns:
         A rendered template for adding a new blog post.
     """
-
+    
     # Check if the user is a superuser
-    if request.user.is_superuser:
-        if request.method == 'POST':
-            form = PostForm(request.POST, request.FILES)
-            if form.is_valid():
-                post = form.save(commit=False)
-                # Set the author of the post to the current user
-                post.author = request.user
-                post.save()
-                # Redirect to blog list & display message
-                messages.success(request, 'Blog post added successfully')
-                return redirect('blog_list')
-        else:
-            form = PostForm()
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry only store owners can add blog posts')
+        return redirect('blog_list')
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            # Set the author of the post to the current user
+            post.author = request.user
+            post.save()
+            # Redirect to blog list & display message
+            messages.success(request, 'Blog post added successfully')
+            return redirect('blog_list')
+    else:
+        form = PostForm()
+    
     # Render the add_post template with the form
     return render(request, 'blog/add_post.html', {'form': form})
 
@@ -128,8 +133,11 @@ def edit_post(request, pk):
                 return redirect('blog_detail', pk=pk)
         else:
             form = PostForm(instance=post)
-    # Render the edit_post template with the form and the post being edited
-    return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
+        # Render the edit_post template with the form and the post being edited
+        return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
+    else:
+        messages.error(request, 'Only superusers are allowed to edit blog posts.')
+        return redirect('blog_list')
 
 
 @login_required
@@ -151,9 +159,12 @@ def delete_post(request, pk):
         post = get_object_or_404(Post, pk=pk)
         # Delete Post
         post.delete()
-    # Redirect to the blog list page after successful deletion with toast
-    messages.success(request, 'Blog post deleted successfully')
-    return redirect('blog_list')
+        # Redirect to the blog list page after successful deletion with toast
+        messages.success(request, 'Blog post deleted successfully')
+        return redirect('blog_list')
+    else:
+        messages.error(request, 'Only superusers are allowed to delete blog posts.')
+        return redirect('blog_list')
 
 
 @login_required
