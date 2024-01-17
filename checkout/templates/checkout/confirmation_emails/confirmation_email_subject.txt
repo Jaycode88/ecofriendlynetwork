@@ -1,1 +1,1 @@
-Eco Friendly Newtwork Confirmation Order Number {{ order.order_number }}
+Eco Friendly Network Confirmation Order Number {{ order.order_number }}

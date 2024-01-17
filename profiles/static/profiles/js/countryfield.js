@@ -11,7 +11,7 @@ let countrySelected = $('#id_default_country').val();
 
 // If no country is selected initially, set the color to a greyish tone
 if(!countrySelected) {
-    $('id_default_country').css('color', '#aab7c4');
+    $('#id_default_country').css('color', '#aab7c4');
 };
 
 // Add a change event listener to the country selection dropdown
