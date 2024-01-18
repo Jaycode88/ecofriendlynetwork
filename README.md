@@ -130,35 +130,36 @@ In essence, our goal is to seamlessly blend commercial success with our commitme
 ## UX
 ### Color Scheme
 
-I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme" Except I chose a lighter green for contrast reasons. The orriginal theme used #678760(Sage Green) and I chose #7BA273(Muted Pea Green).
-
+I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme" . I did decide to replace their selection of #FB9B27(Tangerine) with #A8671A(Burnt Sienna) for contrast reasons.
 ![colourscheme](documentation/colourscheme.webp)
 
 ### Color by color:
 
- - **Muted Pea Green**
-![Muted Pea Green](documentation/peagreen.webp)
+ - **Sage Green**
+![SageGreen](documentation/sagegreen.webp)
 
-     - Natural and Restorative: This shade of green, similar to fresh peas, connects deeply with nature. It symbolizes growth, renewal, and the rejuvenating qualities of the natural world. Its muted tone suggests a calming effect, much like a peaceful, verdant landscape.
+     - Connection with Nature: Green hues are typically linked with nature, suggesting a sense of growth, renewal, and life. This particular shade of green, reminiscent of natural foliage, can evoke feelings of being grounded and connected to the natural world.
 
-     - Balance and Stability: As with most greens, #7BA273 offers a sense of balance. It is neither too bold nor too subtle, providing a stable visual anchor. This quality makes it excellent for designs aiming to convey a sense of equilibrium and steadiness.
+     - Balance and Harmony: Green is considered a color of balance and harmony, derived from its position in the color spectrum being in the middle of warm and cool tones. This shade of sage green, with its balanced mix of green and gray, can reinforce these qualities.
 
-     - Refreshing and Revitalizing: Muted Pea Green carries an inherently refreshing quality, reminiscent of lush foliage and new growth. It can create a sense of revitalization, especially when used in spaces or designs meant for relaxation and rejuvenation.
+     - Health and Wellness: Often, green is associated with health and wellness. This might be due to its prevalent presence in healthy natural foods and its representation of vitality and freshness.
 
-     - Understated Elegance: Unlike more vivid greens, this shade is more restrained and sophisticated. It offers an elegance that is subtle and not overly opulent, suitable for designs that aim for an upscale yet approachable look.
+     - Sophistication and Elegance: The muted quality of this sage green can impart a sense of sophistication and understated elegance. It's often used in interior design to create a chic, yet calming atmosphere.
 
-     - Comfort and Serenity: This particular green hue imparts a sense of comfort and serenity, making it ideal for environments where peace and calm are desired. It's a color that can soothe the senses and promote a tranquil atmosphere.
+     - Subtlety and Softness: Unlike brighter or darker greens, this shade is more subtle and soft, which can create a more welcoming and less overwhelming space. It's often favored in design for its versatility and gentle appearance.
 
-- **Tangerine**
-![Tangerine](documentation/tangerine.webp)
+- **Burnt Sienna**
+![Burnt Sienna](documentation/burntsienna.webp)
 
-    - Energy and Enthusiasm: Bright orange hues are often associated with energy, vibrancy, and excitement. They tend to evoke feelings of enthusiasm and can stimulate activity and social interaction.
+    - Earthiness and Warmth: The color Burnt Sienna, with its deep, rich earth tone, embodies warmth and a grounded feeling. It is reminiscent of natural elements like soil and autumn leaves, bringing a sense of warmth and comfort to designs.
 
-    - Attention-Grabbing: Due to its high visibility, orange is used to catch attention and highlight the most important elements in a design. It can be used effectively to draw focus or emphasize key points.
+    - Stability and Strength: This shade of brown is often associated with stability and reliability. It can convey a sense of strength and resilience, making it a good choice for designs that aim to evoke feelings of security and dependability.
 
-    - Optimism and Positivity: Like other warm colors, orange is often linked with positivity and optimism. It's a color that can uplift moods and bring a sense of brightness and cheerfulness.
+    - Rustic Charm: Burnt Sienna has a rustic quality that can add a charming, old-world feel to a design. It's ideal for themes that aim to reflect tradition, heritage, or a connection with the past.
 
-    - Creativity and Playfulness: Orange is considered a color that stimulates creativity and playfulness. It's seen as a fun, lively color that can encourage spontaneous and unconventional thinking.
+    - Sophistication and Depth: As a deeper and more complex color than brighter oranges or yellows, Burnt Sienna provides a sophisticated palette. It can lend depth and richness to a design, making it suitable for elegant and refined themes.
+
+	- Nostalgia and Comfort: This color can evoke feelings of nostalgia and comfort, reminiscent of cozy, autumnal settings. It's a color that can make a space or design feel more inviting and homely.
 
 - **Peach**
 ![Peach](documentation/peach.webp)

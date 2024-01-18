@@ -27,22 +27,28 @@ body {
     width: fit-content;
 }
 
+/* free delivery banner */
+.custom-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .shop-now-button {
-    background: #fb9b27;
+    background: #a8671a;
     border: 2px solid #d3d4d5;
-    color: #000;
+    color: #fff;
     min-width: 260px;
 }
 
 .btn-orange {
-    background: #fb9b27;
+    background: #a8671a;
     border: 2px solid #d3d4d5;
-    color: #000;
+    color: #fff !important;
     font-weight: bold;
 }
 
 .btn-green {
-    background: #7BA273;
+    background: #678760;
     border: 2px solid #d3d4d5;
     color: #000;
     font-weight: bold;
@@ -55,8 +61,8 @@ body {
 .btn-orange:active,
 .btn-orange:focus {
     background: #fcc15d;
-    color: #000;
-    border: 2px solid #fb9b27;
+    color: #000 !important;
+    border: 2px solid #a8671a;
 }
 
 .btn-green:hover,
@@ -64,7 +70,7 @@ body {
 .btn-green:focus {
     background: #d3d4d5;
     color: #000;
-    border: 2px solid #7BA273;
+    border: 2px solid #678760;
 }
 
 .nav-i:hover,
@@ -78,7 +84,7 @@ body {
 }
 
 .text-orange {
-    color: #fb9b27 !important;
+    color: #a8671a !important;
 }
 
 .text-grey {
@@ -86,7 +92,7 @@ body {
 }
 
 .text-green {
-    color: #7BA273 !important;
+    color: #678760 !important;
 }
 
 .text-black {
@@ -98,11 +104,11 @@ body {
 }
 
 .bg-green {
-    background: #7BA273;
+    background: #678760;
 }
 
 .bg-orange {
-    background: #fb9b27;
+    background:#a8671a;
 }
 
 .overlay {
@@ -116,7 +122,7 @@ body {
 }
 
 .badge-cust {
-    background: #7BA273 !important;
+    background: #678760 !important;
 }
 
 a.category-badge > span.badge:hover {

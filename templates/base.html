@@ -68,7 +68,7 @@
             <div class="input-group w-100">
               <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search our site">
               <div class="input-group-append">
-                <button class="form-control btn btn-green border border-black rounded-0" type="submit">
+                <button class="form-control btn btn-green border border-black rounded-0" type="submit" aria-label="Submit Search">
                   <span class="icon">
                     <i class="fas fa-search"></i>
                   </span>
@@ -135,8 +135,8 @@
         </nav>
       </div>
       <div class="row text-center" id="delivery-banner">
-        <div class="col bg-green text-black">
-          <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+        <div class="col bg-green">
+          <p class="logo-font custom-text text-black my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</p>
         </div>
       </div>
     </header>
