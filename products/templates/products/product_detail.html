@@ -90,7 +90,8 @@
                                         <!-- Decrement Button: Reduces quantity by one -->
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-green rounded-0" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}"
+                                                aria-label="Decrement Quantity Button">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
@@ -99,11 +100,13 @@
                                         <!-- Quantity Input: Shows the current quantity, can be manually edited -->
                                         <input class="form-control qty_input" type="number" 
                                             name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                            data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"
+                                            aria-label="Quantity Input">
                                         <!-- Increment Button: Increases quantity by one -->
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-green rounded-0"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}"
+                                                aria-label="Decrement Quantity Button">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>

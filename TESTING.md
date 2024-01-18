@@ -76,6 +76,20 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ### Form Validation Testing
 
 ### LightHouse Testing
+I used Google Chrome Lighthouse testing to assess the quality of the web app.
+
+| Page | Results desktop | Results mobile |
+|------|-----------------|----------------|
+|Home| ![Lighthouse Home Desktop](documentation/homedesktop.webp)|  |
+|Sign Up| ![Lighthouse Sign Up Desktop](documentation/lightsignupdesktop.webp)|  |
+|Sign In| ![Lighthouse Sign In Desktop](documentation/signindesktop.webp)|  |
+|Products|
+|Product Detail|
+|Blog|
+|Blog Detail|
+|Profile|
+|Add Product|
+|Edit Product|
 
 ## Defensive Programming
 
@@ -109,6 +123,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
     The discrepancy was caused by the way the total_favorites was calculated in the sales_stats view. Initially, the count of favorites might have included duplicate counts or was affected by other filters applied to the sales data, such as date ranges.
 
     Therefore the line of code responsible for counting the total number of favorites for each product in the sales_stats view was modified:
-    ![Sales Stats Favorites Fix](documentation/favoritesfix.webp)
+    ![Sales Stats Favorites Fix](documentation/favoritesfix.webp )
 
 ## Unfixed Bugs
