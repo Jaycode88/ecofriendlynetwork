@@ -318,6 +318,10 @@ input[name='q']::placeholder {
         min-height: 100vh;
         padding-top: 85px;
     }
+
+    .welcome-text {
+        font-size: 48px;
+    }
 }
 
 @media (max-width: 363px) {
