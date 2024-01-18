@@ -320,11 +320,11 @@ input[name='q']::placeholder {
     }
 
     .index-main-container {
-        padding-top: 40px;
+        padding-top: 25px;
     }
 
     .welcome-text {
-        font-size: 35x;
+        font-size: 34x;
     }
 }
 
