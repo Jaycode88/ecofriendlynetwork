@@ -38,12 +38,14 @@ body {
     background: #fb9b27;
     border: 2px solid #d3d4d5;
     color: #000;
+    font-weight: bold;
 }
 
 .btn-green {
-    background: #678760;
+    background: #7BA273;
     border: 2px solid #d3d4d5;
     color: #000;
+    font-weight: bold;
 }
 
 .shop-now-button:hover,
@@ -62,7 +64,7 @@ body {
 .btn-green:focus {
     background: #d3d4d5;
     color: #000;
-    border: 2px solid #678760;
+    border: 2px solid #7BA273;
 }
 
 .nav-i:hover,
@@ -84,7 +86,7 @@ body {
 }
 
 .text-green {
-    color: #678760 !important;
+    color: #7BA273 !important;
 }
 
 .text-black {
@@ -96,7 +98,7 @@ body {
 }
 
 .bg-green {
-    background: #678760;
+    background: #7BA273;
 }
 
 .bg-orange {
@@ -114,7 +116,7 @@ body {
 }
 
 .badge-cust {
-    background: #678760 !important;
+    background: #7BA273 !important;
 }
 
 a.category-badge > span.badge:hover {
