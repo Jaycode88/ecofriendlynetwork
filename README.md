@@ -130,23 +130,24 @@ In essence, our goal is to seamlessly blend commercial success with our commitme
 ## UX
 ### Color Scheme
 
-I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme(as seen below)
+I researched colour schemes on [ShutterStock](https://www.shutterstock.com/blog/sustainable-design-color-palettes). I decided to choose their pre-made "Clean Living theme" Except I chose a lighter green for contrast reasons. The orriginal theme used #678760(Sage Green) and I chose #7BA273(Muted Pea Green).
+
 ![colourscheme](documentation/colourscheme.webp)
 
 ### Color by color:
 
- - **Sage Green**
-![SageGreen](documentation/sagegreen.webp)
+ - **Muted Pea Green**
+![Muted Pea Green](documentation/peagreen.webp)
 
-     - Connection with Nature: Green hues are typically linked with nature, suggesting a sense of growth, renewal, and life. This particular shade of green, reminiscent of natural foliage, can evoke feelings of being grounded and connected to the natural world.
+     - Natural and Restorative: This shade of green, similar to fresh peas, connects deeply with nature. It symbolizes growth, renewal, and the rejuvenating qualities of the natural world. Its muted tone suggests a calming effect, much like a peaceful, verdant landscape.
 
-     - Balance and Harmony: Green is considered a color of balance and harmony, derived from its position in the color spectrum being in the middle of warm and cool tones. This shade of sage green, with its balanced mix of green and gray, can reinforce these qualities.
+     - Balance and Stability: As with most greens, #7BA273 offers a sense of balance. It is neither too bold nor too subtle, providing a stable visual anchor. This quality makes it excellent for designs aiming to convey a sense of equilibrium and steadiness.
 
-     - Health and Wellness: Often, green is associated with health and wellness. This might be due to its prevalent presence in healthy natural foods and its representation of vitality and freshness.
+     - Refreshing and Revitalizing: Muted Pea Green carries an inherently refreshing quality, reminiscent of lush foliage and new growth. It can create a sense of revitalization, especially when used in spaces or designs meant for relaxation and rejuvenation.
 
-     - Sophistication and Elegance: The muted quality of this sage green can impart a sense of sophistication and understated elegance. It's often used in interior design to create a chic, yet calming atmosphere.
+     - Understated Elegance: Unlike more vivid greens, this shade is more restrained and sophisticated. It offers an elegance that is subtle and not overly opulent, suitable for designs that aim for an upscale yet approachable look.
 
-     - Subtlety and Softness: Unlike brighter or darker greens, this shade is more subtle and soft, which can create a more welcoming and less overwhelming space. It's often favored in design for its versatility and gentle appearance.
+     - Comfort and Serenity: This particular green hue imparts a sense of comfort and serenity, making it ideal for environments where peace and calm are desired. It's a color that can soothe the senses and promote a tranquil atmosphere.
 
 - **Tangerine**
 ![Tangerine](documentation/tangerine.webp)
