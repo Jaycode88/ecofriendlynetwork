@@ -7,7 +7,7 @@ HTML / CSS / Python / Django / Jquery
 
 By Joe Seabrook
 
-![screenshot](**Add amiresponsive image**)
+![AmIResponsive Image](documentation/amiresponsive.webp)
 
 ## Strategy
 
@@ -391,7 +391,7 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- The Add product form can be accessed via the "My Account" dropdown nav menu
 	- The Edit Product form can be accessed via clicking on the links on the product list and detail pages
 
-![Add/Edit Products](AddLinkHere)
+![Add/Edit Products](documentation/addproduct.webp)
 
 - **Add & Edit Blog Posts**
 	- This form allows super users to add and edit blog posts.
@@ -419,6 +419,18 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 ![Product Statistics](documentation/productstats.webp)
 
 ### Future Features
+
+- **Blog Search and Filter Functionality**
+	As the number of blog posts on Eco Friendly Network increases, introducing a search feature will greatly enhance user experience. This functionality will allow users to quickly find blogs by keywords, authors, or topics, making the content more accessible and navigable.
+
+- **User Statistics(For Admin)**
+	A dedicated section for superusers to view comprehensive statistics about user activities. This dashboard could include metrics such as most ordered products, user order histories, frequency of purchases, and other relevant data. This feature would aid in making informed business and stock decisions. This feature would sit nicely along with the other Statistics features already included in the Site.
+
+- **User Reviews and Ratings**
+	Implementing a system where users can rate and review products and blog posts. This feature not only fosters a sense of community but also provides valuable feedback for continuous improvement. Currently ratings are displayed for products but these are taken from the supplier of the products rather than made by Eco Friendly Network's Users. I believe it would be better for both users and Admin that the ratings figure were coming directly from the store rather than the product source.
+
+- **Share to Social Media**
+	Enabling users to share their favorite products, blogs, or their own shopping experiences directly to social media platforms. This feature could increase the visibility of Eco Friendly Network and drive more traffic to the site.
 
 ## Database Design
 
