@@ -31,6 +31,7 @@ class OrderForm(forms.ModelForm):
 
         # Set autofocus on the first field
         self.fields['full_name'].widget.attrs['autofocus'] = True
+
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:
@@ -40,7 +41,19 @@ class OrderForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 # Set placeholder text for the field
                 self.fields[field].widget.attrs['placeholder'] = placeholder
+                
             # Add a custom CSS class to the field
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             # Remove the auto-generated labels
             self.fields[field].label = False
+
+            # Add autocomplete attribute to email & country fields
+            if field == 'email':
+                self.fields[field].widget.attrs['autocomplete'] = 'email'
+            if field == 'country':
+                self.fields[field].widget.attrs['autocomplete'] = 'country-name'
+
+        # Add an aria-label for the country field for screen reader users
+        self.fields['country'].widget.attrs['aria-label'] = 'Country'
+            
+            

@@ -8,7 +8,7 @@
             <div class="col text-center mt-3">
                 <!-- Display the page title and subtitle -->
                 <h2 class="logo-font mb-4">Blog Management</h2>
-                <h5 class="text-muted">Add a Blog Post</h5>
+                <p class="custom-text text-muted">Add a Blog Post</p>
                 <hr>
             </div>
         </div>
@@ -32,6 +32,8 @@
                             <!-- Render the field using the 'as_crispy_field' template filter -->
                             {{ field | as_crispy_field }}
                         {% else %}
+                            <!-- Label for Image Field -->
+                            <label for="{{ field.auto_id }}">{{ field.label }}</label>
                             <!-- Render the image field as is -->
                             {{ field }}
                         {% endif %}

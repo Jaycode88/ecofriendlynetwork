@@ -11,7 +11,7 @@ let countrySelected = $('#id_default_country').val();
 
 // If no country is selected initially, set the color to a greyish tone
 if(!countrySelected) {
-    $('#id_default_country').css('color', '#aab7c4');
+    $('#id_default_country').css('color', '#6c757d');
 };
 
 // Add a change event listener to the country selection dropdown
@@ -22,7 +22,7 @@ $('#id_default_country').change(function() {
     // Check if a country is selected
     if(!countrySelected) {
         // If no country is selected, keep the color grey
-        $(this).css('color', '#aab7c4');
+        $(this).css('color', '#6c757d');
     } else {
         // If a country is selected, set the color to black for better visibility
         $(this).css('color', '#000') 

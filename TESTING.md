@@ -80,16 +80,26 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 | Page | Results desktop | Results mobile |
 |------|-----------------|----------------|
-|Home| ![Lighthouse Home Desktop](documentation/homedesktop.webp)|  |
-|Sign Up| ![Lighthouse Sign Up Desktop](documentation/lightsignupdesktop.webp)|  |
-|Sign In| ![Lighthouse Sign In Desktop](documentation/signindesktop.webp)|  |
+|Home| ![Lighthouse Home Desktop](documentation/homedesktop.webp)| ![Lighthouse Home Mobile](documentation/lighthomemob.webp) |
+|Sign Up| ![Lighthouse Sign Up Desktop](documentation/lightsignupdesktop.webp)| ![Lighthouse Sign Up Mobile](documentation/lightsignupmob.webp) |
+|Sign In| ![Lighthouse Sign In Desktop](documentation/signindesktop.webp)| ![Lighthouse Sign In Mobile](documentation/lightsigninmob.webp) |
 |Products|
-|Product Detail|
+|Product Detail| ![Lighthouse Product Detail Desktop](documentation/lighproductdetaildesk.webp)| ![Lighthouse Product Detail Mobile](documentation/lighproductdetailmob.webp) |
 |Blog|
 |Blog Detail|
 |Profile|
+|Shopping Bag|
+|Checkout Page|
+|Checkout Success|
 |Add Product|
 |Edit Product|
+|Add Blog Post|
+|Edit Blog Post|
+|Order Stats|
+|Product Stats|
+|Log Out|
+|Password reset|
+
 
 ## Defensive Programming
 

@@ -45,7 +45,7 @@
                     <!-- Display each item in the bag -->
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                            <a href="{% url 'product_detail' item.product.id %}" aria-label="Go to {{ product.name }}">
                                 {% if item.product.image %}
                                     <!-- Display product image -->
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
@@ -111,17 +111,17 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
                                 <!-- Display sign-up or login options for guest users -->
-								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                                </label>
+								<div class="form-check-label">
+                                    <a href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a href="{% url 'account_login' %}">login</a> to save this information
+                                </div>
 							{% endif %}
 						</div>
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- Stripe card element will be rendered here -->
-                        <div class="mb-3" id="card-element"></div>
+                        <div class="mb-3" id="stripe-card-element"></div>
 
                         <!-- Display form errors, if any -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>

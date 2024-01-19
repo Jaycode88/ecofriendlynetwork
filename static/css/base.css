@@ -27,7 +27,17 @@ body {
     width: fit-content;
 }
 
-/* free delivery banner */
+a {
+    color: #0044cc;
+}
+
+a:hover, a:focus {
+    color: #003399;
+    text-decoration: underline;
+}
+
+
+/* free delivery banner and other sub heads */
 .custom-text {
     font-size: 20px;
     font-weight: bold;
@@ -144,8 +154,19 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* forms */
+
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+/* shopping bag */
+.custom-bag-text {
+    font-size: 1rem;
+}
+
+.grand-total-text {
+    font-size: 1.33em;
 }
 
 /* -- bootstrap toasts -- */
@@ -237,7 +258,8 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #0044cc; /* text-info */
+    font-weight: bold;
 }
 
 /* product form */
@@ -351,5 +373,13 @@ input[name='q']::placeholder {
     body {
         min-height: 100vh;
         padding-top: 125px;
+    }
+}
+
+/* shopping bag */
+@media (max-width: 395px) {
+    /* Center the buttons horizontally */
+    .text-right {
+        text-align: center !important;
     }
 }

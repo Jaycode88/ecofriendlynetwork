@@ -18,9 +18,12 @@
     {{ widget.input_text }}:
 {% endif %}
 
-<!-- File Input for Image Upload -->
-<span class="btn btn-green rounded-0 btn-file">
-    Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
-</span>
+<!-- Label for File Input -->
+<label for="new-image" class="btn btn-green rounded-0 btn-file">
+    Select Image 
+    <!-- File Input for Image Upload -->
+    <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}" {% include "django/forms/widgets/attrs.html" %}>
+</label>
+
 <!-- Display Filename after Selection -->
 <p class="text-danger" id="filename"></p>
