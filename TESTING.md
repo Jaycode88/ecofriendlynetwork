@@ -88,7 +88,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |Blog| ![Lighthouse Blog Desktop](documentation/lightblogdesk.webp)| ![Lighthouse Blog Mobile](documentation/lightblogmob.webp) |
 |Blog Detail| ![Lighthouse Blog Detail Desktop](documentation/lightblogdetaildesk.webp)| ![Lighthouse Blog Detail Mobile](documentation/lightblogdetailmob.webp) |
 |Profile| ![Lighthouse Profile Desktop](documentation/lightprofdesk.webp)| ![Lighthouse Profile Mobile](documentation/lightprofmob.webp) |
-|Shopping Bag|
+|Shopping Bag|![Lighthouse Bag Desktop](documentation/lightbagdesk.webp)| ![Lighthouse Bag Mobile](documentation/lightbagmob.webp) |
 |Checkout Page|
 |Checkout Success|
 |Add Product|
