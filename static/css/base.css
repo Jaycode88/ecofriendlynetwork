@@ -290,7 +290,7 @@ input[name='q']::placeholder {
 }
 
 .cust-size {
-    max-width: 75%;
+    max-width: 800px;
     align-self: center;
 }
 
