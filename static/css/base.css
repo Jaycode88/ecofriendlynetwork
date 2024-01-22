@@ -289,9 +289,15 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* blog detail image */
 .cust-size {
     max-width: 800px;
     align-self: center;
+}
+
+/* Product detail image */
+.image-container {
+    max-width: 600px;
 }
 
 /* -- Media Queries -- */

@@ -85,9 +85,9 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |Sign In| ![Lighthouse Sign In Desktop](documentation/signindesktop.webp)| ![Lighthouse Sign In Mobile](documentation/lightsigninmob.webp) |
 |Products|![Lighthouse Product Desktop](documentation/lightproductdesktop.webp)|![Lighthouse Product Mobile](documentation/lightproductmob.webp)
 |Product Detail| ![Lighthouse Product Detail Desktop](documentation/lighproductdetaildesk.webp)| ![Lighthouse Product Detail Mobile](documentation/lighproductdetailmob.webp) |
-|Blog|
-|Blog Detail|
-|Profile|
+|Blog| ![Lighthouse Blog Desktop](documentation/lightblogdesk.webp)| ![Lighthouse Blog Mobile](documentation/lightblogmob.webp) |
+|Blog Detail| ![Lighthouse Blog Detail Desktop](documentation/lightblogdetaildesk.webp)| ![Lighthouse Blog Detail Mobile](documentation/lightblogdetailmob.webp) |
+|Profile| ![Lighthouse Profile Desktop](documentation/lightprofdesk.webp)| ![Lighthouse Profile Mobile](documentation/lightprofmob.webp) |
 |Shopping Bag|
 |Checkout Page|
 |Checkout Success|
