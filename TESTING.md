@@ -89,16 +89,17 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |Blog Detail| ![Lighthouse Blog Detail Desktop](documentation/lightblogdetaildesk.webp)| ![Lighthouse Blog Detail Mobile](documentation/lightblogdetailmob.webp) |
 |Profile| ![Lighthouse Profile Desktop](documentation/lightprofdesk.webp)| ![Lighthouse Profile Mobile](documentation/lightprofmob.webp) |
 |Shopping Bag|![Lighthouse Bag Desktop](documentation/lightbagdesk.webp)| ![Lighthouse Bag Mobile](documentation/lightbagmob.webp) |
-|Checkout Page|
-|Checkout Success|
-|Add Product|
-|Edit Product|
-|Add Blog Post|
-|Edit Blog Post|
-|Order Stats|
-|Product Stats|
-|Log Out|
-|Password reset|
+|Checkout Page|![Lighthouse Checkout Desktop](documentation/lightcheckdesk.webp)| ![Lighthouse Checkout Mobile](documentation/lightcheckmob.webp) |
+|Checkout Success|![Lighthouse Checkout Success Desktop](documentation/lightchecksuccessdesk.webp)| ![Lighthouse Checkout Success Mobile](documentation/lightchecksuccessmob.webp) |
+|Add Product|![Lighthouse Add Product Desktop](documentation/lightaddproddesk.webp)| ![Lighthouse Add Product Mobile](documentation/lightaddprodmob.webp) |
+|Edit Product|![Lighthouse Edit Product Desktop](documentation/lighteditproddesk.webp)| ![Lighthouse Edit Product Mobile](documentation/lighteditprodmob.webp) |
+|Add Blog Post|![Lighthouse Add Blog Desktop](documentation/lightaddblogdesk.webp)| ![Lighthouse Add Blog Mobile](documentation/lightaddblogmob.webp) |
+|Edit Blog Post|![Lighthouse Edit Blog Desktop](documentation/lighteditblogdesk.webp)| ![Lighthouse Edit Blog Mobile](documentation/lighteditblogmob.webp) |
+|Order Stats|![Lighthouse Order Stats Desktop](documentation/lightorderstatdesk.webp)| ![Lighthouse Order Stats Mobile](documentation/lightorderstatmob.webp) |
+|Product Stats|![Lighthouse Product Stats Desktop](documentation/lightprodstatdesk.webp) | ![Lighthouse Product Stats Mobile](documentation/lightprodstatmob.webp) |
+|View Order|![Lighthouse View Order Desktop](documentation/lightorderdesk.webp) | ![Lighthouse View Order Mobile](documentation/lightordermob.webp) |
+|Log Out|![Lighthouse Log Out Desktop](documentation/lightlogoutdesk.webp) | ![Lighthouse Log Out Mobile](documentation/lightlogoutmob.webp) |
+|Password reset|![Lighthouse Password Reset Desktop](documentation/lightresetdesk.webp) | ![Lighthouse Password Reset Mobile](documentation/lightresetmob.webp) |
 
 
 ## Defensive Programming
