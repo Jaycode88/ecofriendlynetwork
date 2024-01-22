@@ -36,12 +36,12 @@
                                     {% if post.image %}
                                         <!-- Display the blog post image if available -->
                                         <a href="{% url 'blog_detail' post.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+                                            <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}" width="300" height="300">
                                         </a>
                                     {% else %}
                                         <!-- Display a placeholder image if no image is available -->
                                         <a href="{% url 'blog_detail' post.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" width="300" height="300">
                                         </a>
                                     {% endif %}
                                 <div class="card-body">

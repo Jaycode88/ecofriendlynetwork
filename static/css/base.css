@@ -289,6 +289,11 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.cust-size {
+    max-width: 75%;
+    align-self: center;
+}
+
 /* -- Media Queries -- */
 
 /* Slightly larger container on xl screens */
@@ -315,6 +320,8 @@ input[name='q']::placeholder {
     .index-main-container {
         padding-top: 125px;
     }
+
+    
 }
 
 /* pad the top when navbar is collapsed on mobile */
@@ -330,6 +337,13 @@ input[name='q']::placeholder {
 
     .index-main-container {
         padding-top: 80px;
+    }
+    
+}
+
+@media (max-width: 611px) {
+    .cust-size {
+        max-width: 100%;
     }
 }
 
