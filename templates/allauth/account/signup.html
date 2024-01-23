@@ -13,7 +13,38 @@
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form|crispy }}
+
+  {% for field in form %}
+        <div class="form-group">
+            <label for="{{ field.id_for_label }}" class="control-label">{{ field.label }}</label>
+            <input type="{{ field.field.widget.input_type }}"
+                   name="{{ field.name }}"
+                   class="form-control {% if field.errors %}is-invalid{% endif %}"
+                   id="{{ field.id_for_label }}"
+                   placeholder="{{ field.field.widget.attrs.placeholder }}"
+                   {% if field.field.required %}required{% endif %}
+                   value="{{ field.value|default_if_none:'' }}">
+
+            {% if field.name == "password1" %}
+                <div class="form-text text-muted">
+                    <!-- Custom Password Hints -->
+                    <ul>
+                        <li>Your password can’t be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can’t be a commonly used password.</li>
+                        <li>Your password can’t be entirely numeric.</li>
+                    </ul>
+                </div>
+            {% endif %}
+
+          {% if field.errors %}
+              <div class="invalid-feedback">
+                  {{ field.errors|striptags }}
+              </div>
+          {% endif %}
+      </div>
+  {% endfor %}
+
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
