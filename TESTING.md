@@ -136,4 +136,11 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
     Therefore the line of code responsible for counting the total number of favorites for each product in the sales_stats view was modified:
     ![Sales Stats Favorites Fix](documentation/favoritesfix.webp )
 
+- **Signup Html Validation Error**
+When attempting to validate HTML on the sign up page I was recieving the following error:
+![Sign up HTML validation error](documentation/signuperror.webp).
+It was suggested that the problem was due to an incompatability between the versions of packages I had installed particuraly Allauth, Django and Crispy Forms,  but when checking this I could not find an issue.
+The only other option I had was to manually render the form in the signup.html rather than use crispy forms.
+![Sign up html error fix](documentation/signupfix.webp)
+
 ## Unfixed Bugs
