@@ -14,7 +14,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
     - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F)
     ![Home Results Pass](documentation/homehtml.webp)
 
-    - [Sign Up](To be checked)
+    - [Sign Up](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Fsignup%2F)
+    ![Sign Up Valid](documentation/signupvalid.webp)
 
     - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogin%2F)
     ![Sign In Results Pass](documentation/signinhtml.webp)
@@ -31,19 +32,68 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
     - [Blog Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F3%2F)
     ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
 
-    - [Profile](to discuss)
+    - [Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fprofile%2F)
+    ![Profile Results Pass](documentation/profilevalid.webp)
 
-    - [Add Product](TBC)
+    - [Shopping Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fbag%2F)
+    ![Shopping Bag Results Pass](documentation/bagvalid.webp)
 
-    - [Edit Product](TBC)
+    - [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2F)
+    ![Checkout Results Pass](documentation/checkoutvalid.webp)
+
+    - [Checkout Success](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA44315E1218E45D3BD6F89C825B3791F)
+    ![Checkout Success Results Pass](documentation/checkoutsuccessvalid.webp)
+
+    -[Add Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fadd%2F)
+    ![Add Product Results Pass](documentation/addproductvalid.webp)
+
+    - [Edit Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fedit%2F1)
+    ![Edit Product Results Pass](documentation/editproductvalid.webp)
+
+    - [Add Blog Post](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2Fadd%2F)
+    ![Add Blog results Pass](documentation/addblogvalid.webp)
+
+    - [Edit Blog Post](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2Fedit%2F2)
+    ![Edit Blog Results Pass](documentation/editblogvalid.webp)
+
+    - [Order Stats](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Fmanage_orders%2F)
+    ![Order Stats Results Pass](documentation/orderstatsvalid.webp)
+
+    - [Product Stats](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Fstats%2F)
+    ![Product Stats Results Pass](documentation/productstatsvalid.webp)
+
+    - [View Order](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Forder_detail%2F11%2F)
+    ![View Order Results Pass](documentation/viewordervalid.webp)
+
+    - [Log Out](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogout%2F)
+    ![Logout Results Pass](documentation/logoutvalid.webp)
+
+    - [Password Reset](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F)
+    ![Password Reset Results Pass](documentation/forgotvalid.webp)
+
+on the Profile, Add Product, Edit Product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order and Forgot Password pages you will see an info note in the validation results I have discussed this in the Unfixed Bugs section.
 
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
-- link to results: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- **base.css**
 
-![Css Valid](documentation/cssvalid.webp)
+link to results: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![Css Valid](documentation/basecssvalid.webp)
+
+- **Profile.css**
+
+link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![Profile CSS Valid](documentation/profilecssvalid.webp)
+
+- **checkout.css**
+
+link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![Checkout CSS Valid](documentation/checkoutcssvalid.webp)
 
 ### JavaScript
 
@@ -144,3 +194,18 @@ The only other option I had was to manually render the form in the signup.html r
 ![Sign up html error fix](documentation/signupfix.webp)
 
 ## Unfixed Bugs
+- **validation issues**
+Whilst validating the HTML for the Profile, Add Prduct, Edit product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order and Forgot Password pages, I recieved and info note(not an error) Regarding avoiding trailing slashes on void elements(see images)
+![Profile Valid info image](documentation/profilebug.webp)
+![Add Product Valid info image](documentation/addproductbug.webp)
+![Edit Product Valid info image](documentation/editproductbug.webp)
+![Add Blog Valid info image](documentation/addblogbug.webp)
+![Edit Blog Valid info image](documentation/editblogbug.webp)
+![Order Stats Valid info image](documentation/orderstatsbug.webp)
+![Product Stats Valid info image](documentation/productstatsbug.webp)
+![View Order Valid info image](documentation/vieworderbug.webp)
+![Forgot Password Valid info image](documentation/forgotbug.webp)
+
+I suspect this is due to a mis match in compatability between the versions of packages I have installed but as mentioned before I could not pin point this. As the validation note is only an info point and not a validation error or warning, I chose not to modify all the forms in a similar manner of which I did with the Signup error in the interest of completing the project on time.
+
+In an ideal scenario in which I had more time to complete I would of liked to look further into this and resolve the issue completely.
