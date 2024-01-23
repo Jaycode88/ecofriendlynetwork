@@ -107,8 +107,24 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
     - Countryfield.js
     ![Countryfield JS Valid](documentation/countryfieldjsvalid.webp)
 
-    - add_product.html
-    ![Add_product JS Valid](documentation/addproductscriptvalid.webp)
+    - products.html
+    ![Products JS Valid](documentation/productsjsvalid.webp)
+
+    - product_detail.html
+    ![Product Detail JS Valid](documentation/productdetailjsvalid.webp)
+
+    - quantity_buttons_script.html
+    ![Quantity Button Script JS Valid](documentation/qbsjsvalid.webp)
+
+    - image_upload_preview_script.html
+    ![Image Upload Script JS Valid](documentation/iupsjsvalid.webp)
+
+    - stripe_element.js
+     ![Stripe Element Script JS Valid](documentation/stripeelementjsvalid.webp)
+
+    - bag.html
+    ![Bag JS Valid](documentation/bagjsvalid.webp)
+
 
 ### PEP8
 
