@@ -170,7 +170,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||signals.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/signals.py)|![Results](documentation/pepchecksignals.webp)|
 ||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/models.py)|![Results](documentation/pepcheckmodels.webp)|
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/forms.py)|![Results](documentation/pepcheckforms.webp)|
-||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/apps.py)|![Results](documentation/pepcheckapps.webp|)
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/apps.py)|![Results](documentation/pepcheckapps.webp)|
 ||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/admin.py)|![Results](documentation/pepcheckadmin.webp)|
 **blog**
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/views.py)|![Results](documentation/pepblogviews.webp)|
