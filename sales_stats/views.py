@@ -25,7 +25,7 @@ def sales_stats(request):
     """
     if not request.user.is_superuser:
         messages.error(
-            request, "Access denied. Only superusers can view sales statistics.")
+            request, "Access denied. Only superusers can view statistics.")
         return redirect('home')
 
     # Retrieve filter parameters from GET request

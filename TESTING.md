@@ -97,7 +97,7 @@ link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=h
 
 ### JavaScript
 
-I have used the recommended [JShint Validator](https://jshint.com) to validate my JS files. I used version 11 which does not throw errors due to use of ES6 syntax, Aswell as informing JSHint that I was intenionally using jQuery. To do so I have added the following line to the top of my script.js file:
+I have used the recommended [JShint Validator](https://jshint.com) to validate my JS files. I used version 11 which does not throw errors due to use of ES6 syntax, Aswell as informing JSHint that I was intenionally using jQuery. To do so I have added the following line to the top of my scripts:
 ```
 /* jshint esversion: 11, jquery: true */
 ```
@@ -129,6 +129,60 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 ### PEP8
 
 I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInstitute) to check all Python files are PEP8 compliant.
+| Directory | File | Results Link | Results image |
+|--------|------|--------------|---------------|
+**eco_friendly_network**
+||wsgi.py|[view](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/eco_friendly_network/wsgi.py)|![Results](documentation/pepefnwsgi.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/eco_friendly_network/urls.py)|![Results](documentation/pepefnwurls.webp)|
+||settings.py|[view](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/eco_friendly_network/settings.py)|![Results](documentation/pepefnwsettings.webp)|
+||asgi.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/eco_friendly_network/asgi.py)|![Results](documentation/pepefnwasgi.webp)|
+**home**
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/views.py)|![Results](documentation/pephomeviews.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/urls.py)|![Results](documentation/pephomeurls.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/apps.py)|![Results](documentation/pephomeadmin.webp)|
+**products**
+||widgets.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/widgets.py)|![Results](documentation/pepprodwidgets.webp)|
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/views.py)|![Results](documentation/pepprodviews.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/urls.py)|![Results](documentation/pepprodurls.webp)|
+||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/models.py)|![Results](documentation/pepprodmodels.webp)|
+|forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/forms.py)|![Results](documentation/pepprodforms.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/apps.py)|![Results](documentation/pepprodapps.webp)|
+||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/admin.py)|![Results](documentation/pepprodadmin.webp)|
+**profiles**
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/views.py)|![Results](documentation/pepprofviews.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/urls.py)|![Results](documentation/pepprofurls.webp)|
+||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/models.py)|![Results](documentation/pepprofmodels.webp)|
+||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/forms.py)|![Results](documentation/pepprofforms.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/apps.py)|![Results](documentation/pepprofapps.webp)|
+**sales_stats**
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/views.py)|![Results](documentation/pepsalesviews.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/urls.py)|![Results](documentation/pepsalesurls.webp)|
+||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/models.py)|![Results](documentation/pepsalesmodels.webp)|
+||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/forms.py)|![Results](documentation/pepsalesforms.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/apps.py)|![Results](documentation/pepsalesapps.webp)|
+||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/admin.py)|![Results](documentation/pepsalesadmin.webp)|
+**Checkout**
+||webhooks.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/webhooks.py)|![Results](documentation/pepcheckwebhooks.webp)|
+||webhook_handler.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/webhook_handler.py)|![Results](documentation/pepcheckwh.webp)|
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/views.py)|![Results](documentation/pepcheckviews.webp)|
+||urls.py|[view](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/urls.py)|![Results](documentation/pepcheckurls.webp)|
+||signals.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/signals.py)|![Results](documentation/pepchecksignals.webp)|
+||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/models.py)|![Results](documentation/pepcheckmodels.webp)|
+||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/forms.py)|![Results](documentation/pepcheckforms.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/apps.py)|![Results](documentation/pepcheckapps.webp|)
+||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/admin.py)|![Results](documentation/pepcheckadmin.webp)|
+**blog**
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/views.py)|![Results](documentation/pepblogviews.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/urls.py)|![Results](documentation/pepblogurls.webp)|
+||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/models.py)|![Results](documentation/pepblogmodels.webp)|
+||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/forms.py)|![Results](documentation/pepblogforms.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/apps.py)|![Results](documentation/pepblogapps.webp)|
+||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/admin.py)|![Results](documentation/pepblogadmin.webp)|
+**bag**
+||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/views.py)|![Results](documentation/pepbagviews.webp)|
+||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/urls.py)|![Results](documentation/pepbagurls.webp)|
+||contexts.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/contexts.py)|![Results](documentation/pepbagcontexts.webp)|
+||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/apps.py)|![Results](documentation/pepbagapps.webp)|
 
 ## Cross Platform Testing
 
