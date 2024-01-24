@@ -12,65 +12,84 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 - **Results:**
 
     - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F)
-    ![Home Results Pass](documentation/homehtml.webp)
+
+            ![Home Results Pass](documentation/homehtml.webp)
 
     - [Sign Up](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Fsignup%2F)
 
-    ![Sign Up Valid](documentation/signupvalid.webp)
+            ![Sign Up Valid](documentation/signupvalid.webp)
 
     - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogin%2F)
-    ![Sign In Results Pass](documentation/signinhtml.webp)
+
+            ![Sign In Results Pass](documentation/signinhtml.webp)
 
     - [Products](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2F)
-    ![Products Results Pass](documentation/productshtml.webp)
+
+            ![Products Results Pass](documentation/productshtml.webp)
 
     - [Product Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2F1%2F)
-    ![Product Detail Results Pass](documentation/productdetailhtml.webp)
+
+            ![Product Detail Results Pass](documentation/productdetailhtml.webp)
 
     - [Blog](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F)
-    ![Blog Results Pass](documentation/bloghtml.webp)
+
+            ![Blog Results Pass](documentation/bloghtml.webp)
 
     - [Blog Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F3%2F)
-    ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
+
+            ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
 
     - [Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fprofile%2F)
-    ![Profile Results Pass](documentation/profilevalid.webp)
+
+            ![Profile Results Pass](documentation/profilevalid.webp)
 
     - [Shopping Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fbag%2F)
-    ![Shopping Bag Results Pass](documentation/bagvalid.webp)
+
+            ![Shopping Bag Results Pass](documentation/bagvalid.webp)
 
     - [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2F)
-    ![Checkout Results Pass](documentation/checkoutvalid.webp)
+
+            ![Checkout Results Pass](documentation/checkoutvalid.webp)
 
     - [Checkout Success](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA44315E1218E45D3BD6F89C825B3791F)
-    ![Checkout Success Results Pass](documentation/checkoutsuccessvalid.webp)
+
+            ![Checkout Success Results Pass](documentation/checkoutsuccessvalid.webp)
 
     -[Add Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fadd%2F)
-    ![Add Product Results Pass](documentation/addproductvalid.webp)
+
+            ![Add Product Results Pass](documentation/addproductvalid.webp)
 
     - [Edit Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fedit%2F1)
-    ![Edit Product Results Pass](documentation/editproductvalid.webp)
+
+            ![Edit Product Results Pass](documentation/editproductvalid.webp)
 
     - [Add Blog Post](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2Fadd%2F)
-    ![Add Blog results Pass](documentation/addblogvalid.webp)
+
+            ![Add Blog results Pass](documentation/addblogvalid.webp)
 
     - [Edit Blog Post](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2Fedit%2F2)
-    ![Edit Blog Results Pass](documentation/editblogvalid.webp)
+
+            ![Edit Blog Results Pass](documentation/editblogvalid.webp)
 
     - [Order Stats](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Fmanage_orders%2F)
-    ![Order Stats Results Pass](documentation/orderstatsvalid.webp)
+
+            ![Order Stats Results Pass](documentation/orderstatsvalid.webp)
 
     - [Product Stats](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Fstats%2F)
-    ![Product Stats Results Pass](documentation/productstatsvalid.webp)
+
+            ![Product Stats Results Pass](documentation/productstatsvalid.webp)
 
     - [View Order](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Forder_detail%2F11%2F)
-    ![View Order Results Pass](documentation/viewordervalid.webp)
+
+            ![View Order Results Pass](documentation/viewordervalid.webp)
 
     - [Log Out](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogout%2F)
-    ![Logout Results Pass](documentation/logoutvalid.webp)
+
+            ![Logout Results Pass](documentation/logoutvalid.webp)
 
     - [Password Reset](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F)
-    ![Password Reset Results Pass](documentation/forgotvalid.webp)
+
+        ![Password Reset Results Pass](documentation/forgotvalid.webp)
 
 on the Profile, Add Product, Edit Product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order and Forgot Password pages you will see an info note in the validation results I have discussed this in the Unfixed Bugs section.
 
@@ -80,21 +99,21 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 - **base.css**
 
-link to results: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    link to results: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![Css Valid](documentation/basecssvalid.webp)
+    ![Css Valid](documentation/basecssvalid.webp)
 
 - **Profile.css**
 
-link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![Profile CSS Valid](documentation/profilecssvalid.webp)
+    ![Profile CSS Valid](documentation/profilecssvalid.webp)
 
 - **checkout.css**
 
-link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    link to results:[click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![Checkout CSS Valid](documentation/checkoutcssvalid.webp)
+    ![Checkout CSS Valid](documentation/checkoutcssvalid.webp)
 
 ### JavaScript
 
@@ -187,6 +206,92 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 
 ## Cross Platform Testing
 
+|Browser|page|Expected Look|Expected Function|Screenshot|
+|-------|----|-------------|-----------------|----------|
+**Chrome**
+||Home|y|y|[View](documentation/chromehome.webp)|
+||Sign Up|y|y|[View](documentation/chromesignup.webp)|
+||Sign In|y|y|[View](documentation/chromesignin.webp)|
+||Products|y|y|[View](documentation/chromeproducts.webp)|
+||Product Deatail|y|y|[View](documentation/chromeproductdetail.webp)|
+||Blog|y|y|[View](documentation/chromeblog.webp)|
+||Blog Detail|y|y|[View](documentation/chromeblogdetail.webp)|
+||Profile|y|y|[View](documentation/chromeprofile.webp)|
+||Shopping Bag|y|y|[View](documentation/chromebag.webp)|
+||Checkout|y|y|[View](documentation/chromecheckout.webp)|
+||Checkout Success|y|y|[View](documentation/chromechecksuccess.webp)|
+||Add Product|y|y|[View](documentation/chromeaddproduct.webp)|
+||Edit Product|y|y|[View](documentation/chromeeditproduct.webp)|
+||Add Blog|y|y|[View](documentation/chromeaddblog.webp)|
+||Edit Blog|y|y|[View](documentation/chromeeditblog.webp)|
+||Order Stats|y|y|[View](documentation/chromeorderstats.webp)|
+||Product Stats|y|y|[View](documentation/chromesalesstats.webp)|
+||View Order|y|y|[View](documentation/chromevieworder.webp)|
+||Log Out|y|y|[View](documentation/chromesignout.webp)|
+||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
+**Firefox**
+||Home|y|y|[View](documentation)|
+||Sign Up|
+||Sign In|
+||Products|
+||Product Deatail|
+||Blog|
+||Blog Detail|
+||Profile|
+||Shopping Bag|
+||Checkout|
+||Checkout Success|
+||Add Product|
+||Edit Product|
+||Add Blog|
+||Edit Blog|
+||Order Stats|
+||Product Stats|
+||View Order|
+||Log Out|
+||Password Reset|
+**Edge**
+||Home|
+||Sign Up|
+||Sign In|
+||Products|
+||Product Deatail|
+||Blog|
+||Blog Detail|
+||Profile|
+||Shopping Bag|
+||Checkout|
+||Checkout Success|
+||Add Product|
+||Edit Product|
+||Add Blog|
+||Edit Blog|
+||Order Stats|
+||Product Stats|
+||View Order|
+||Log Out|
+||Password Reset|
+**Opera**
+||Home|
+||Sign Up|
+||Sign In|
+||Products|
+||Product Deatail|
+||Blog|
+||Blog Detail|
+||Profile|
+||Shopping Bag|
+||Checkout|
+||Checkout Success|
+||Add Product|
+||Edit Product|
+||Add Blog|
+||Edit Blog|
+||Order Stats|
+||Product Stats|
+||View Order|
+||Log Out|
+||Password Reset|
 ### Browser Compatability
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
