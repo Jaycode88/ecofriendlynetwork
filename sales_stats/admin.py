@@ -33,4 +33,3 @@ def download_sales_stats(modeladmin, request, queryset):
                 order_item.lineitem_total])
 
     return response
-

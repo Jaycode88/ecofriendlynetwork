@@ -24,7 +24,8 @@ def sales_stats(request):
         HttpResponse: The response containing the sales statistics page.
     """
     if not request.user.is_superuser:
-        messages.error(request, "Access denied. Only superusers can view sales statistics.")
+        messages.error(
+            request, "Access denied. Only superusers can view sales statistics.")
         return redirect('home')
 
     # Retrieve filter parameters from GET request
@@ -120,7 +121,8 @@ def manage_orders(request):
         HttpResponse: The response containing the manage orders page.
     """
     if not request.user.is_superuser:
-        messages.error(request, "Access denied. Only superusers can manage orders.")
+        messages.error(
+            request, "Access denied. Only superusers can manage orders.")
         return redirect('home')
 
     # Create an order search form
@@ -182,7 +184,8 @@ def order_detail(request, order_id):
         HttpResponse: The response containing the order detail page.
     """
     if not request.user.is_superuser:
-        messages.error(request, "Access denied. Only superusers can view order details.")
+        messages.error(
+            request, "Access denied. Only superusers can view order details.")
         return redirect('home')
 
     order = get_object_or_404(Order, id=order_id)

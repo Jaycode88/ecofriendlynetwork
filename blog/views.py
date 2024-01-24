@@ -84,7 +84,7 @@ def add_post(request):
     Returns:
         A rendered template for adding a new blog post.
     """
-    
+
     # Check if the user is a superuser
     if not request.user.is_superuser:
         messages.error(
@@ -103,7 +103,7 @@ def add_post(request):
             return redirect('blog_list')
     else:
         form = PostForm()
-    
+
     # Render the add_post template with the form
     return render(request, 'blog/add_post.html', {'form': form})
 
@@ -134,9 +134,11 @@ def edit_post(request, pk):
         else:
             form = PostForm(instance=post)
         # Render the edit_post template with the form and the post being edited
-        return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
+        return render(
+            request, 'blog/edit_post.html', {'form': form, 'post': post})
     else:
-        messages.error(request, 'Only superusers are allowed to edit blog posts.')
+        messages.error(
+            request, 'Only superusers are allowed to edit blog posts.')
         return redirect('blog_list')
 
 
@@ -163,7 +165,8 @@ def delete_post(request, pk):
         messages.success(request, 'Blog post deleted successfully')
         return redirect('blog_list')
     else:
-        messages.error(request, 'Only superusers are allowed to delete blog posts.')
+        messages.error(
+            request, 'Only superusers are allowed to delete blog posts.')
         return redirect('blog_list')
 
 

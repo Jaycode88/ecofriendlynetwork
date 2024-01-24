@@ -32,8 +32,9 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs[
                 'class'] = 'border-black rounded-0 profile-form-input'
-            
+
             # Add a screen-reader friendly label for the country field
-            self.fields['default_country'].widget.attrs['aria-label'] = 'Country'
+            self.fields[
+                'default_country'].widget.attrs['aria-label'] = 'Country'
 
             self.fields[field].label = False

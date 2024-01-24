@@ -88,7 +88,7 @@ def checkout(request):
                 except Product.DoesNotExist:
                     # return error message
                     messages.error(request, (
-                        "One of the products in yourbag wasn't in our database."
+                        "An item in your bag wasn't in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()

@@ -35,6 +35,7 @@ class ProductForm(forms.ModelForm):
             if field_name == 'name':
                 field.widget.attrs['autocomplete'] = 'name'
 
+
 class FavoriteForm(forms.ModelForm):
     """
     Form for managing user's favorite products.

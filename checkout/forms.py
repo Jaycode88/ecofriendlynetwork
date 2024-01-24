@@ -8,10 +8,12 @@ class OrderForm(forms.ModelForm):
         model = Order
 
         # Specify the fields to include in the form
-        fields = ('full_name', 'email', 'phone_number',
-                    'street_address1', 'street_address2',
-                    'town_or_city', 'postcode',  'country',
-                    'county')
+        fields = (
+            'full_name', 'email', 'phone_number',
+            'street_address1', 'street_address2',
+            'town_or_city', 'postcode',  'country',
+            'county'
+            )
 
     def __init__(self, *args, **kwargs):
         """
@@ -41,7 +43,7 @@ class OrderForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 # Set placeholder text for the field
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-                
+
             # Add a custom CSS class to the field
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             # Remove the auto-generated labels
@@ -51,9 +53,8 @@ class OrderForm(forms.ModelForm):
             if field == 'email':
                 self.fields[field].widget.attrs['autocomplete'] = 'email'
             if field == 'country':
-                self.fields[field].widget.attrs['autocomplete'] = 'country-name'
+                self.fields[field].widget.attrs[
+                    'autocomplete'] = 'country-name'
 
         # Add an aria-label for the country field for screen reader users
         self.fields['country'].widget.attrs['aria-label'] = 'Country'
-            
-            
