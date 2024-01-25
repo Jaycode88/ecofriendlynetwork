@@ -24,49 +24,62 @@
             <form method="get" action="{% url 'manage_orders' %}">
 
                 <!-- Order Number input field with label -->
-                <label for="order_number">Order Number:</label>
-                <input type="text" id="order_number" name="order_number" value="{{ order_number|default_if_none:'' }}">
-
-                <!-- Username input field with label -->
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" value="{{ username|default_if_none:'' }}">
-
-                <!-- Postcode input field with label -->
-                <label for="postcode">Postcode:</label>
-                <input type="text" id="postcode" name="postcode" value="{{ postcode|default_if_none:'' }}">
-
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="order_number">Order Number:</label>
+                        <input type="text" id="order_number" name="order_number" value="{{ order_number|default_if_none:'' }}">
+                    </div>
+                    <!-- Username input field with label -->
+                    <div class="form-group col-md-4">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" value="{{ username|default_if_none:'' }}">
+                    </div>
+                    <!-- Postcode input field with label -->
+                    <div class="form-group col-md-4">
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" name="postcode" value="{{ postcode|default_if_none:'' }}">
+                    </div>
+                </div>
                 <!-- Start Date input field with label -->
-                <label for="start_date">Start Date:</label>
-                <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d'|default_if_none:'' }}">
-
-                <!-- End Date input field with label -->
-                <label for="end_date">End Date:</label>
-                <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d'|default_if_none:'' }}">
-
-                <!-- Search button -->
-                <button class="btn-green" type="submit">Search</button>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="start_date">Start Date:</label>
+                        <input type="date" id="start_date" name="start_date" value="{{ start_date|date:'Y-m-d'|default_if_none:'' }}">
+                    </div>
+                    <!-- End Date input field with label -->
+                    <div class="form-group col-md-4">
+                        <label for="end_date">End Date:</label>
+                        <input type="date" id="end_date" name="end_date" value="{{ end_date|date:'Y-m-d'|default_if_none:'' }}">
+                    </div>
+                    <!-- Search button -->
+                    <div class="col-md-4">
+                        <button class="btn-green" type="submit">Search</button>
+                    </div>
+                </div>
             </form>
 
             <!-- Display order stats -->
             <div class="order-data-section">
                 <!-- Table to display order statistics -->
-                <table class="table table-striped">
-                    <tr>
-                        <th>Order Number</th>
-                        <th>Username</th>
-                        <th>Postcode</th>
-                        <th>Date</th>
-                    </tr>
-                    <!-- Loop through orders and display order details -->
-                    {% for order in orders %}
-                    <tr>
-                        <td><a href="{% url 'order_detail' order.id %}">{{ order.order_number }}</a></td>
-                        <td>{{ order.user_profile.user.username }}</td>
-                        <td>{{ order.postcode }}</td>
-                        <td>{{ order.date|date:"Y-m-d H:i" }}</td>
-                    </tr>
-                    {% endfor %}
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Order Number</th>
+                            <th>Username</th>
+                            <th>Postcode</th>
+                            <th>Date</th>
+                        </tr>
+                        <!-- Loop through orders and display order details -->
+                        {% for order in orders %}
+                        <tr>
+                            <td><a href="{% url 'order_detail' order.id %}">{{ order.order_number }}</a></td>
+                            <td>{{ order.user_profile.user.username }}</td>
+                            <td>{{ order.postcode }}</td>
+                            <td>{{ order.date|date:"Y-m-d H:i" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
             </div>
         </div>
     </div>

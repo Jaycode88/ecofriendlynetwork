@@ -300,6 +300,16 @@ input[name='q']::placeholder {
     max-width: 600px;
 }
 
+/* results table for order and sales stats */
+.responsive-table {
+    overflow-x: auto;
+    display: block;
+}
+
+#product {
+    max-width: 70%;
+}
+
 /* -- Media Queries -- */
 
 /* Slightly larger container on xl screens */
