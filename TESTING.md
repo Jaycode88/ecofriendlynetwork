@@ -252,7 +252,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||Log Out||y|y|[View](documentation/firelogout.webp)|
 ||Password Reset||y|y|[View](documentation/fireforgot.webp)|
 **Edge**
-||Home||y|y|[View](documentation/edgehome.webp)|
+||Home|y|y|[View](documentation/edgehome.webp)|
 ||Sign Up|y|y|[View](documentation/edgesignup.webp)|
 ||Sign In|y|y|[View](documentation/edgesignin.webp)|
 ||Products|y|y|[View](documentation/edgeproducts.webp)|
@@ -277,6 +277,74 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 ### Responsiveness
+
+ - **Manual Device Testing**
+
+| Device | Page | Expected look | Expected Function | Image |
+|--------|------|---------------|-------------------|-------|
+**Desktop 22"**
+||Home|y|y|[View](documentation/chromehome.webp)|
+||Sign Up|y|y|[View](documentation/chromesignup.webp)|
+||Sign In|y|y|[View](documentation/chromesignin.webp)|
+||Products|y|y|[View](documentation/chromeproducts.webp)|
+||Product Deatail|y|y|[View](documentation/chromeproductdetail.webp)|
+||Blog|y|y|[View](documentation/chromeblog.webp)|
+||Blog Detail|y|y|[View](documentation/chromeblogdetail.webp)|
+||Profile|y|y|[View](documentation/chromeprofile.webp)|
+||Shopping Bag|y|y|[View](documentation/chromebag.webp)|
+||Checkout|y|y|[View](documentation/chromecheckout.webp)|
+||Checkout Success|y|y|[View](documentation/chromechecksuccess.webp)|
+||Add Product|y|y|[View](documentation/chromeaddproduct.webp)|
+||Edit Product|y|y|[View](documentation/chromeeditproduct.webp)|
+||Add Blog|y|y|[View](documentation/chromeaddblog.webp)|
+||Edit Blog|y|y|[View](documentation/chromeeditblog.webp)|
+||Order Stats|y|y|[View](documentation/chromeorderstats.webp)|
+||Product Stats|y|y|[View](documentation/chromesalesstats.webp)|
+||View Order|y|y|[View](documentation/chromevieworder.webp)|
+||Log Out|y|y|[View](documentation/chromesignout.webp)|
+||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
+**Laptop 16"** 
+||Home|y|y|[View](documentation)|
+||Sign Up|y|y|[View](documentation)|
+||Sign In|y|y|[View](documentation)|
+||Products|y|y|[View](documentation)|
+||Product Deatail|y|y|[View](documentation)|
+||Blog|y|y|[View](documentation)|
+||Blog Detail|y|y|[View](documentation.webp)|
+||Profile|y|y|[View](documentation)|
+||Shopping Bag|y|y|[View](documentation)|
+||Checkout|y|y|[View](documentation)|
+||Checkout Success|y|y|[View](documentation)|
+||Add Product|y|y|[View](documentation)|
+||Edit Product|y|y|[View](documentation)|
+||Add Blog|y|y|[View](documentation)|
+||Edit Blog|y|y|[View](documentation)|
+||Order Stats|y|y|[View](documentation)|
+||Product Stats|y|y|[View](documentation)|
+||View Order|y|y|[View](documentation)|
+||Log Out|y|y|[View](documentation)|
+||Password Reset|y|y|[View](documentation)|
+**Galaxy S20"** 
+||Home|y|y|[View](documentation)|
+||Sign Up|y|y|[View](documentation)|
+||Sign In|y|y|[View](documentation)|
+||Products|y|y|[View](documentation)|
+||Product Deatail|y|y|[View](documentation)|
+||Blog|y|y|[View](documentation)|
+||Blog Detail|y|y|[View](documentation.webp)|
+||Profile|y|y|[View](documentation)|
+||Shopping Bag|y|y|[View](documentation)|
+||Checkout|y|y|[View](documentation)|
+||Checkout Success|y|y|[View](documentation)|
+||Add Product|y|y|[View](documentation)|
+||Edit Product|y|y|[View](documentation)|
+||Add Blog|y|y|[View](documentation)|
+||Edit Blog|y|y|[View](documentation)|
+||Order Stats|y|y|[View](documentation)|
+||Product Stats|y|y|[View](documentation)|
+||View Order|y|y|[View](documentation)|
+||Log Out|y|y|[View](documentation)|
+||Password Reset|y|y|[View](documentation)|
 
 ### CRUD (create, read, update, delete) Testing
 
