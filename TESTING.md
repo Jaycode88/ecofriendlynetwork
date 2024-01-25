@@ -13,79 +13,79 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
     - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2F)
 
-            ![Home Results Pass](documentation/homehtml.webp)
+        ![Home Results Pass](documentation/homehtml.webp)
 
     - [Sign Up](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Fsignup%2F)
 
-            ![Sign Up Valid](documentation/signupvalid.webp)
+        ![Sign Up Valid](documentation/signupvalid.webp)
 
     - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogin%2F)
 
-            ![Sign In Results Pass](documentation/signinhtml.webp)
+        ![Sign In Results Pass](documentation/signinhtml.webp)
 
     - [Products](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2F)
 
-            ![Products Results Pass](documentation/productshtml.webp)
+        ![Products Results Pass](documentation/productshtml.webp)
 
     - [Product Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2F1%2F)
 
-            ![Product Detail Results Pass](documentation/productdetailhtml.webp)
+        ![Product Detail Results Pass](documentation/productdetailhtml.webp)
 
     - [Blog](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F)
 
-            ![Blog Results Pass](documentation/bloghtml.webp)
+        ![Blog Results Pass](documentation/bloghtml.webp)
 
     - [Blog Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2F3%2F)
 
-            ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
+        ![Blog Detail Results Pass](documentation/blogdetailhtml.webp)
 
     - [Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fprofile%2F)
 
-            ![Profile Results Pass](documentation/profilevalid.webp)
+        ![Profile Results Pass](documentation/profilevalid.webp)
 
     - [Shopping Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fbag%2F)
 
-            ![Shopping Bag Results Pass](documentation/bagvalid.webp)
+        ![Shopping Bag Results Pass](documentation/bagvalid.webp)
 
     - [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2F)
 
-            ![Checkout Results Pass](documentation/checkoutvalid.webp)
+        ![Checkout Results Pass](documentation/checkoutvalid.webp)
 
     - [Checkout Success](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA44315E1218E45D3BD6F89C825B3791F)
 
-            ![Checkout Success Results Pass](documentation/checkoutsuccessvalid.webp)
+        ![Checkout Success Results Pass](documentation/checkoutsuccessvalid.webp)
 
-    -[Add Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fadd%2F)
+    - [Add Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fadd%2F)
 
-            ![Add Product Results Pass](documentation/addproductvalid.webp)
+        ![Add Product Results Pass](documentation/addproductvalid.webp)
 
     - [Edit Product](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fproducts%2Fedit%2F1)
 
-            ![Edit Product Results Pass](documentation/editproductvalid.webp)
+        ![Edit Product Results Pass](documentation/editproductvalid.webp)
 
     - [Add Blog Post](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2Fadd%2F)
 
-            ![Add Blog results Pass](documentation/addblogvalid.webp)
+        ![Add Blog results Pass](documentation/addblogvalid.webp)
 
     - [Edit Blog Post](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fblog%2Fedit%2F2)
 
-            ![Edit Blog Results Pass](documentation/editblogvalid.webp)
+        ![Edit Blog Results Pass](documentation/editblogvalid.webp)
 
     - [Order Stats](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Fmanage_orders%2F)
 
-            ![Order Stats Results Pass](documentation/orderstatsvalid.webp)
+        ![Order Stats Results Pass](documentation/orderstatsvalid.webp)
 
     - [Product Stats](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Fstats%2F)
 
-            ![Product Stats Results Pass](documentation/productstatsvalid.webp)
+        ![Product Stats Results Pass](documentation/productstatsvalid.webp)
 
     - [View Order](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fsales_stats%2Forder_detail%2F11%2F)
 
-            ![View Order Results Pass](documentation/viewordervalid.webp)
+        ![View Order Results Pass](documentation/viewordervalid.webp)
 
     - [Log Out](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogout%2F)
 
-            ![Logout Results Pass](documentation/logoutvalid.webp)
+        ![Logout Results Pass](documentation/logoutvalid.webp)
 
     - [Password Reset](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F)
 
@@ -232,25 +232,25 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
 **Firefox**
 ||Home|y|y|[View](documentation/firehome.webp)|
-||Sign Up||y|y|[View](documentation/firesignup.webp)|
-||Sign In||y|y|[View](documentation/firesignin.webp)|
-||Products||y|y|[View](documentation/fireproducts.webp)|
-||Product Detail||y|y|[View](documentation/fireproductdetail.webp)|
-||Blog||y|y|[View](documentation/fireblog.webp)|
-||Blog Detail||y|y|[View](documentation/fireblogdetail.webp)|
-||Profile||y|y|[View](documentation/fireprof.webp)|
-||Shopping Bag||y|y|[View](documentation/firebag.webp)|
-||Checkout||y|y|[View](documentation/firecheckout.webp)|
-||Checkout Success||y|y|[View](documentation/firechecksuccess.webp)|
-||Add Product||y|y|[View](documentation/fireaddprod.webp)|
-||Edit Product||y|y|[View](documentation/fireeditprod.webp)|
-||Add Blog||y|y|[View](documentation/fireaddblog.webp)|
-||Edit Blog||y|y|[View](documentation/fireeditblog.webp)|
-||Order Stats||y|y|[View](documentation/fireorderstats.webp)|
-||Product Stats||y|y|[View](documentation/fireproductstats.webp)|
-||View Order||y|y|[View](documentation/firevieworder.webp)|
-||Log Out||y|y|[View](documentation/firelogout.webp)|
-||Password Reset||y|y|[View](documentation/fireforgot.webp)|
+||Sign Up|y|y|[View](documentation/firesignup.webp)|
+||Sign In|y|y|[View](documentation/firesignin.webp)|
+||Products|y|y|[View](documentation/fireproducts.webp)|
+||Product Detail|y|y|[View](documentation/fireproductdetail.webp)|
+||Blog|y|y|[View](documentation/fireblog.webp)|
+||Blog Detail|y|y|[View](documentation/fireblogdetail.webp)|
+||Profile|y|y|[View](documentation/fireprof.webp)|
+||Shopping Bag|y|y|[View](documentation/firebag.webp)|
+||Checkout|y|y|[View](documentation/firecheckout.webp)|
+||Checkout Success|y|y|[View](documentation/firechecksuccess.webp)|
+||Add Product|y|y|[View](documentation/fireaddprod.webp)|
+||Edit Product|y|y|[View](documentation/fireeditprod.webp)|
+||Add Blog|y|y|[View](documentation/fireaddblog.webp)|
+||Edit Blog|y|y|[View](documentation/fireeditblog.webp)|
+||Order Stats|y|y|[View](documentation/fireorderstats.webp)|
+||Product Stats|y|y|[View](documentation/fireproductstats.webp)|
+||View Order|y|y|[View](documentation/firevieworder.webp)|
+||Log Out|y|y|[View](documentation/firelogout.webp)|
+||Password Reset|y|y|[View](documentation/fireforgot.webp)|
 **Edge**
 ||Home|y|y|[View](documentation/edgehome.webp)|
 ||Sign Up|y|y|[View](documentation/edgesignup.webp)|
@@ -325,26 +325,26 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Log Out|y|y|[View](documentation/mobsignout.jpg)|
 ||Password Reset|y|y|[View](documentation/mobforgot.jpg)|
 **Laptop 16"** 
-||Home|y|y|[View](documentation)|
-||Sign Up|y|y|[View](documentation)|
-||Sign In|y|y|[View](documentation)|
-||Products|y|y|[View](documentation)|
-||Product Deatail|y|y|[View](documentation)|
-||Blog|y|y|[View](documentation)|
-||Blog Detail|y|y|[View](documentation.webp)|
-||Profile|y|y|[View](documentation)|
-||Shopping Bag|y|y|[View](documentation)|
-||Checkout|y|y|[View](documentation)|
-||Checkout Success|y|y|[View](documentation)|
-||Add Product|y|y|[View](documentation)|
-||Edit Product|y|y|[View](documentation)|
-||Add Blog|y|y|[View](documentation)|
-||Edit Blog|y|y|[View](documentation)|
-||Order Stats|y|y|[View](documentation)|
-||Product Stats|y|y|[View](documentation)|
-||View Order|y|y|[View](documentation)|
-||Log Out|y|y|[View](documentation)|
-||Password Reset|y|y|[View](documentation)|
+||Home|y|y|[View](documentation/laphome.webp)|
+||Sign Up|y|y|[View](documentation/lapsignup.webp)|
+||Sign In|y|y|[View](documentation/lapsignin.webp)|
+||Products|y|y|[View](documentation/lapproducts.webp)|
+||Product Deatail|y|y|[View](documentation/lapproddetail.webp)|
+||Blog|y|y|[View](documentation/lapblog.webp)|
+||Blog Detail|y|y|[View](documentation/lapblogdetail.webp)|
+||Profile|y|y|[View](documentation/lapprof.webp)|
+||Shopping Bag|y|y|[View](documentation/lapbag.webp)|
+||Checkout|y|y|[View](documentation/lapcheckout.webp)|
+||Checkout Success|y|y|[View](documentation/lapchecksuccess.webp)|
+||Add Product|y|y|[View](documentation/lapaddprod.webp)|
+||Edit Product|y|y|[View](documentation/lapeditprod.webp)|
+||Add Blog|y|y|[View](documentation/lapaddblog.webp)|
+||Edit Blog|y|y|[View](documentation/lapeditblog.webp)|
+||Order Stats|y|y|[View](documentation/laporderstats.webp)|
+||Product Stats|y|y|[View](documentation/lapprodstats.webp)|
+||View Order|y|y|[View](documentation/lapvieworder.webp)|
+||Log Out|y|y|[View](documentation/lapsignout.webp)|
+||Password Reset|y|y|[View](documentation/lapforgot.webp)|
 
 ### CRUD (create, read, update, delete) Testing
 
