@@ -357,13 +357,6 @@ input[name='q']::placeholder {
     
 }
 
-/* product selector product stats */
-@media (max-width: 767px) {
-    #product {
-        max-width: 60% !important;
-    }
-}
-
 @media (max-width: 611px) {
     .cust-size {
         max-width: 100%;

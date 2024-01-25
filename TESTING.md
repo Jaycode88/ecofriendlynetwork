@@ -303,28 +303,28 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||View Order|y|y|[View](documentation/chromevieworder.webp)|
 ||Log Out|y|y|[View](documentation/chromesignout.webp)|
 ||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
-**Laptop 16"** 
-||Home|y|y|[View](documentation)|
-||Sign Up|y|y|[View](documentation)|
-||Sign In|y|y|[View](documentation)|
-||Products|y|y|[View](documentation)|
-||Product Deatail|y|y|[View](documentation)|
-||Blog|y|y|[View](documentation)|
-||Blog Detail|y|y|[View](documentation.webp)|
-||Profile|y|y|[View](documentation)|
-||Shopping Bag|y|y|[View](documentation)|
-||Checkout|y|y|[View](documentation)|
-||Checkout Success|y|y|[View](documentation)|
-||Add Product|y|y|[View](documentation)|
-||Edit Product|y|y|[View](documentation)|
-||Add Blog|y|y|[View](documentation)|
-||Edit Blog|y|y|[View](documentation)|
-||Order Stats|y|y|[View](documentation)|
-||Product Stats|y|y|[View](documentation)|
-||View Order|y|y|[View](documentation)|
-||Log Out|y|y|[View](documentation)|
-||Password Reset|y|y|[View](documentation)|
 **Galaxy S20"** 
+||Home|y|y|[View](documentation/mobhome.jpg)|
+||Sign Up|y|y|[View](documentation/mobsignup.jpg)|
+||Sign In|y|y|[View](documentation/mobsignin.jpg)|
+||Products|y|y|[View](documentation/mobproducts.jpg)|
+||Product Deatail|y|y|[View](documentation/mobproddetail.jpg)|
+||Blog|y|y|[View](documentation/mobblog.jpg)|
+||Blog Detail|y|y|[View](documentation/mobblogdetail.jpg)|
+||Profile|y|y|[View](documentation/mobprof.jpg)|
+||Shopping Bag|y|y|[View](documentation/mobbag.jpg)|
+||Checkout|y|y|[View](documentation/mobcheckout.jpg)|
+||Checkout Success|y|y|[View](documentation/mobcheckoutsuccess.jpg)|
+||Add Product|y|y|[View](documentation/mobaddprod.jpg)|
+||Edit Product|y|y|[View](documentation/mobeditprod.jpg)|
+||Add Blog|y|y|[View](documentation/mobaddblog.jpg)|
+||Edit Blog|y|y|[View](documentation/mobeditblog.jpg)|
+||Order Stats|y|y|[View](documentation/moborderstats.jpg)|
+||Product Stats|y|y|[View](documentation/mobprodstats.jpg)|
+||View Order|y|y|[View](documentation/mobvieworder.jpg)|
+||Log Out|y|y|[View](documentation/mobsignout.jpg)|
+||Password Reset|y|y|[View](documentation/mobforgot.jpg)|
+**Laptop 16"** 
 ||Home|y|y|[View](documentation)|
 ||Sign Up|y|y|[View](documentation)|
 ||Sign In|y|y|[View](documentation)|
