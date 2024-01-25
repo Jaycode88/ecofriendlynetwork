@@ -149,6 +149,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 ### PEP8
 
 I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInstitute) to check all Python files are PEP8 compliant.
+
 | Directory | File | Results Link | Results image |
 |--------|------|--------------|---------------|
 **eco_friendly_network**
@@ -230,68 +231,48 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||Log Out|y|y|[View](documentation/chromesignout.webp)|
 ||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
 **Firefox**
-||Home|y|y|[View](documentation)|
-||Sign Up|
-||Sign In|
-||Products|
-||Product Deatail|
-||Blog|
-||Blog Detail|
-||Profile|
-||Shopping Bag|
-||Checkout|
-||Checkout Success|
-||Add Product|
-||Edit Product|
-||Add Blog|
-||Edit Blog|
-||Order Stats|
-||Product Stats|
-||View Order|
-||Log Out|
-||Password Reset|
+||Home|y|y|[View](documentation/firehome.webp)|
+||Sign Up||y|y|[View](documentation/firesignup.webp)|
+||Sign In||y|y|[View](documentation/firesignin.webp)|
+||Products||y|y|[View](documentation/fireproducts.webp)|
+||Product Detail||y|y|[View](documentation/fireproductdetail.webp)|
+||Blog||y|y|[View](documentation/fireblog.webp)|
+||Blog Detail||y|y|[View](documentation/fireblogdetail.webp)|
+||Profile||y|y|[View](documentation/fireprof.webp)|
+||Shopping Bag||y|y|[View](documentation/firebag.webp)|
+||Checkout||y|y|[View](documentation/firecheckout.webp)|
+||Checkout Success||y|y|[View](documentation/firechecksuccess.webp)|
+||Add Product||y|y|[View](documentation/fireaddprod.webp)|
+||Edit Product||y|y|[View](documentation/fireeditprod.webp)|
+||Add Blog||y|y|[View](documentation/fireaddblog.webp)|
+||Edit Blog||y|y|[View](documentation/fireeditblog.webp)|
+||Order Stats||y|y|[View](documentation/fireorderstats.webp)|
+||Product Stats||y|y|[View](documentation/fireproductstats.webp)|
+||View Order||y|y|[View](documentation/firevieworder.webp)|
+||Log Out||y|y|[View](documentation/firelogout.webp)|
+||Password Reset||y|y|[View](documentation/fireforgot.webp)|
 **Edge**
-||Home|
-||Sign Up|
-||Sign In|
-||Products|
-||Product Deatail|
-||Blog|
-||Blog Detail|
-||Profile|
-||Shopping Bag|
-||Checkout|
-||Checkout Success|
-||Add Product|
-||Edit Product|
-||Add Blog|
-||Edit Blog|
-||Order Stats|
-||Product Stats|
-||View Order|
-||Log Out|
-||Password Reset|
-**Opera**
-||Home|
-||Sign Up|
-||Sign In|
-||Products|
-||Product Deatail|
-||Blog|
-||Blog Detail|
-||Profile|
-||Shopping Bag|
-||Checkout|
-||Checkout Success|
-||Add Product|
-||Edit Product|
-||Add Blog|
-||Edit Blog|
-||Order Stats|
-||Product Stats|
-||View Order|
-||Log Out|
-||Password Reset|
+||Home||y|y|[View](documentation/edgehome.webp)|
+||Sign Up|y|y|[View](documentation/edgesignup.webp)|
+||Sign In|y|y|[View](documentation/edgesignin.webp)|
+||Products|y|y|[View](documentation/edgeproducts.webp)|
+||Product Deatail|y|y|[View](documentation/edgeproddetail.webp)|
+||Blog|y|y|[View](documentation/edgeblog.webp)|
+||Blog Detail|y|y|[View](documentation/edgeblogdetail.webp)|
+||Profile|y|y|[View](documentation/edgeprof.webp)|
+||Shopping Bag|y|y|[View](documentation/edgebag.webp)|
+||Checkout|y|y|[View](documentation/edgecheckout.webp)|
+||Checkout Success|y|y|[View](documentation/edgecheckoutsuccess.webp)|
+||Add Product|y|y|[View](documentation/edgeaddprod.webp)|
+||Edit Product|y|y|[View](documentation/edgeeditprod.webp)|
+||Add Blog|y|y|[View](documentation/edgeaddblog.webp)|
+||Edit Blog|y|y|[View](documentation/edgeeditblog.webp)|
+||Order Stats|y|y|[View](documentation/edgeorderstats.webp)|
+||Product Stats|y|y|[View](documentation/edgeprodstats.webp)|
+||View Order|y|y|[View](documentation/edgevieworder.webp)|
+||Log Out|y|y|[View](documentation/edgelogout.webp)|
+||Password Reset|y|y|[View](documentation/edgeforgot.webp)|
+
 ### Browser Compatability
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
