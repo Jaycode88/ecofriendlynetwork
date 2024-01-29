@@ -207,6 +207,9 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 
 ## Cross Platform Testing
 
+### Browser Compatability
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
 |Browser|page|Expected Look|Expected Function|Screenshot|
 |-------|----|-------------|-----------------|----------|
 **Chrome**
@@ -273,8 +276,6 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||Log Out|y|y|[View](documentation/edgelogout.webp)|
 ||Password Reset|y|y|[View](documentation/edgeforgot.webp)|
 
-### Browser Compatability
-I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 ### Responsiveness
 
@@ -348,7 +349,140 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ### CRUD (create, read, update, delete) Testing
 
+|Aim|Admin|User|Non-User|Notes|
+|---|-----|----|--------|-----|
+**Profiles**
+|CREATE a Profile|No(As Intended)|No(As Intended)|Yes| A User may create a second account with a different email address|
+|READ Profile Details|Yes|Yes|No(As Intended)||
+|UPDATE Profile Details|Yes|Yes|No(As Intended)||
+|DELETE Profile|Yes|No(As Intended)|No(As Intended)|
+**Products**
+|CREATE a Product|Yes|No(As Intended)|No(As Intended)||
+|READ Product Details|Yes|Yes|Yes||
+|UPDATE Product Details|Yes|No(As Intended)|No(As Intended)||
+|DELETE Product|Yes|No(As Intended)|No(As Intended)|
+**Orders**
+|CREATE an Order|Yes|Yes|Yes||
+|READ an Order Details|Yes|Yes|Yes||
+|UPDATE an Order Details|Yes|No(As Intended)|No(As Intended)|Admin can configure an order via the Django Admin panel|
+|DELETE an Order|Yes|No(As Intended)|No(As Intended)|Admin can Delete an order via the Django Admin panel|
+**Blog Posts**
+|CREATE a Post|Yes|No(As Intended)|No(As Intended)||
+|READ Post Details|Yes|Yes|Yes||
+|UPDATE Post Details|Yes|No(As Intended)|No(As Intended)||
+|DELETE Post|Yes|No(As Intended)|No(As Intended)|
+**Favorite Products**
+|CREATE a Favorite Product|Yes|Yes|No(As Intended)||
+|READ Favorite Product|Yes|Yes|No(As Intended)||
+|UPDATE Favorite Product|No(As Intended)|No(As Intended)|No(As Intended)||
+|DELETE Favorite Product|Yes|Yes|No(As Intended)|
+**Favorite Blog Posts**
+|CREATE a Favorite Product|Yes|Yes|No(As Intended)||
+|READ Favorite Product|Yes|Yes|No(As Intended)||
+|UPDATE Favorite Product|No(As Intended)|No(As Intended)|No(As Intended)||
+|DELETE Favorite Product|Yes|Yes|No(As Intended)|
+
 ### Form Validation Testing
+
+|Aim|SM|MD|LG|
+|---|--|--|--|
+**User Registration**
+|Email field must be in a valid email format and is required|Yes|Yes|Yes|
+|Password field must be secure, hide characters, be at least 8 characters and is required|Yes|Yes|Yes|
+|Password field must not be too similar to user's personal information|Yes|Yes|Yes|
+|Password field must not be a commonly used password|Yes|Yes|Yes|
+|Password field must not be entirely numeric|Yes|Yes|Yes|
+|Confirm Password field (password2) must match the Password field (password1) and is required|Yes|Yes|Yes|
+|Appropriate error message is displayed for invalid input|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+**User Login**
+|Email/Username field must be validated against database entries|Yes|Yes|Yes|
+|Password field must be validated against database entries for the given Email/Username|Yes|Yes|Yes|
+|Form should not submit with empty Email/Username or Password fields|Yes|Yes|Yes|
+|Appropriate error message is displayed for invalid Email/Username|Yes|Yes|es|
+|Appropriate error message is displayed for incorrect Password|Yes|Yes|Yes|
+|Form submits successfully with valid credentials|Yes|Yes|Yes|
+|'Forgot Password' link is visible and functional|Yes|Yes|Yes|
+|'Sign Up' link redirects to the registration page and is functional|Yes|Yes|Yes|
+**User Profile**
+|'Phone Number' field must accept valid phone number format|Yes|Yes|Yes|
+|'Postal Code' field should accept alphanumeric characters, specific to user's country format|Yes|Yes|Yes|
+|'Town or City' field must accept text and is required|Yes|Yes|Yes|
+|'Street Address 1' must accept text and is required|Yes|Yes|Yes|
+|'Street Address 2' should accept text (not required)|Yes|Yes|Yes|
+|'County, State or Locality' should accept text (not required)|Yes|Yes|Yes|
+|'Country' field should be a dropdown of countries and is required|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+|Appropriate error messages are displayed for invalid inputs|Yes|Yes|Yes|
+|Updated information is correctly reflected in user profile after submission|Yes|Yes|Yes|
+**Product Search**
+|Search field should not be empty|Yes|Yes|Yes|
+|Search field accepts text and performs a search based on product name or description|Yes|Yes|Yes|
+|Appropriate message is displayed when no search criteria is entered|Yes|Yes|Yes|
+|Appropriate message is displayed when the search returns no results|Yes|Yes|Yes|
+**Product Management(ADD/EDIT)**
+|'Name' field must accept text and is required|Yes|Yes|Yes|
+|'Description' field must accept text and is required|Yes|Yes|Yes|
+|'Price' field must accept a valid number format and is required|Yes|Yes|Yes|
+|'Rating' field (if present) must accept a number within a specified range|Yes|Yes|Yes|
+|'Category' field should be a dropdown of categories and is required|Yes|Yes|Yes|
+|'Image' field should accept image file formats and is not required|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+|Appropriate error messages are displayed for invalid inputs|Yes|Yes|Yes|
+|Updated product information is correctly reflected after submission|Yes|Yes|Yes|
+**Quantity Selector on Product detail page**
+|Quantity selector increments correctly|Yes|Yes|Yes|
+|Quantity selector decrements correctly|Yes|Yes|Yes|
+|Quantity selector does not go below the minimum limit (1)|Yes|Yes|Yes|
+|Quantity selector does not exceed the maximum limit (99)|Yes|Yes|Yes|
+|Manual entry in quantity selector accepts only numeric values within range|Yes|Yes|Yes|
+|Form submits successfully with valid quantity|Yes|Yes|Yes|
+|Updated quantity reflects correctly in shopping bag|Yes|Yes|Yes|
+**Quantity Selector on Shopping Bag page**
+|Increment button increases item quantity correctly|Yes|Yes|Yes|
+|Decrement button decreases item quantity correctly|Yes|Yes|Yes|
+|Quantity cannot be decremented below 1|Yes|Yes|Yes|
+|Quantity cannot be incremented above the maximum limit (99)|Yes|Yes|Yes|
+|Manual entry in quantity field accepts only numeric values within the specified range|Yes|Yes|Yes|
+|Updating quantity reflects correctly in subtotal and total calculations|Yes|Yes|Yes|
+|Remove item button correctly removes the item from the bag	Yes	Yes	Yes
+|Appropriate error message or action is taken for invalid quantity input|Yes|Yes|Yes|
+|Bag updates correctly with changes in quantity or item removal|Yes|Yes|Yes|
+**CheckOut**
+|'Full Name' field must accept text and is required|Yes|Yes|Yes|
+|'Email Address' field must be in valid email format and is required|Yes|Yes|Yes|
+|'Phone Number' field must accept valid phone number format and is required|Yes|Yes|Yes|
+|'Street Address 1' must accept text and is required|Yes|Yes|Yes|
+|'Street Address 2' should accept text (not required)|Yes|Yes|Yes|
+|'Town or City' field must accept text and is required|Yes|Yes|Yes|
+|'Postal Code' field should accept alphanumeric characters, specific to the user's country format|Yes|Yes|Yes|
+|'Country' field should be a dropdown of countries and is required|Yes|Yes|Yes|
+|'County, State or Locality' should accept text (not required)|Yes|Yes|Yes|
+|Option to save information to profile works correctly for authenticated users|Yes|Yes|Yes|
+|Payment process through Stripe (or chosen payment gateway) works correctly and securely|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+|Appropriate error messages are displayed for invalid inputs|Yes|Yes|Yes|
+**Blog Post Management(ADD/EDIT)**
+|'Title' field must accept text and is required|Yes|Yes|Yes|
+|'Content' field must accept text (HTML or plain text) and is required|Yes|Yes|Yes|
+|'Image' field should accept image file formats and is not required|Yes|Yes|Yes|
+|'Excerpt' field should accept a brief text summary of the post and is required|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+|Appropriate error messages are displayed for invalid inputs|Yes|Yes|Yes|
+|Blog post details are correctly updated/added in the database after submission|Yes|Yes|Yes|
+**Order Stats(manage_orders.html)**
+|'Order Number' field accepts text and filters orders accordingly|Yes|Yes|Yes|
+|'Username' field accepts text and filters orders based on username|Yes|Yes|Yes|
+|'Postcode' field accepts alphanumeric characters and filters orders|Yes|Yes|Yes|
+|'Start Date' and 'End Date' fields accept dates and filter orders within the date range|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+|Appropriate order data is displayed based on search criteria|Yes|Yes|Yes|
+**Sales Stats**
+|'Product' dropdown filters statistics by selected product|Yes|Yes|Yes|
+|'Category' dropdown filters statistics by selected category|Yes|Yes|Yes|
+|'Start Date' and 'End Date' fields accept dates and filter sales data within the date range|Yes|Yes|Yes|
+|Form submits successfully with valid inputs|Yes|Yes|Yes|
+|Appropriate sales data is displayed based on selected filters|Yes|Yes|Yes|
 
 ### LightHouse Testing
 I used Google Chrome Lighthouse testing to assess the quality of the web app.
