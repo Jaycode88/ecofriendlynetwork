@@ -513,6 +513,45 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 ## Defensive Programming
 
+**General Site Interaction**
+|User Status|User Action|Expected Result|Pass/Fail|
+|-----------|-----------|---------------|---------|
+|All Users|Click on any navigation link|Correct page loads|Pass|
+|All Users|Attempt to access a restricted page (e.g., admin page) without proper privileges|Access denied message shown, or redirected to login|Pass|
+
+**Product Interaction**
+|User Status|User Action|Expected Result|Pass/Fail|
+|-----------|-----------|---------------|---------|
+|All Users|	View a product detail|	Product details are displayed correctly	|Pass|
+|All Users|	Add a product to cart|	Product is added to the cart	|Pass|
+
+**User Account Interaction**
+|User Status|User Action|Expected Result|Pass/Fail|
+|-----------|-----------|---------------|---------|
+|Non-Registered|	Attempt to access profile|	Redirected to login |	Pass|
+|Registered|	Update profile information|	Profile updated successfully|	Pass|
+|Registered|	Attempt an invalid action in profile (e.g., invalid form data)|Appropriate error message shown|	Pass|
+
+**Blog Interaction**
+|User Status|User Action|Expected Result|Pass/Fail|
+|-----------|-----------|---------------|---------|
+|All Users|	Read a blog post|	Blog post displayed correctly|	Pass|
+|Admins|	Attempt to post an invalid blog entry|	Error message or rejection of submission|	Pass|
+|Non-Admins|	Attempt to edit/delete a blog post|	Access denied message or Directed to Sign in|	Pass|
+
+**Checkout Process**
+|User Status|User Action|Expected Result|Pass/Fail|
+|-----------|-----------|---------------|---------|
+|Registered|	Complete a purchase	Order |processed successfully|Pass|
+|Registered|	Attempt checkout with invalid data|	Error message shown and checkout prevented	|Pass|
+|Non-Registered|	Attempt to checkout| allowed as a guest 	|Pass|
+
+**Admin & Stats Pages**
+|User Status|User Action|Expected Result|Pass/Fail|
+|-----------|-----------|---------------|---------|
+|Admins|	Access and interact with admin/stats pages|	Pages load and function correctly|	Pass|
+|Non-Admins|	Attempt to access admin/stats pages|	Access denied message shown or Directed to Sign In|	Pass|
+
 ## User Story Testing
 
 ## Automated Testing
