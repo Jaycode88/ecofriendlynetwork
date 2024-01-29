@@ -222,15 +222,17 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 ## User Stories
 ### As a new user....
 
-- I want to easily navigate the website, so that I can find the products I'm interested in without confusion.
+- I want to intuitively navigate the website and easily find eco-friendly products, so that I can shop without confusion.
 
 - I want to see clear product descriptions and images, so that I know exactly what I'm buying.
 
--  I want to easily create an account, so that I can manage my orders and save my preferences.
+-  I want to easily create an account, so I can track my orders, save my preferences, and have a personalized shopping experience.
 
-- I want to learn about the sustainability of the products, so that I can make informed decisions about my purchases.
+- I want to access information about sustainability practices and product sourcing, so that I can make informed and environmentally-conscious purchasing decisions.
 
-- I want a seamless and secure checkout process, so I can complete my purchase efficiently.
+- I want a straightforward and secure checkout process, so I can complete my purchase quickly and with confidence in the security of my personal information.
+
+- I may want to purchase without creating an account.
 
 ### As a returning user....
 
@@ -242,9 +244,11 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 
 ### As a site Admin.....
 
-- I want to easily update product listings and information, so that the website stays current and accurate.
+- I want to easily add, update, and remove product listings, ensuring all information is current and accurate, to maintain a reliable and up-to-date product catalogue.
 
-- I want to implement effective marketing strategies, so that I can attract new customers and retain existing ones.
+- I want the ability to easily label products as 'Clearance', 'New Arrival', or 'Special Deals', so I can effectively promote specific items and attract customer interest, leveraging these categories as key marketing strategies alongside the blog.
+
+- I want to access analytics and insights about user behavior and sales trends, so I can make data-driven decisions to improve the website and product offerings
 
 ## Wireframes
 

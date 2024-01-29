@@ -554,6 +554,103 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 ## User Story Testing
 
+### As A New User...
+
+**I want to intuitively navigate the website and easily find eco-friendly products, so that I can shop without confusion.**
+    
+- **Achieved:** Yes
+- **Details:** The website's navigation is designed to be intuitive, with clear categories and a search function. Users can easily locate eco-friendly products.
+- **Evidence:**
+![Nav Bar Desktop](documentation/navbardesktop.webp)
+![Nav Bar Mobile](documentation/navbarmobile.webp)
+
+**I want to see clear product descriptions and images, so that I know exactly what I'm buying.**
+
+- **Achieved:** Yes
+- **Details:** Each product page includes detailed descriptions, high-quality images.
+- **Evidence**
+![Product Detail](documentation/productdetail.webp)
+
+**I want to easily create an account, so I can track my orders, save my preferences, and have a personalized shopping experience.**
+
+- **Achieved:** Yes
+- **Details:** Users can easily sign up and create an account, Once a user has an account they can track their orders as well as store favorite products and blog posts.
+- **Evidence:** 
+![Sign Up](documentation/signup.webp)
+
+**I want to access information about sustainability practices and product sourcing, so that I can make informed and environmentally-conscious purchasing decisions.**
+
+- **Achieved:** Yes
+- **Details:** The blog post is the main area utilised for displaying open information on the sourcing of our propducts. Individual product descriptions also contain some infomation regarding the sustainability and sourcing of this ingridients/materials used.
+- **Evidence:**
+![Blog Post](documentation/fireblogdetail.webp)
+![Product Detail](documentation/productdetail.webp)
+
+**I want a straightforward and secure checkout process, so I can complete my purchase quickly and with confidence in the security of my personal information.**
+- **Achieved:** Yes
+- **Details:** 
+    - Checkout Design: The checkout process is designed to be simple and user-friendly. It guides the user through a series of well-defined steps, including cart review, shipping information entry, and payment processing. Each step is clearly labeled and easy to navigate.
+    - Security Features: To ensure the security of personal information, the site employs SSL encryption for data protection. Sensitive payment information is handled securely using a trusted payment gateway (Stripe), which means the site itself never stores credit card details, adding an extra layer of security.
+    - User Feedback: Throughout the checkout process, users receive clear feedback. For instance, form validation messages inform users of any missed or incorrectly filled fields. After completing a purchase, users receive a confirmation message with order details, both on the website and via email.
+    - Error Handling: In case of any issues during the checkout (e.g., payment decline), the system provides users with an understandable error message and suggestions for how to proceed, ensuring users are not left confused or uncertain.
+- **Evidence**
+![CheckOut](documentation/checkout.webp)
+![Order Confirmation](documentation/ordersummary.webp)
+![Secure Connection](documentation/secureconnection.webp)
+
+**I may want to purchase without creating an account.**
+- **Achieved:** Yes
+- **Details:** Users can checkout as a guest without having to sign up first.
+- **Evidence**
+![Guest Checkout](documentation/guestcheckout.webp)
+
+### As a returning user....
+
+**I want to be able to manage a user account and track my orders.**
+
+- **Achieved:** Yes
+- **Details:** Returning users can effortlessly manage their accounts and track their orders through their user profile.
+- **Evidence:**
+![Profile](documentation/profile.webp)
+
+**I want the website to be responsive and user-friendly on my smartphone or tablet, so I can shop conveniently on the go.**
+
+- **Achieved:** Yes
+- **Details:** The website is designed with a responsive layout that adapts seamlessly to various screen sizes, ensuring a consistent and comfortable shopping experience across all devices, including smartphones and tablets.
+- **Evidence:**
+[See Browser Compatibility section](#cross-platform-testing)
+
+**I want to receive updates on promotions, new eco-friendly products, and sustainability initiatives, so I can stay engaged with the brand.**
+
+- **Achieved:** Yes
+- **Details:** The Users can view new products via the new arrivals category link, As well as keep up to date on latest news and engagement via the blog.
+- **Evidence**
+![Blog](documentation/blog.webp)
+
+### As a site Admin.....
+
+**I want to easily add, update, and remove product listings, ensuring all information is current and accurate, to maintain a reliable and up-to-date product catalogue.**
+
+- **Achieved:** Yes
+- **Details:**  As an admin, Adding, updating & Deleting product listings is straightforward, with an admin interface that allows quick edits to product details.
+- **Evidence**
+![Edit Product](documentation/edgeeditprod.webp)
+
+**I want the ability to easily label products as 'Clearance', 'New Arrival', or 'Special Deals', so I can effectively promote specific items and attract customer interest, leveraging these categories as key marketing strategies alongside the blog.**
+
+- **Achieved:** Yes
+- **Details:** Admin can Edit product categories to add them to clearance or New Arrivals etc. Admin also has the ability to post blog posts with the Purpose of propmoting a particular product or range.
+- **Evidence**
+![Blog](documentation/blog.webp)
+
+**I want to access analytics and insights about user behavior and sales trends, so I can make data-driven decisions to improve the website and product offerings**
+
+- **Achieved:** Yes
+- **Details:**As an admin, I have access to a comprehensive analytics dashboard that provides in-depth insights into user behavior and sales trends. This dashboard includes key metrics such as  product popularity, sales figures, and other relevant data. The analytics tool allows me to track the performance of various products and identify trends, helping me understand which items are well-received and which may need further promotion or improvement.
+- **Evidence**
+![Product Stats](documentation/productstats.webp)
+![Order Stats](documentation/chromeorderstats.webp)
+
 ## Automated Testing
 ### Jest Testing JQuery
 
