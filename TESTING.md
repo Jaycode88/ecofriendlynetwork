@@ -673,12 +673,12 @@ Then it is required to run the Django tests using coverage to measure code cover
 This leaves a file within the project named ".coverage"(do not delete it yet)
 
 To Generate the HTML report the command ``coverage html
-`` is used, This creates a HTML report from the ".coverage" file previously mentioned.. You will find the Report in a new directory in your project named "htmlcov" it is a file named "index.html". (It is best to not push the htmlcov directory to your repo, Add to .gitignore)
+`` is used, This creates a HTML report from the ".coverage" file previously mentioned.. You will find the Report in a new directory in your project named "htmlcov" it is a file named "index.html". (It is best to not push the htmlcov directory to your repo, Add it to .gitignore instead)
 
 #### Results
 
 I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
-To view the full Testing report, please [download the PDF](documentation/pythoncoveragereport.pdf).
+To view the full Testing report, please [Click Here](documentation/pythoncoveragereport.pdf).
 
 ## Bugs
 ### Fixed Bugs
