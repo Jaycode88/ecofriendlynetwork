@@ -677,8 +677,8 @@ To Generate the HTML report the command ``coverage html
 
 #### Results
 
- I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
-To view the full Testing report Please [Click Here](documentation/pythontestreport.html)
+I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
+To view the full Testing report, please [download the PDF](documentation/pythoncoveragereport.pdf).
 
 ## Bugs
 ### Fixed Bugs
