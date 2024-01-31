@@ -657,12 +657,34 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 #### Jest test Issues 
 
 ### Python unit testing
+#### Process
+
+I Added a number of tests within each apps tests.py file. To run the tests the terminal command is:
+ ``python manage.py test``
+
+or for a more verbose output the --verbosity flag can be used:
+``python manage.py test --verbosity=2``
+
+I prefer to recieve a html coverage report so installed coverage using command:
+``pip install coverage``
+
+Then it is required to run the Django tests using coverage to measure code coverage, using command:
+``coverage run --source='.' manage.py test``
+This leaves a file within the project named ".coverage"(do not delete it yet)
+
+To Generate the HTML report the command ``coverage html
+`` is used, This creates a HTML report from the ".coverage" file previously mentioned.. You will find the Report in a new directory in your project named "htmlcov" it is a file named "index.html". (It is best to not push the htmlcov directory to your repo, Add to .gitignore)
+
+#### Results
+
+ I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
+To view the full Testing report Please [Click Here](documentation/pythontestreport.html)
 
 ## Bugs
 ### Fixed Bugs
 
 - **Increment/Decrement Buttons**
-    When Attempting to create the functionality for the shopping bag to be updated upon the click of the increment or decrement button being pushed rather than needing a submit button: I came accross great difficulty in that when i was pressing the increment or decrement buttons the no. of items value would increment or decrement by 2 rather than 1 When i tried to fix this I would get varying results mainly the buttons not disabling and enabling correctly or the increment and decrements going in values of 2. After a lot of time debugging I realised it was due to using the quantity input script in the bag template as I was changing the function it was nessacerry to completely  rewrite the code for the bag template and leave the quantity input script for the product details page only.
+    When Attempting to create the functionality for the shopping bag to be updated upon the click of the increment or decrement button being pushed rather than needing a submit button: I came accross great difficulty in that when i was pressing the increment or decrement buttons the no. of items value would increment or decrement by 2 rather than 1 When I tried to fix this I would get varying results mainly the buttons not disabling and enabling correctly or the increment and decrements going in values of 2. After a lot of time debugging I realised it was due to using the quantity input script in the bag template as I was changing the function it was nessacerry to completely  rewrite the code for the bag template and leave the quantity input script for the product details page only.
 
 - **Custom Clearable file input**
     I was recieving the following error when attempting to load my add or edit product pages:
