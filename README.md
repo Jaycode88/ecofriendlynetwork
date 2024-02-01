@@ -1,5 +1,5 @@
 # [Eco Friendly network](https://ecofriendlynetwork-82b71b042579.herokuapp.com/)
-An Eco friendly eccomerce store selling many diffent items. The website was created for people passionat about eco friendly living. The online shop offers products from different brands and it's aim is to encourage people to easy and friendly e-shopping.
+An Eco friendly eccomerce store selling many diffent items. The website was created for people passionate about eco friendly living. The online shop offers products from different brands and it's aim is to encourage people to easy and friendly e-shopping.
 
 **Code Institute - Milestone Project 4**
 
@@ -214,10 +214,12 @@ I chose Roboto for body text due suitable contrast to the Allan Headings, As wel
 
 - **Enhancing User Experience:** Given its legibility and aesthetic neutrality, Roboto enhances the user experience by making the reading process effortless and pleasant, which is crucial for engaging and retaining the audience.
 
-All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
-
+#### Fallback Font
 ![Sans Serif](documentation/sanserif.webp)
+
 As a best practice, I have also included Sans Serif as a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
+
+All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
 ## User Stories
 ### As a new user....
@@ -312,17 +314,18 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 ![Nav Bar Mobile](documentation/navbarmobile.webp)
 
 - **Sign Up/Sign In**
-	- The sign Up page/form enables members to become members of the site with ability to save an address as well as favorite products and blog posts.
+	- Enhance your Eco Friendly Network experience by registering. Once signed up, you can save your favorite products and blog posts for quick access later. This personalized feature streamlines your shopping and reading experience, making it easier to return to the items and content you love most.
 	- contains links for sign in
 
-![Sign Up](documentation/signup.webp)
+	![Sign Up](documentation/signup.webp)
+
 	- The sign in page enables users to access their accounts
 	- Contains links for forgotten password and sign up
 
-![Sign In](documentation/signin.webp)
+	![Sign In](documentation/signin.webp)
 
 - **My Profile**
-	- Allows users to view & update default information
+	- Allows users to view & update default delivery information
 	- Displays user's list of placed orders
 
 ![My Profile](documentation/profile.webp)
@@ -335,14 +338,14 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- Each product contains tags providing rating, category and wether the product is in their favorites
 	- For superusers only, It also displays the total amount of favorites a product has by users as well as links to edit and delete a product
 
-![products](documentation/products.webp)
+	![products](documentation/products.webp)
 
 - **Product Detail Page**
 	- This page provides the user with a description of a product aswell as the information tags that were included on the products page
 	- Here user's can find the link to add and remove the product from their favorites
 	- Includes a quantiy selector input with the option to add the item to the bag or return to the products view
 	
-![Product Detail](documentation/productdetail.webp)
+	![Product Detail](documentation/productdetail.webp)
 
 - **Shopping Bag**
 	- This provides a place for customers to review their purchases before commiting to checkout
@@ -352,22 +355,25 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- After the list of items the bag total, delivery cost and grand total is displayed followed by the procced to checkout and back to shopping buttons
 	- If the Free delivery amaount is not reached a note is displayed to advise the customer of what they need to spend to get free delivery.
 
-![Shopping Bag](documentation/shopbag.webp)
+	![Shopping Bag](documentation/shopbag.webp)
 
 - **CheckOut**
-	- This page the user with an order summary and an order form to complete with  payment.
-	- The order form is prefilled with the users address infrmation if they have an account.
-	- Payment is processed with stripe, Includes webhook to ensure no orders can be lost during the payment process.
-	- Has buttons to return to bag and complete order, with a warning that the card will be charged.
-	- This page has a loading over-lay So that the payment process can not be interupted by clicks on the page.
+	- Offers an order summary and form for completing payment, with address information pre-filled for registered users.
+	- Supports guest checkout, allowing non-registered users to complete purchases without creating an account, simplifying the process for first-time shoppers.	- Has buttons to return to bag and complete order, with a warning that the card will be charged.
+	- Features return to bag and order completion buttons, with a card charge warning.
+	-Includes a loading overlay to prevent interruptions during payment.
+	- Utilizes Stripe for secure payment processing; see the "Stripe Payment and Webhooks" section(Below) for details.
 
-![CheckOut](documentation/checkout.webp)
+	![CheckOut](documentation/checkout.webp)
+
+- **Stripe Payment and webhooks**
+	This feature ensures secure and efficient payment processing through Stripe. It integrates Stripe's comprehensive API to handle transactions, providing users with a seamless checkout experience. Webhooks are employed to maintain order integrity, capturing events such as successful payments and failures. This system guarantees that orders are only finalized when payment is confirmed, enhancing reliability and user trust.
 
 - **Order Confirmation**
 	- This page displays an ordery complete summary after a succesful checkout
 	- Button to return to shop to see latest deals.
 
-![Order Confirmation](documentation/ordersummary.webp)
+	![Order Confirmation](documentation/ordersummary.webp)
 
 - **Blog List**
 	- This page provides a list of all blog posts in a grid layout suitable for the viewong device
@@ -376,19 +382,19 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- Link and icon displayed for users to add blog to favorites.
 	- Links for superuser's only to edit and delete posts
 
-![Blog List](documentation/blog.webp)
+	![Blog List](documentation/blog.webp)
 
 - **Blog Detail**
 	- This page shows the blog in a larger view, It provides the full blog article rather than just the excerpt.
 	- Has the same links and information tags as on the blog list page
 
-![Blog Detail](documentation/blogdetail.webp)
+	![Blog Detail](documentation/blogdetail.webp)
 
 - **Toast Meassages**
 	- Toast messages are displayed for many different event types including Success, Error , Info and Warning
 	- Toast messages provide great functionality in informing the user of errors or succesful tasks.
 
-![Toasts](documentation/toast.webp)
+	![Toasts](documentation/toast.webp)
 
 #### Super User Only Features
 - **Add & Edit Products**
@@ -397,7 +403,7 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- The Add product form can be accessed via the "My Account" dropdown nav menu
 	- The Edit Product form can be accessed via clicking on the links on the product list and detail pages
 
-![Add/Edit Products](documentation/addproduct.webp)
+	![Add/Edit Products](documentation/addproduct.webp)
 
 - **Add & Edit Blog Posts**
 	- This form allows super users to add and edit blog posts.
@@ -406,7 +412,7 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- The Add Blog page can be accessed via the "Blog" dropdown nav menu
 	- The Edit Blog page can be accessed via the links on the blog list & detail pages
 
-![Add/Edit Blog](documentation/addblog.webp)
+	![Add/Edit Blog](documentation/addblog.webp)
 
 - **View Orders**
 	- This page is accessible via the "My Account" dropdown nav menu
@@ -414,7 +420,7 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- If a Order in the list is selected the super user is taken to the order reciept page with a button to return to the orders view.
 	- This page was implemented so super users had a user friendly place to view and search orders.
 
-![View Orders](documentation/orders.webp)
+	![View Orders](documentation/orders.webp)
 
 - **Products Statistics page**
 	- This page is accessible via the "My Account" dropdown nav menu
@@ -422,7 +428,7 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	- The Favorites column Is not affected via date selection It simply shows how many users have the product saved as favorite at the time of viewing the page
 	- This page was implemented to give Admin an accessible area where they can get required statistics helping them make stock decisions such as wether to discontinue a product or discount etc.
 
-![Product Statistics](documentation/productstats.webp)
+	![Product Statistics](documentation/productstats.webp)
 
 ### Future Features
 
@@ -475,6 +481,8 @@ The Following graphs show connections between the different models.
 - **Checkout and Profile**
 
 	![Checkout and Profile Graphs](documentation/checkoutprofconnections.webp)
+
+The Models flow charts were created with [Diagrams.net](https://app.diagrams.net/)
 
 ## CRUD Functionality
 ### Sales Stats
@@ -970,11 +978,17 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
 - [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
+- [JQuery](https://jquery.com/) simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
 - [Python 3.9.17](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
 - [Bootstrap 4.6.2](https://getbootstrap.com/) is a is a powerful front-end framework for faster and easier web development, Bootstrap provides ready-to-use components and responsive design templates.
 - [Django 4.2.9](https://www.djangoproject.com/) is a high-level Python web framework that enables rapid development of secure and maintainable websites, streamlining web application development with its pragmatic design.
+- [Django-Storages](https://django-storages.readthedocs.io/en/latest/) A collection of custom storage backends for Django, supporting a variety of storage services like Amazon S3, which allows for efficient handling of static and media files in production environments.
 - [ElephantSQL](https://www.elephantsql.com/) is a cloud-hosted PostgreSQL database service that offers automated backups, easy scaling, and a user-friendly interface for database management.
 - [SQLite](https://www.sqlite.org/index.html) is an embedded SQL database engine that provides a lightweight disk-based database without requiring a separate server process, facilitating easy setup and simple data management.
+- [Stripe](https://stripe.com/gb) is a comprehensive suite of payment APIs that powers commerce for online businesses of all sizes, including fraud prevention, and subscription management. Used for secure payment processing in the checkout feature, it ensures smooth and reliable transactions.
+- [Amazon Web Services (AWS)](https://aws.amazon.com/) A comprehensive and widely adopted cloud platform that offers over 200 fully featured services from data centers globally. AWS provides a scalable infrastructure for deploying web applications and storing data, including static and media files through services like S3 (Simple Storage Service), making it an essential tool for high availability and scalability in web projects.
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) The Amazon Web Services (AWS) SDK for Python, enabling Django applications to directly interact with AWS services like S3, facilitating the storage and retrieval of media files with ease and efficiency.
+- [Pillow](https://python-pillow.org/) An imaging library for Python that adds support for opening, manipulating, and saving many different image file formats, essential for processing images in Django applications, from resizing to altering image properties.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [Heroku](https://heroku.com) To create and Host the Deployed App.
@@ -989,7 +1003,6 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 - [JSHint](https://jshint.com/) Used to validate JQuery.
 - [CodeInstitute Python Linter](https://pep8ci.herokuapp.com/) Used to Check Python for PEP-8 Compliance.
 - [WAVE](https://wave.webaim.org/) Used to check accesability.
-- [Responsinator](http://www.responsinator.com/) Used to check responsiveness.
 - [UI.dev](https://ui.dev/amiresponsive) Used to create am I responsive image.
 - [Pytest](https://pypi.org/project/pytest/) Used for Python unit testing.
 
@@ -998,4 +1011,4 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/)  for his amazing help, advice and support throughout the development of this project.
 - - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
-- I would like to thank freinds for there on going support and reviewing of the Web App.
+- I would like to thank freinds for there on going support.
