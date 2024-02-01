@@ -136,6 +136,17 @@ def manage_orders(request):
     start_date = request.GET.get('start_date')
     end_date = request.GET.get('end_date')
 
+    # Adjusting start_date to beginning of the day
+    if start_date:
+        start_date = parse_date(start_date)
+        start_date = timezone.make_aware(datetime.combine(start_date, datetime.min.time()))
+
+    # Adjusting end_date to the end of the day
+    if end_date:
+        end_date = parse_date(end_date)
+        # Add one day and subtract a second to include the entire end date
+        end_date = timezone.make_aware(datetime.combine(end_date, datetime.max.time()))
+
     # Apply filters if values are provided
     if order_number:
         query = query.filter(order_number__icontains=order_number)
@@ -144,10 +155,8 @@ def manage_orders(request):
     if postcode:
         query = query.filter(postcode__icontains=postcode)
     if start_date:
-        start_date = parse_date(start_date)
         query = query.filter(date__gte=start_date)
     if end_date:
-        end_date = parse_date(end_date)
         query = query.filter(date__lte=end_date)
 
     # Retrieve orders based on applied filters
