@@ -673,7 +673,7 @@ Then it is required to run the Django tests using coverage to measure code cover
 This leaves a file within the project named ".coverage"(do not delete it yet)
 
 To Generate the HTML report the command ``coverage html
-`` is used, This creates a HTML report from the ".coverage" file previously mentioned.. You will find the Report in a new directory in your project named "htmlcov" it is a file named "index.html". (It is best to not push the htmlcov directory to your repo, Add it to .gitignore instead)
+`` is used, This creates a HTML report from the ".coverage" file previously mentioned.. You will find the Report in a new directory in your project named "htmlcov" it is a file named "index.html". (It is best to not push the htmlcov directory to your repo, Add it to .gitignore instead) You can also delete the ".coverage" file now you have the report also.
 
 #### Results
 
@@ -726,3 +726,7 @@ Whilst validating the HTML for the Profile, Add Prduct, Edit product, Add Blog, 
 I suspect this is due to a mis match in compatability between the versions of packages I have installed but as mentioned before I could not pin point this. As the validation note is only an info point and not a validation error or warning, I chose not to modify all the forms in a similar manner of which I did with the Signup error in the interest of completing the project on time.
 
 In an ideal scenario in which I had more time to complete I would of liked to look further into this and resolve the issue completely.
+
+- **Blog posts**
+It is known to me that it is required for the user to use html in order to achieve layout wishes when typing in the text area.
+How ever I noticed that It is nessacery to leave the last paragraph closing tag out. As if included it causes a validation error for the blog detail pages due to 2 closing tags.

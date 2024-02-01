@@ -439,6 +439,42 @@ As a best practice, I have also included Sans Serif as a fallback font in The de
 	Enabling users to share their favorite products, blogs, or their own shopping experiences directly to social media platforms. This feature could increase the visibility of Eco Friendly Network and drive more traffic to the site.
 
 ## Database Design
+During the development phase, I used SQLite for its simplicity and ease of configuration, allowing for rapid prototyping and testing. This project leverages Django's ORM with a relational database structure for efficient data management, without detailing specific models which are visually represented below. SQLite served as a crucial tool in the initial stages, before transitioning to a more robust database for production, ensuring a seamless user experience and data integrity throughout the application lifecycle.
+
+### Model Flow Charts
+- **Products**
+
+	![Products chart](documentation/productsdatabase.webp)
+
+- **Profiles**
+
+	![Profiles Chart](documentation/profilesdatabase.webp)
+
+- **Checkout**
+
+	![Checkout Graph](documentation/checkoutdatabase.webp)
+
+- **Blog**
+
+	![Blog Graph](documentation/blogdatabase.webp)
+
+- **Sales Stats**
+
+	![Sales Stats Graph](documentation/salesstatsdatabase.webp)
+
+The Following graphs show connections between the different models.
+
+- **Products, Sales Stats & Checkout**
+
+	![Products, Sales Stats & Checkout Graphs](documentation/prodsalescheckconnections.webp)
+
+- **Products, Profiles & Blog Posts**
+
+	![Products, Profiles & Blog Posts Graphs](documentation/prodprofpostsconnections.webp)
+
+- **Checkout and Profile**
+
+	![Checkout and Profile Graphs](documentation/checkoutprofconnections.webp)
 
 ## CRUD Functionality
 ### Sales Stats
