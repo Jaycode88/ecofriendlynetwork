@@ -37,6 +37,9 @@
                     <!-- User's Delivery Information Form -->
                     {{ form|crispy }}
                     <button class="btn btn-green rounded-0 text-uppercase float-right">Update Information</button>
+                    <div class="text-right mt-3">
+                        <a href="{% url 'delete_profile' %}" class="btn btn-orange rounded-0">Delete Profile</a>
+                    </div>
                 </form>
             </div>
 

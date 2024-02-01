@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
 from django.contrib import messages
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
@@ -42,6 +44,18 @@ def profile(request):
 
     # Renders the profile template with the given context.
     return render(request, template, context)
+
+@login_required
+def delete_profile(request):
+    """Allows a user to delete their profile."""
+    if request.method == "POST":
+        user = request.user
+        user.delete()  # deletes the User and related UserProfile due to CASCADE
+        logout(request)
+        messages.success(request, "Your profile has been deleted successfully.")
+        return redirect(reverse('home'))  # Redirect to homepage
+    else:
+        return render(request, 'profiles/delete_profile_confirm.html')
 
 
 def order_history(request, order_number):

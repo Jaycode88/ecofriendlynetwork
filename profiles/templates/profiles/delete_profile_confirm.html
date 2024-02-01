@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+    <!-- Linking custom CSS for the profile page -->
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <!-- Header Container: Left Empty, for positioning of other elements on page -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!-- Overlay: To Remove background image -->
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <!-- Profile Heading -->
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Confirm Profile Deletion</h2>
+            <hr>
+        </div>
+    </div>
+    <p>Are you sure you want to delete your profile? This action cannot be undone.</p>
+    <form method="post">
+        {% csrf_token %}
+        <a href="{% url 'profile' %}" class="btn btn-orange rounded-0">Cancel</a>
+        <button type="submit" class="btn btn-danger rounded-0"><strong>Delete My Profile</strong></button>
+    </form>
+</div>
+{% endblock %}
