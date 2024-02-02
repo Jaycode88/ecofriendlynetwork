@@ -133,8 +133,12 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
     - product_detail.html
     ![Product Detail JS Valid](documentation/productdetailjsvalid.webp)
 
-    - quantity_buttons_script.html
-    ![Quantity Button Script JS Valid](documentation/qbsjsvalid.webp)
+    - enabledisable_buttons_script.html
+    ![Enable/Disable Buttons Script JS Valid](documentation/qbsjsvalid.webp)
+
+    - bag.html
+    ![Bag JS Valid](documentation/bagjsvalid.webp)
+    N.B The 'handleEnableDisable' Is defined in the 'quantity_buttons_script.html'(Above), Which is included in the 'bag.html'. 
 
     - image_upload_preview_script.html
     ![Image Upload Script JS Valid](documentation/iupsjsvalid.webp)
@@ -142,8 +146,6 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
     - stripe_element.js
      ![Stripe Element Script JS Valid](documentation/stripeelementjsvalid.webp)
 
-    - bag.html
-    ![Bag JS Valid](documentation/bagjsvalid.webp)
 
 
 ### PEP8
