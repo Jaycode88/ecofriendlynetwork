@@ -139,12 +139,14 @@ def manage_orders(request):
     # Adjusting start_date to beginning of the day
     if start_date:
         start_date = parse_date(start_date)
-        start_date = timezone.make_aware(datetime.combine(start_date, datetime.min.time()))
+        start_date = timezone.make_aware(
+                datetime.combine(start_date, datetime.min.time()))
 
     # Adjusting end_date to include the entire day up to 23:59:59
     if end_date:
         end_date = parse_date(end_date)
-        end_date = timezone.make_aware(datetime.combine(end_date, datetime.max.time()))
+        end_date = timezone.make_aware(
+                datetime.combine(end_date, datetime.max.time()))
 
     # Apply filters if values are provided
     if order_number:

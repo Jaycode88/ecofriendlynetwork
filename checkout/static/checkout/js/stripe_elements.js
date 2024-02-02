@@ -1,4 +1,5 @@
 /* jshint esversion: 11, jquery: true */
+/* globals Stripe */
 
 /*
     Core logic/payment flow for this comes from here:

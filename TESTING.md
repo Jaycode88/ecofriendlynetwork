@@ -187,7 +187,6 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/models.py)|![Results](documentation/pepsalesmodels.webp)|
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/forms.py)|![Results](documentation/pepsalesforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/apps.py)|![Results](documentation/pepsalesapps.webp)|
-||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/admin.py)|![Results](documentation/pepsalesadmin.webp)|
 ||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/tests.py)|![Results](documentation/pepsalestests.webp)|
 **Checkout**
 ||webhooks.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/webhooks.py)|![Results](documentation/pepcheckwebhooks.webp)|
@@ -207,7 +206,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/forms.py)|![Results](documentation/pepblogforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/apps.py)|![Results](documentation/pepblogapps.webp)|
 ||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/admin.py)|![Results](documentation/pepblogadmin.webp)|
-||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/tests.py)|![Results]()|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/tests.py)|![Results](documentation/pepblogtests.webp)|
 **bag**
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/views.py)|![Results](documentation/pepbagviews.webp)|
 ||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/urls.py)|![Results](documentation/pepbagurls.webp)|

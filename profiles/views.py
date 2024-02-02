@@ -45,14 +45,17 @@ def profile(request):
     # Renders the profile template with the given context.
     return render(request, template, context)
 
+
 @login_required
 def delete_profile(request):
     """Allows a user to delete their profile."""
     if request.method == "POST":
         user = request.user
-        user.delete()  # deletes the User and related UserProfile due to CASCADE
+        # delete the User and related UserProfile due to CASCADE
+        user.delete()
         logout(request)
-        messages.success(request, "Your profile has been deleted successfully.")
+        messages.success(
+            request, "Your profile has been deleted successfully.")
         return redirect(reverse('home'))  # Redirect to homepage
     else:
         return render(request, 'profiles/delete_profile_confirm.html')
