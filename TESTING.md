@@ -355,7 +355,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 |CREATE a Profile|No(As Intended)|No(As Intended)|Yes| A User may create a second account with a different email address|
 |READ Profile Details|Yes|Yes|No(As Intended)||
 |UPDATE Profile Details|Yes|Yes|No(As Intended)||
-|DELETE Profile|Yes|No(As Intended)|No(As Intended)|
+|DELETE Profile|Yes|Yes|No(As Intended)|
 **Products**
 |CREATE a Product|Yes|No(As Intended)|No(As Intended)||
 |READ Product Details|Yes|Yes|Yes||

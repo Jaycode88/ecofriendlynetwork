@@ -1,9 +1,23 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+Hello Eco Friend,
 
-You're receiving this e-mail because user {{ user_display }} has given yours as an e-mail address to connect their account.
+We're delighted to welcome you to {{ site_name }}, a community where each choice supports a greener, more sustainable world. 
 
-To confirm this is correct, go to {{ activate_url }}
+It appears that {{ user_display }} has given this email address to register an account with us. If this was you, simply click the link below to confirm your email and activate your journey towards sustainable living:
+
+{{ activate_url }}
+
+If you did not initiate this, please ignore this email or reach out to us for support. Your security and privacy are of utmost importance to us.
+
 {% endblocktrans %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
-{{ site_domain }}{% endblocktrans %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+Thank you for joining us in our mission to make the world a better place, one step at a time.
+
+With gratitude and green wishes,
+
+The {{ site_name }} Team
+
+{{ site_domain }}
+{% endblocktrans %}
 {% endautoescape %}
