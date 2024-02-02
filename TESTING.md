@@ -132,13 +132,14 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 
     - product_detail.html
     ![Product Detail JS Valid](documentation/productdetailjsvalid.webp)
+    N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.html'(Below), Which is included in the 'product_detail.html'.
 
     - enabledisable_buttons_script.html
     ![Enable/Disable Buttons Script JS Valid](documentation/qbsjsvalid.webp)
 
     - bag.html
     ![Bag JS Valid](documentation/bagjsvalid.webp)
-    N.B The 'handleEnableDisable' Is defined in the 'quantity_buttons_script.html'(Above), Which is included in the 'bag.html'. 
+    N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.html'(Above), Which is included in the 'bag.html'. 
 
     - image_upload_preview_script.html
     ![Image Upload Script JS Valid](documentation/iupsjsvalid.webp)
@@ -163,6 +164,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/views.py)|![Results](documentation/pephomeviews.webp)|
 ||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/urls.py)|![Results](documentation/pephomeurls.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/apps.py)|![Results](documentation/pephomeadmin.webp)|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/home/tests.py)|![Results](documentation/pephometests.webp)|
 **products**
 ||widgets.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/widgets.py)|![Results](documentation/pepprodwidgets.webp)|
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/views.py)|![Results](documentation/pepprodviews.webp)|
@@ -171,12 +173,14 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/forms.py)|![Results](documentation/pepprodforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/apps.py)|![Results](documentation/pepprodapps.webp)|
 ||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/admin.py)|![Results](documentation/pepprodadmin.webp)|
+||tests.py|[view](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/products/tests.py)|![Results](documentation/pepprodtests.webp)
 **profiles**
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/views.py)|![Results](documentation/pepprofviews.webp)|
 ||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/urls.py)|![Results](documentation/pepprofurls.webp)|
 ||models.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/models.py)|![Results](documentation/pepprofmodels.webp)|
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/forms.py)|![Results](documentation/pepprofforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/apps.py)|![Results](documentation/pepprofapps.webp)|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/profiles/tests.py)|![Results](documentation/pepproftests.webp)|
 **sales_stats**
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/views.py)|![Results](documentation/pepsalesviews.webp)|
 ||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/urls.py)|![Results](documentation/pepsalesurls.webp)|
@@ -184,6 +188,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/forms.py)|![Results](documentation/pepsalesforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/apps.py)|![Results](documentation/pepsalesapps.webp)|
 ||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/admin.py)|![Results](documentation/pepsalesadmin.webp)|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/sales_stats/tests.py)|![Results](documentation/pepsalestests.webp)|
 **Checkout**
 ||webhooks.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/webhooks.py)|![Results](documentation/pepcheckwebhooks.webp)|
 ||webhook_handler.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/webhook_handler.py)|![Results](documentation/pepcheckwh.webp)|
@@ -194,6 +199,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/forms.py)|![Results](documentation/pepcheckforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/apps.py)|![Results](documentation/pepcheckapps.webp)|
 ||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/admin.py)|![Results](documentation/pepcheckadmin.webp)|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/checkout/tests.py)|![Results](documentation/pepchecktests.webp)|
 **blog**
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/views.py)|![Results](documentation/pepblogviews.webp)|
 ||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/urls.py)|![Results](documentation/pepblogurls.webp)|
@@ -201,11 +207,13 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ||forms.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/forms.py)|![Results](documentation/pepblogforms.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/apps.py)|![Results](documentation/pepblogapps.webp)|
 ||admin.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/admin.py)|![Results](documentation/pepblogadmin.webp)|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/blog/tests.py)|![Results]()|
 **bag**
 ||views.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/views.py)|![Results](documentation/pepbagviews.webp)|
 ||urls.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/urls.py)|![Results](documentation/pepbagurls.webp)|
 ||contexts.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/contexts.py)|![Results](documentation/pepbagcontexts.webp)|
 ||apps.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/apps.py)|![Results](documentation/pepbagapps.webp)|
+||tests.py|[View](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/ecofriendlynetwork/main/bag/tests.py)|![Results](documentation/pepbagtests.webp)|
 
 ## Cross Platform Testing
 

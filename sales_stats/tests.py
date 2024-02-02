@@ -7,6 +7,7 @@ from products.models import Product
 from checkout.models import Order
 from datetime import datetime, timedelta
 
+
 class TestProductSalesStatsModel(TestCase):
     def setUp(self):
         # Create a test product
@@ -24,12 +25,15 @@ class TestProductSalesStatsModel(TestCase):
 
     def test_product_sales_stats_str(self):
         # Test the string representation of ProductSalesStats
-        self.assertEqual(str(self.sales_stats), f'Sales Stats for {self.product.name}')
+        self.assertEqual(
+            str(self.sales_stats), f'Sales Stats for {self.product.name}')
+
 
 class TestSalesStatsViews(TestCase):
     def setUp(self):
         # Create and login as a superuser
-        self.superuser = User.objects.create_superuser('superuser', 'superuser@test.com', 'superpassword')
+        self.superuser = User.objects.create_superuser(
+            'superuser', 'superuser@test.com', 'superpassword')
         self.client = Client()
         self.client.login(username='superuser', password='superpassword')
 

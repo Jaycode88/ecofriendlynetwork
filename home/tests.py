@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+
 class HomeViewsTestCase(TestCase):
 
     def test_index_view_exists(self):
@@ -16,10 +17,3 @@ class HomeViewsTestCase(TestCase):
         """
         response = self.client.get(reverse('home'))
         self.assertTemplateUsed(response, 'home/index.html')
-
-    def test_index_view_context(self):
-        """
-        Test to ensure the index view passes the correct context to the template.
-        (Modify this if your view passes context)
-        """
-        response = self.client.get(reverse('home'))
