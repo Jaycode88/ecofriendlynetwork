@@ -57,5 +57,5 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- JavaScript for Image Upload Preview -->
-    {% include 'products/includes/image_upload_preview_script.html' %}
+    <script src="{% static 'js/image_upload_preview_script.js' %}"></script>
 {% endblock %}

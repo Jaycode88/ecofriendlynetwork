@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = os.environ.get('DEBUG', False)
 
 ALLOWED_HOSTS = [
-    '8000-jaycode88-ecofriendlyne-9c3xmnw9i4g.ws-eu107.gitpod.io',
+    '8000-jaycode88-ecofriendlyne-9c3xmnw9i4g.ws-eu108.gitpod.io',
     'ecofriendlynetwork-82b71b042579.herokuapp.com'
     ]
 

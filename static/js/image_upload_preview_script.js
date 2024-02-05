@@ -1,5 +1,4 @@
-<script>
-    /* jshint esversion: 11, jquery: true */
+/* jshint esversion: 11, jquery: true */
     /**
      * Script for updating the displayed filename when a new image is selected.
      * It listens for changes on the file input element and updates the text
@@ -15,4 +14,3 @@
         // to display the name of the selected file
         $('#filename').text(`Image will be set to: ${file.name}`);
     });
-</script>

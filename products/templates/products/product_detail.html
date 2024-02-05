@@ -141,32 +141,8 @@
 {% block postloadjs %}
 {{ block.super }}
 <!-- Script for Quantity buttons enable and disable -->
-{% include 'products/includes/enabledisable_buttons_script.html' %}
+<script src="{% static 'js/enabledisable_buttons_script.js' %}"></script>
 
 <!-- Script logic for incrementing/decrementing quantity -->
-<script>
-    /* jshint esversion: 11, jquery: true */
-    // Increment quantity
-    $('.increment-qty').click(function(e) {
-       e.preventDefault();
-       console.log('increment button clicked');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       var currentValue = parseInt($(closestInput).val());
-       console.log(`currentValue : ${currentValue}`);
-       $(closestInput).val(currentValue + 1);
-       var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
-    });
-
-    // Decrement quantity
-    $('.decrement-qty').click(function(e) {
-       e.preventDefault();
-       console.log('decrement button clicked');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       var currentValue = parseInt($(closestInput).val());
-       $(closestInput).val(currentValue - 1);
-       var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
-    });
-</script>
+<script src="{% static 'js/proddetail_incdec_quantity_btn.js' %}"></script>
 {% endblock %}

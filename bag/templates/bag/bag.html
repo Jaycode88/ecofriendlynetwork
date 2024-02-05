@@ -156,57 +156,8 @@
 {% block postloadjs %}
 {{ block.super }}
 <!-- Script for Quantity buttons enable and disable -->
-{% include 'products/includes/enabledisable_buttons_script.html' %}
+<script src="{% static 'js/enabledisable_buttons_script.js' %}"></script>
 
-<script>
-    /* jshint esversion: 11, jquery: true */
-    
-    // JavaScript code for incrementing, decrementing, and removing items from the bag
-    $(document).ready(function() {
-        // Increment quantity on click
-        $(document).on('click', '.increment-qty', function(event) {
-            event.preventDefault();
-            updateQuantity($(this), 1);
-        });
-
-        // Decrement quantity on click
-        $(document).on('click', '.decrement-qty', function(event) {
-            event.preventDefault();
-            updateQuantity($(this), -1);
-        });
-
-        // Remove item and reload on click
-        $(document).on('click', '.remove-item', function() {
-            var csrfToken = "{{ csrf_token }}";
-            var itemId = $(this).attr('id').split('_')[1];
-            var url = `/bag/remove/${itemId}/`;
-            var data = {'csrfmiddlewaretoken': csrfToken};
-            $.post(url, data)
-                .done(function() {
-                    location.reload();
-                });
-        });
-
-        // Combine both functions into one
-        function updateQuantity(button, change) {
-            var itemId = button.data('item_id');
-            var inputField = $('#id_qty_' + itemId);
-            var currentQuantity = parseInt(inputField.val());
-
-            // Calculate the new quantity based on increment or decrement
-            var newQuantity = currentQuantity + (change > 0 ? 1 : -1);
-
-            // Ensure the new quantity is within the valid range
-            if (newQuantity >= inputField.attr('min') && newQuantity <= inputField.attr('max')) {
-                inputField.val(newQuantity);
-
-                // Submit the form to update the quantity
-                button.closest('form').submit();
-
-                // handleEnableDisable is defined in 'quantity_buttons_script.html'
-                handleEnableDisable(itemId);
-            }
-        }
-    });
-</script>
+<!-- Script for incrementing, Decrementing qauntities and removing items -->
+<script src="{% static 'js/bag_incdec_remove.js' %}"></script>
 {% endblock %}
