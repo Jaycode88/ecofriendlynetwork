@@ -1,7 +1,7 @@
 /* jshint esversion: 11, jquery: true */
 
 /**
- * Script for handling the default country selection in forms.
+ * Script for handling the default country selection in forms on profile page.
  * It sets the default color of the country selector based on whether a country is selected.
  * When the country selection changes, it updates the color to reflect the selection status.
  */

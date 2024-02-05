@@ -662,6 +662,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 ## Automated Testing
 ### Jest Testing JQuery
+When it chame to testing JQuery, I beame a little lost due to following the file structure of my django learning material I had JQuery code all over the place(at the bottom of html templates, in html includes etc.). This made being able to test with jest very tricky. With a bit of research and advice from a CodeInstitute graduate, It was nessacery for me to rearrange the file structure of my static files. To see the precise changes made please refer to commit [3f348c3](https://github.com/Jaycode88/ecofriendlynetwork/commit/3f348c33e81057aedeeac721aff42deb6bc4dbb3). From there I was ready to start testing.
 
 #### Jest test Issues 
 
