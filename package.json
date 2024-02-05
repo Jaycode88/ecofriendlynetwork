@@ -1,0 +1,26 @@
+{
+  "name": "ecofriendlynetwork",
+  "version": "1.0.0",
+  "description": "An Eco friendly eccomerce store selling many diffent items. The website was created for people passionate about eco friendly living. The online shop offers products from different brands and it's aim is to encourage people to easy and friendly e-shopping.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaycode88/ecofriendlynetwork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaycode88/ecofriendlynetwork/issues"
+  },
+  "homepage": "https://github.com/Jaycode88/ecofriendlynetwork#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

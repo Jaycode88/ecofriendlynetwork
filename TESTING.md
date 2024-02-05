@@ -127,21 +127,21 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
     - Countryfield.js
     ![Countryfield JS Valid](documentation/countryfieldjsvalid.webp)
 
-    - products.html
+    - sorting_select_box_script.js
     ![Products JS Valid](documentation/productsjsvalid.webp)
 
-    - product_detail.html
+    - proddetail_incdec_quantity_btn.js
     ![Product Detail JS Valid](documentation/productdetailjsvalid.webp)
-    N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.html'(Below), Which is included in the 'product_detail.html'.
+    N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.js'(Below), Which is included in the 'product_detail.html'.
 
-    - enabledisable_buttons_script.html
+    - enabledisable_buttons_script.js
     ![Enable/Disable Buttons Script JS Valid](documentation/qbsjsvalid.webp)
 
-    - bag.html
+    - bag_incdec_remove.js
     ![Bag JS Valid](documentation/bagjsvalid.webp)
-    N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.html'(Above), Which is included in the 'bag.html'. 
+    N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.js'(Above), Which is included in the 'bag.html'. 
 
-    - image_upload_preview_script.html
+    - image_upload_preview_script.js
     ![Image Upload Script JS Valid](documentation/iupsjsvalid.webp)
 
     - stripe_element.js
@@ -662,7 +662,58 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 ## Automated Testing
 ### Jest Testing JQuery
-When it chame to testing JQuery, I beame a little lost due to following the file structure of my django learning material I had JQuery code all over the place(at the bottom of html templates, in html includes etc.). This made being able to test with jest very tricky. With a bit of research and advice from a CodeInstitute graduate, It was nessacery for me to rearrange the file structure of my static files. To see the precise changes made please refer to commit [3f348c3](https://github.com/Jaycode88/ecofriendlynetwork/commit/3f348c33e81057aedeeac721aff42deb6bc4dbb3). From there I was ready to start testing.
+When it chame to testing JQuery, I beame a little lost due to following the file structure of my django learning material I had JQuery code all over the place(at the bottom of html templates, in html includes etc.). This made being able to test with jest very tricky. With a bit of research and advice from a CodeInstitute graduate, It was nessacery for me to rearrange the file structure of my static files. To see the precise changes made please refer to commits [3f348c3](https://github.com/Jaycode88/ecofriendlynetwork/commit/3f348c33e81057aedeeac721aff42deb6bc4dbb3) & [ef5c9e4](https://github.com/Jaycode88/ecofriendlynetwork/commit/ef5c9e4a209ac06c4f508ba95eca7d46ded3f6e0). From there I was ready to start setting up testing.
+
+#### Jest Setup
+I first needed to ensure npm was initialized using command:
+```npm init -y``` in the terminal. This command creates a 'package.json' file in the project directory which tracks the JavaScript dependencies.
+
+Then I needed to install not only 'Jest' but 'babel-jest' and '@babel/present-env' to ensure modern features are supported which are not supported in Node.js, I also needed to install 'jest-environment-jsdom' to simulate the browsers environment in the tests as I am testing JQuery. To do all of this I used the one following command:
+```
+npm install --save-dev jest babel-jest @babel/preset-env jest-environment-jsdom
+```
+
+It was then nessacery to create a 'babel.config.json' file in the project directory, with its contents as folllows:(This file tells babel which presets to use)
+```
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+I then needed to tell Jest how to find the javascript files and which environment to use for testing. for this i created a 'jest.config.js' file in the project root with the following configuration:
+```
+module.exports = {
+    testEnvironment: 'jsdom',
+    moduleDirectories: [
+      "node_modules",
+      // path to  JavaScript files 
+      "<ecofriendlynetwork>/static/js"
+    ],
+    transform: {
+      // Transform files with a .js or .jsx extension using babel-jest
+      "^.+\\.jsx?$": "babel-jest"
+    },
+  };
+```
+
+Next I located the 'package.json' file in the root directory and added script to easily run tests:
+```
+"scripts": {
+  "test": "jest"
+}
+```
+
+I then created a sample test file in my static/js directory 'test.test.js' withthe following sample test:
+```
+describe('Example test', () => {
+    test('true to be true', () => {
+      expect(true).toBe(true);
+    });
+  });
+```
+
+I then ran the test using command ```npm test```. The test pass concluding my setup is correct. I could then remove the sample test file and start writing real tests.
+
 
 #### Jest test Issues 
 
