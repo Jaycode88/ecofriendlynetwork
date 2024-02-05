@@ -714,8 +714,48 @@ describe('Example test', () => {
 
 I then ran the test using command ```npm test```. The test pass concluding my setup is correct. I could then remove the sample test file and start writing real tests.
 
+#### Writing tests
+I first started with some simple tests for bag_incdec_remove file, Upon trying to run the test I found I also needed to install jQuery as a dependencie using command:
+```npm install jquery```
 
-#### Jest test Issues 
+Even after this I ran into issues with jest testing jQuery (See Below)
+#### Jest testing jQuery Issues 
+During the initial testing phase of the project, I encountered several challenges while attempting to use Jest for testing jQuery-based DOM manipulations and event handling within the application. Despite Jest's strengths in unit testing JavaScript code, My specific use case—testing complex interactions with the DOM—presented unique difficulties.
+
+##### Challenges Encountered
+**Mocking Complexity:** I faced significant challenges in effectively mocking jQuery methods, such as $.fn.val, to test DOM updates triggered by user interactions (e.g., clicking to increment or decrement item quantities). Despite implementing mock functions and attempting to simulate user actions, the tests failed to accurately capture the interactions and resulted in false negatives.
+**Event Handling Issues:** My tests consistently struggled with correctly simulating click events and verifying the subsequent DOM manipulations. Even after ensuring correct event binding and attempting both direct and mocked event triggers, the expected changes in input values were not consistently detected in the Jest environment.
+**Asynchronous Operations:** Handling AJAX calls and form submissions within Jest proved problematic. Although I mocked these operations, aligning them with the synchronous flow of unit tests while ensuring realistic simulation of user actions was complex and often led to inconclusive test outcomes.
+
+##### Troubleshooting Steps
+To address these issues, I undertook a comprehensive troubleshooting process that included:
+
+**Directly Mocking jQuery Functions:** I attempted to directly mock jQuery's core functions, such as val, to control and assert their interactions within the tests.
+**Simplifying Test Cases:** I reduced test complexity by focusing on direct DOM manipulation and bypassing more complex interactions, aiming for a more granular understanding of the failure points.
+**Manual Event Triggers:** I used jQuery to manually trigger events in an effort to more closely mimic user interactions, though this too did not yield consistent results.
+
+### Jest Testing Vanilla Javascript
+After failing to test my jQuery code, I attempted to convert my jQuery into Vanilla Javascript within a seperate file, I then attempted to write tests for the javascript with Jest.(This method worked for me in a previous project)
+
+#### Jest Testing Vanilla Javascript Issues
+Despite my efforts to enhance test coverage for the application, I faced significant challenges while attempting to use Jest for testing vanilla JavaScript, specifically for scripts handling DOM manipulations and user event simulations. These obstacles prompted a reconsideration of my testing approach.
+
+##### Encountered Challenges
+**DOM Manipulation and Event Handling:** Testing DOM updates and event listeners presented difficulties, particularly when simulating user actions like clicks. These challenges were compounded by Jest's simulated DOM environment, which doesn't always replicate browser behaviors accurately.
+
+**Mocking Limitations:** I attempted to mock global objects such as window.location to test navigation and reload scenarios. However, Jest's environment restrictions on modifying certain properties led to TypeError issues, complicating my testing efforts.
+
+**Asynchronous Behavior:** Properly testing asynchronous operations, including AJAX requests and their effects on the DOM, proved to be complex within Jest's testing framework. This complexity was due to Jest's handling of asynchronous code and the need for precise mocking of fetch requests and responses.
+
+##### Troubleshooting Steps
+In response to these challenges, I undertook several steps to address and mitigate the issues:
+
+**Mocking Strategies:** I explored various strategies for mocking global objects and functions, including using jest.fn() and Object.defineProperty, to bypass limitations in modifying read-only properties.
+
+**Event Simulation Refinement:** I refined my approach to simulating user events, experimenting with different methods to trigger event handlers directly or using Jest's utilities to simulate events more reliably.
+
+##### Conclusion
+While Jest remains a robust solution for unit testing in many JavaScript applications, My specific requirements for testing DOM manipulations, event handling, and asynchronous behavior necessitated a pivot towards tools better suited for these tasks. By adopting another testing format, I aim to achieve more effective and realistic testing outcomes, ensuring the application performs reliably under various user interactions and scenarios.
 
 ### Python unit testing
 #### Process
