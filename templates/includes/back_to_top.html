@@ -1,3 +1,4 @@
+{% load static %}
 <div id="back-to-top" class="btt-button shadow-sm rounded-0 border border-black d-none">
     <a  href="#" class="btt-link d-flex h-100" aria-label="Back to Top">
         <!-- Icon for back to top -->
@@ -5,22 +6,4 @@
     </a>    
 </div>
 
-<script>
-    $(document).ready(function() {
-        // Show or hide the back to top button based on scroll position
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) {
-                $('#back-to-top').removeClass('d-none');
-            } else {
-                $('#back-to-top').addClass('d-none');
-            }
-        });
-
-        // Scroll to top functionality
-        $('#back-to-top').click(function(e) {
-            e.preventDefault();
-            // Ensure smooth scrolling for all browsers
-            $('html, body').animate({scrollTop: 0}, 600);
-        });
-    });
-</script>
+<script src="{% static 'js/back_to_top_script.js' %}"></script>

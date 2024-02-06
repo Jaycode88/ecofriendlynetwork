@@ -147,6 +147,9 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
     - stripe_element.js
      ![Stripe Element Script JS Valid](documentation/stripeelementjsvalid.webp)
 
+    - back_to_top_script.js
+    ![Back To Top Button Script JS Valid](documentation/jsbacktotop.webp)
+
 
 
 ### PEP8
