@@ -41,23 +41,23 @@ By Joe Seabrook
 
 - **Value to the user?**
 
-    Eco Friendly Network provides distinct value to our users through our focused selection of eco-friendly personal accessories and home essentials. Here's how we deliver value:
+    Eco Friendly Network provides distinct value to users through a focused selection of eco-friendly personal accessories and home essentials. Here's how this value is delivered:
 
     - **Curated Eco-Friendly Selection:**
 
-        Our platform specializes in a carefully chosen range of sustainable products, specifically in personal accessories like watches, bracelets, sunglasses, and home essentials in kitchenware, and bath & beauty products. This focus ensures that every item we offer aligns with eco-conscious values and practices.
+        The platform specializes in a carefully chosen range of sustainable products, specifically in personal accessories like watches, bracelets, sunglasses, and home essentials in kitchenware, and bath & beauty products. This focus ensures that every item offered aligns with eco-conscious values and practices.
 
     - **Quality and Sustainability:**
     
-        Each product in our collection is selected for its quality and sustainable attributes. Whether it's a bamboo watch or a biodegradable beauty product, we ensure that our items meet high standards of both functionality and eco-friendliness.
+        Each product in the collection is selected for its quality and sustainable attributes. Whether it's a bamboo watch or a biodegradable beauty product, It is ensured that the products meet high standards of both functionality and eco-friendliness.
 
     - **Personal Accessory and Home Essential Focus:**
     
-        By specializing in specific categories, we provide users with a targeted shopping experience. Our range of personal accessories and home essentials caters to everyday needs, ensuring that users can easily incorporate sustainability into their daily lives.
+        By specializing in specific categories, The store provides users with a targeted shopping experience. The range of personal accessories and home essentials caters to everyday needs, ensuring that users can easily incorporate sustainability into their daily lives.
 
     - **Contribution to a Greener Future:**
     
-        Every purchase made on our platform is a step towards a more sustainable future. Users are not just buying a product; they are making a conscious choice to support environmentally friendly practices and reduce their ecological footprint.
+        Every purchase made on the platform is a step towards a more sustainable future. Users are not just buying a product; they are making a conscious choice to support environmentally friendly practices and reduce their ecological footprint.
 
     - **What makes a good experience ?**
     
@@ -65,7 +65,7 @@ By Joe Seabrook
 
     - **Intuitive Navigation and Design:**
     
-        A clean, user-friendly website design is crucial. Our platform is structured for ease of navigation, allowing users to effortlessly browse through categories of personal accessories, kitchen items, and bath & beauty products. This straightforward approach helps users find what they're looking for without hassle.
+        A clean, user-friendly website design is crucial. The platform is structured for ease of navigation, allowing users to effortlessly browse through categories of personal accessories, kitchen items, and bath & beauty products. This straightforward approach helps users find what they're looking for without hassle.
 
     - **High-Quality Product Imagery and Descriptions:**
     
@@ -73,23 +73,23 @@ By Joe Seabrook
 
     - **Secure and Efficient Checkout Process:**
     
-        A smooth and secure checkout process is vital. We employ robust security measures to protect user data, coupled with an efficient checkout process to make transactions quick and hassle-free.
+        A smooth and secure checkout process is vital. The platform employs robust security measures to protect user data, coupled with an efficient checkout process to make transactions quick and hassle-free.
 
 - **What we shouldn't do?**
 
-    In our pursuit to offer an exceptional and sustainable shopping experience at Eco Friendly Network, there are certain practices we consciously avoid:
+    In the pursuit to offer an exceptional and sustainable shopping experience at Eco Friendly Network, there are certain practices that should be avoided:
 
     - **Overwhelming Our Users:**
     
-        We steer clear of cluttering our platform with excessive product options or information. Keeping our range focused and our presentation clean ensures users can find what they need without feeling overwhelmed.
+        We steer clear of cluttering the platform with excessive product options or information. Keeping our range focused and our presentation clean ensures users can find what they need without feeling overwhelmed.
 
     - **Undermining Privacy and Security:**
     
-        We do not compromise on the privacy and security of our user data. Avoiding practices that could put user information at risk is a top priority.
+        We do not compromise on the privacy and security of user data. Avoiding practices that could put user information at risk is a top priority.
 
     - **Inconsistency in Values:**
     
-        We avoid stocking products that don't align with our core values of sustainability and ethical responsibility. Every item we sell must contribute positively to our mission.
+        We avoid stocking products that don't align with the core values of sustainability and ethical responsibility. Every product sold must contribute positively to our mission.
 
     - **Inadequate Product Descriptions and Imagery:**
     
@@ -99,19 +99,19 @@ By Joe Seabrook
     
         We strictly avoid exaggerating or misrepresenting the sustainability of our products. Honesty and transparency in how products are sourced and their impact are paramount.
 
-    By consciously steering clear of these practices, Eco Friendly Network aims to build trust, ensure user satisfaction, and uphold our commitment to promoting sustainable consumer choices.
+    By consciously steering clear of these practices, Eco Friendly Network aims to build trust, ensure user satisfaction, and uphold commitment to promoting sustainable consumer choices.
 
 ### The Why
 
-Eco Friendly Network was born out of a recognition of the urgent need for sustainable consumer habits in our daily lives. In a world increasingly burdened by environmental challenges, we understand the powerful role that individual choices can play. Our platform bridges the gap between eco-conscious consumers and high-quality, sustainable products. We believe that making environmentally responsible choices should be straightforward and rewarding. By offering a curated selection of personal accessories and home essentials, we demonstrate that living sustainably does not mean compromising on style or quality. Eco Friendly Network is committed to showing that a sustainable lifestyle can be accessible, desirable, and a positive force for change in the world.
+Eco Friendly Network was born out of a recognition of the urgent need for sustainable consumer habits in our daily lives. In a world increasingly burdened by environmental challenges, we understand the powerful role that individual choices can play. The platform bridges the gap between eco-conscious consumers and high-quality, sustainable products. We believe that making environmentally responsible choices should be straightforward and rewarding. By offering a curated selection of personal accessories and home essentials, we demonstrate that living sustainably does not mean compromising on style or quality. Eco Friendly Network is committed to showing that a sustainable lifestyle can be accessible, desirable, and a positive force for change in the world.
 
 ### The Business Goal
 
-Our primary business goal at Eco Friendly Network is to establish and grow as a leading online destination for sustainable personal accessories and home essentials. We aim to achieve this by:
+The primary business goal at Eco Friendly Network is to establish and grow as a leading online destination for sustainable personal accessories and home essentials. I aim to achieve this by:
 
 - **Expanding Our Product Range:**
 
-    Continuously broadening our selection of high-quality, eco-friendly products to meet the evolving needs and preferences of our customers.
+    Continuously broadening the selection of high-quality, eco-friendly products to meet the evolving needs and preferences of our customers.
 
 - **Building Customer Loyalty:**
 
@@ -125,7 +125,7 @@ Our primary business goal at Eco Friendly Network is to establish and grow as a 
 
     Ensuring the business is financially robust and growing, allowing us to invest further in our mission and expand our impact.
 
-In essence, our goal is to seamlessly blend commercial success with our commitment to sustainability, creating a platform where conscious consumerism is not just encouraged, but celebrated.
+In essence, The goal is to seamlessly blend commercial success with commitment to sustainability, creating a platform where conscious consumerism is not just encouraged, but celebrated.
 
 ## UX
 ### Color Scheme
@@ -327,6 +327,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 - **My Profile**
 	- Allows users to view & update default delivery information
 	- Displays user's list of placed orders
+	- Gives users the option to delete their profile.
 
 ![My Profile](documentation/profile.webp)
 
@@ -344,6 +345,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- This page provides the user with a description of a product aswell as the information tags that were included on the products page
 	- Here user's can find the link to add and remove the product from their favorites
 	- Includes a quantiy selector input with the option to add the item to the bag or return to the products view
+	- For superusers only, It also displays the total amount of favorites a product has by users as well as links to edit and delete a product
 	
 	![Product Detail](documentation/productdetail.webp)
 
@@ -367,6 +369,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	![CheckOut](documentation/checkout.webp)
 
 - **Stripe Payment and webhooks**
+
 	This feature ensures secure and efficient payment processing through Stripe. It integrates Stripe's comprehensive API to handle transactions, providing users with a seamless checkout experience. Webhooks are employed to maintain order integrity, capturing events such as successful payments and failures. This system guarantees that orders are only finalized when payment is confirmed, enhancing reliability and user trust.
 
 - **Order Confirmation**
@@ -374,6 +377,11 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- Button to return to shop to see latest deals.
 
 	![Order Confirmation](documentation/ordersummary.webp)
+
+- **Order Confirmation email**
+	- Upon completion of the order process the customer recieve a personalised confirmation email, To the email address supplied on the order.
+
+	![Order Confirmation Email](documentation/emailconf.webp)
 
 - **Blog List**
 	- This page provides a list of all blog posts in a grid layout suitable for the viewong device
@@ -445,7 +453,9 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	Enabling users to share their favorite products, blogs, or their own shopping experiences directly to social media platforms. This feature could increase the visibility of Eco Friendly Network and drive more traffic to the site.
 
 ## Database Design
-During the development phase, I used SQLite for its simplicity and ease of configuration, allowing for rapid prototyping and testing. This project leverages Django's ORM with a relational database structure for efficient data management, without detailing specific models which are visually represented below. SQLite served as a crucial tool in the initial stages, before transitioning to a more robust database for production, ensuring a seamless user experience and data integrity throughout the application lifecycle.
+During the development phase, I utilized SQLite for its simplicity and ease of configuration, which facilitated rapid prototyping and streamlined testing processes. This project employs Django's ORM capabilities within a relational database architecture to efficiently manage data interactions. While the initial stages relied on SQLite due to its straightforward setup and integration with Django, the transition towards deployment necessitated a more scalable and robust database solution.
+
+For the deployed version of the application, I chose ElephantSQL and Amazon Web Services (AWS) to ensure enhanced performance, reliability, and scalability. ElephantSQL offers a managed PostgreSQL service that seamlessly integrates with our Django application, providing the robustness required for production without the overhead of database administration. Additionally, leveraging AWS for hosting and related services further solidifies the application's infrastructure, offering high availability, security, and the flexibility to scale resources according to demand.
 
 ### Model Flow Charts
 - **Products**
@@ -525,6 +535,12 @@ The Models flow charts were created with [Diagrams.net](https://app.diagrams.net
 		- **Description:** Displays a user's past order confirmation for a specific order.
 		- **HTTP Method:** GET
 		- **Database Operation:** Retrieves a single Order instance by order number.
+	- **Delete Profile (D):**
+	- **Function:** delete_profile
+	- **Description:** Allows users to delete their profile.
+	- **HTTP Method:** DELETE
+	- **Database Operation:** Deletes the user's UserProfile instance from the database. Upon deletion, it will also delete the username from their previous orders.
+
 
 ### Products and Favorites
 
@@ -954,15 +970,26 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-When working with this project, it's important to understand the differences between running the application locally and deploying it to Heroku:
+When working with this project, understanding the differences in database configurations between local development and deployment environments is essential:
 
-Local Development: Running the application locally is ideal for development and testing purposes. You can make changes, test new features, and experiment with the code in a controlled environment.
+#### Local Development:
 
-Heroku Deployment: Deploying the application to Heroku makes it accessible to a wider audience on the web. It's suitable for sharing your project with others and providing a public URL for access.
+ - **Database:** For local development, the application uses SQLite. SQLite's simplicity and ease of configuration make it an ideal choice for development and testing phases. It allows developers to quickly make changes, test new features, and experiment with the code in a controlled environment without the need for complex database setup.
+ - **Environment:** Running the application locally is geared towards development and testing. This setup provides a quick feedback loop for code changes, facilitating rapid prototyping and debugging.
 
-Choose the deployment option that best suits your needs and project goals.
+#### Deployment:
 
-Always follow the steps and ensure that your sensitive information(API Keys, Database credentials, etc) are not visible to the public.
+ - **Database:** Upon deployment, the application transitions to using ElephantSQL for PostgreSQL database services and leverages Amazon Web Services (AWS) for hosting and additional cloud-based resources. This shift to more robust and scalable database solutions ensures the application can handle increased traffic and data loads efficiently, providing a seamless user experience.
+ - **Environment:** Deploying the application to Heroku and integrating with AWS services makes it accessible to a wider audience on the web. This environment is optimized for performance, security, and reliability, making it suitable for production use and sharing your project with stakeholders and the public.
+
+#### Key Considerations:
+ - **Data Migration:** Ensure that any necessary data migrations are performed when transitioning from local development to the deployed environment, especially when moving from SQLite to PostgreSQL.
+ - **Environment Variables:** Use environment variables to manage sensitive information (API keys, database credentials, etc.) securely. This practice prevents sensitive data exposure and allows for flexible configuration changes between different environments.
+
+#### Conclusion:
+Choosing between local development and deployment involves considering your project's current needs and goals. While local development offers a convenient and fast way to develop and test features, deployment brings your application into a real-world setting, ready for users. By understanding and managing the differences in database configurations between these environments, you can ensure a smooth transition and maintain data integrity and application performance throughout the development lifecycle.
+
+Always follow best practices for security, especially in handling sensitive information and configuring your databases for both local and deployed environments.
 
 ## Credits
 ### Content
@@ -1005,10 +1032,11 @@ Always follow the steps and ensure that your sensitive information(API Keys, Dat
 - [WAVE](https://wave.webaim.org/) Used to check accesability.
 - [UI.dev](https://ui.dev/amiresponsive) Used to create am I responsive image.
 - [Pytest](https://pypi.org/project/pytest/) Used for Python unit testing.
+- [Jest](https://jestjs.io/) Used for Javascript testing.
 
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/)  for his amazing help, advice and support throughout the development of this project.
-- - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
 - I would like to thank freinds for there on going support.

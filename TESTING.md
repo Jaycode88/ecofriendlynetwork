@@ -665,6 +665,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 When it chame to testing JQuery, I beame a little lost due to following the file structure of my django learning material I had JQuery code all over the place(at the bottom of html templates, in html includes etc.). This made being able to test with jest very tricky. With a bit of research and advice from a CodeInstitute graduate, It was nessacery for me to rearrange the file structure of my static files. To see the precise changes made please refer to commits [3f348c3](https://github.com/Jaycode88/ecofriendlynetwork/commit/3f348c33e81057aedeeac721aff42deb6bc4dbb3) & [ef5c9e4](https://github.com/Jaycode88/ecofriendlynetwork/commit/ef5c9e4a209ac06c4f508ba95eca7d46ded3f6e0). From there I was ready to start setting up testing.
 
 #### Jest Setup
+
 I first needed to ensure npm was initialized using command:
 ```npm init -y``` in the terminal. This command creates a 'package.json' file in the project directory which tracks the JavaScript dependencies.
 
@@ -703,7 +704,7 @@ Next I located the 'package.json' file in the root directory and added script to
 }
 ```
 
-I then created a sample test file in my static/js directory 'test.test.js' withthe following sample test:
+I then created a sample test file in my static/js directory 'example.test.js' withthe following sample test:
 ```
 describe('Example test', () => {
     test('true to be true', () => {
@@ -713,6 +714,8 @@ describe('Example test', () => {
 ```
 
 I then ran the test using command ```npm test```. The test pass concluding my setup is correct. I could then remove the sample test file and start writing real tests.
+
+![Example Test Pass](documentation/examplejestpass.webp)
 
 #### Writing tests
 I first started with some simple tests for bag_incdec_remove file, Upon trying to run the test I found I also needed to install jQuery as a dependencie using command:
@@ -755,7 +758,9 @@ In response to these challenges, I undertook several steps to address and mitiga
 **Event Simulation Refinement:** I refined my approach to simulating user events, experimenting with different methods to trigger event handlers directly or using Jest's utilities to simulate events more reliably.
 
 ##### Conclusion
-While Jest remains a robust solution for unit testing in many JavaScript applications, My specific requirements for testing DOM manipulations, event handling, and asynchronous behavior necessitated a pivot towards tools better suited for these tasks. By adopting another testing format, I aim to achieve more effective and realistic testing outcomes, ensuring the application performs reliably under various user interactions and scenarios.
+While Jest remains a robust solution for unit testing in many JavaScript applications, My specific requirements for testing DOM manipulations, event handling, and asynchronous behavior necessitated a stronger understanding of Jest than I have. I did research another testing format called "Cypress" but encountered many complexities during the setup.
+
+To view the Jest Testing Terminal logs [Click Here](documentation/jestlog.csv)
 
 ### Python unit testing
 #### Process

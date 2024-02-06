@@ -1,0 +1,879 @@
+
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at Object.trigger (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:55:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      53 |
+      54 |         // Trigger the decrement action
+    > 55 |         $('.decrement-qty').trigger('click');
+         |                             ^
+      56 |
+      57 |         // Since val is mocked, we need to manually check the intended decrement
+      58 |         expect($.fn.val).toHaveBeenCalledWith('1');
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at Object.trigger (static/js/bag_incdec_remove.test.js:55:29)
+
+ FAIL  static/js/bag_incdec_remove.test.js
+  Item quantity and removal management
+    ✕ increments item quantity (14 ms)
+    ✕ decrements item quantity (50 ms)
+
+  ● Item quantity and removal management › increments item quantity
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "1"
+
+    Number of calls: 0
+
+      45 |
+      46 |         // Check if val was called to set a new value
+    > 47 |         expect($.fn.val).toHaveBeenCalledWith('1');
+         |                          ^
+      48 |     });
+      49 |
+      50 |     test('decrements item quantity', () => {
+
+      at Object.toHaveBeenCalledWith (static/js/bag_incdec_remove.test.js:47:26)
+
+  ● Item quantity and removal management › decrements item quantity
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "1"
+    Received: "2"
+
+    Number of calls: 1
+
+      56 |
+      57 |         // Since val is mocked, we need to manually check the intended decrement
+    > 58 |         expect($.fn.val).toHaveBeenCalledWith('1');
+         |                          ^
+      59 |     });
+      60 | });
+      61 |
+
+      at Object.toHaveBeenCalledWith (static/js/bag_incdec_remove.test.js:58:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 total
+Snapshots:   0 total
+Time:        1.125 s
+Ran all test suites.
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at jQuery.fn.init.jQuery.fn.<computed> [as click] (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:10579:10)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:40:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      38 |         // set the input field value to 1 before clicking to increment
+      39 |         $('#id_qty_1').val('1');
+    > 40 |         $('.increment-qty').click();
+         |                             ^
+      41 |         const newValue = $('#id_qty_1').val();
+      42 |         expect(newValue).toBe('2'); // Expect the quantity to increment
+      43 |     });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at jQuery.fn.init.jQuery.fn.<computed> [as click] (node_modules/jquery/dist/jquery.js:10579:10)
+      at Object.click (static/js/bag_incdec_remove.test.js:40:29)
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at jQuery.fn.init.jQuery.fn.<computed> [as click] (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:10579:10)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:47:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      45 |     test('decrements item quantity', () => {
+      46 |         // Increment first to avoid going below the min value
+    > 47 |         $('.increment-qty').click();
+         |                             ^
+      48 |         $('.decrement-qty').click();
+      49 |         const newValue = $('#id_qty_1').val();
+      50 |         expect(newValue).toBe('1'); // Expect the quantity to decrement back to initial value
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at jQuery.fn.init.jQuery.fn.<computed> [as click] (node_modules/jquery/dist/jquery.js:10579:10)
+      at Object.click (static/js/bag_incdec_remove.test.js:47:29)
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at jQuery.fn.init.jQuery.fn.<computed> [as click] (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:10579:10)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:48:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      46 |         // Increment first to avoid going below the min value
+      47 |         $('.increment-qty').click();
+    > 48 |         $('.decrement-qty').click();
+         |                             ^
+      49 |         const newValue = $('#id_qty_1').val();
+      50 |         expect(newValue).toBe('1'); // Expect the quantity to decrement back to initial value
+      51 |     });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at jQuery.fn.init.jQuery.fn.<computed> [as click] (node_modules/jquery/dist/jquery.js:10579:10)
+      at Object.click (static/js/bag_incdec_remove.test.js:48:29)
+
+ FAIL  static/js/bag_incdec_remove.test.js
+  Item quantity and removal management
+    ✕ increments item quantity (58 ms)
+    ✓ decrements item quantity (28 ms)
+
+  ● Item quantity and removal management › increments item quantity
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "2"
+    Received: "1"
+
+      40 |         $('.increment-qty').click();
+      41 |         const newValue = $('#id_qty_1').val();
+    > 42 |         expect(newValue).toBe('2'); // Expect the quantity to increment
+         |                          ^
+      43 |     });
+      44 |
+      45 |     test('decrements item quantity', () => {
+
+      at Object.toBe (static/js/bag_incdec_remove.test.js:42:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.932 s, estimated 1 s
+Ran all test suites.
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at Object.trigger (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:38:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      36 |
+      37 |     test('increments item quantity', () => {
+    > 38 |         $('.increment-qty').trigger('click');
+         |                             ^
+      39 |         // Check if val was called at all
+      40 |         expect($.fn.val).toHaveBeenCalled();
+      41 |     });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at Object.trigger (static/js/bag_incdec_remove.test.js:38:29)
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at jQuery.fn.init.jQuery.fn.<computed> [as click] (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:10579:10)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:46:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      44 |     test('decrements item quantity', () => {
+      45 |         // Increment first to avoid going below the min value
+    > 46 |         $('.increment-qty').click();
+         |                             ^
+      47 |         $('.decrement-qty').click();
+      48 |         const newValue = $('#id_qty_1').val();
+      49 |         expect(newValue).toBe('1'); // Expect the quantity to decrement back to initial value
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at jQuery.fn.init.jQuery.fn.<computed> [as click] (node_modules/jquery/dist/jquery.js:10579:10)
+      at Object.click (static/js/bag_incdec_remove.test.js:46:29)
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8668:18)
+        at HTMLButtonElement.<anonymous> (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8707:17)
+        at Function.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:383:19)
+        at jQuery.fn.init.each (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:205:17)
+        at jQuery.fn.init.trigger (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:8706:15)
+        at jQuery.fn.init.jQuery.fn.<computed> [as click] (/workspace/ecofriendlynetwork/node_modules/jquery/dist/jquery.js:10579:10)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/bag_incdec_remove.test.js:47:29)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      45 |         // Increment first to avoid going below the min value
+      46 |         $('.increment-qty').click();
+    > 47 |         $('.decrement-qty').click();
+         |                             ^
+      48 |         const newValue = $('#id_qty_1').val();
+      49 |         expect(newValue).toBe('1'); // Expect the quantity to decrement back to initial value
+      50 |     });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.trigger (node_modules/jquery/dist/jquery.js:8668:18)
+      at HTMLButtonElement.<anonymous> (node_modules/jquery/dist/jquery.js:8707:17)
+      at Function.each (node_modules/jquery/dist/jquery.js:383:19)
+      at jQuery.fn.init.each (node_modules/jquery/dist/jquery.js:205:17)
+      at jQuery.fn.init.trigger (node_modules/jquery/dist/jquery.js:8706:15)
+      at jQuery.fn.init.jQuery.fn.<computed> [as click] (node_modules/jquery/dist/jquery.js:10579:10)
+      at Object.click (static/js/bag_incdec_remove.test.js:47:29)
+
+ FAIL  static/js/bag_incdec_remove.test.js
+  Item quantity and removal management
+    ✕ increments item quantity (59 ms)
+    ✓ decrements item quantity (15 ms)
+
+  ● Item quantity and removal management › increments item quantity
+
+    expect(received).toHaveBeenCalled()
+
+    Matcher error: received value must be a mock or spy function
+
+    Received has type:  function
+    Received has value: [Function val]
+
+      38 |         $('.increment-qty').trigger('click');
+      39 |         // Check if val was called at all
+    > 40 |         expect($.fn.val).toHaveBeenCalled();
+         |                          ^
+      41 |     });
+      42 |     
+      43 |
+
+      at Object.toHaveBeenCalled (static/js/bag_incdec_remove.test.js:40:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.084 s
+Ran all test suites.
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+ FAIL  static/js/bag_incdec_remove.test.js
+  Item quantity and removal management
+    ✕ increments item quantity (15 ms)
+    ✕ decrements item quantity (11 ms)
+
+  ● Item quantity and removal management › increments item quantity
+
+    expect(jest.fn()).toHaveBeenCalled()
+
+    Expected number of calls: >= 1
+    Received number of calls:    0
+
+      40 |         // Since $.fn.val is now a Jest mock function, it can be used with .toHaveBeenCalled()
+      41 |         $('.increment-qty').trigger('click');
+    > 42 |         expect($.fn.val).toHaveBeenCalled();
+         |                          ^
+      43 |     });
+      44 |   
+      45 |     
+
+      at Object.toHaveBeenCalled (static/js/bag_incdec_remove.test.js:42:26)
+
+  ● Item quantity and removal management › decrements item quantity
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "1"
+    Received: "0"
+
+      50 |         $('.decrement-qty').click();
+      51 |         const newValue = $('#id_qty_1').val();
+    > 52 |         expect(newValue).toBe('1'); // Expect the quantity to decrement back to initial value
+         |                          ^
+      53 |     });
+      54 |
+      55 |
+
+      at Object.toBe (static/js/bag_incdec_remove.test.js:52:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 total
+Snapshots:   0 total
+Time:        1.025 s
+Ran all test suites.
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/jsbag_incdec_remove.test.js:33:25)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      31 |         const quantityInput = document.querySelector('#id_qty_1');
+      32 |
+    > 33 |         incrementButton.click();
+         |                         ^
+      34 |
+      35 |         expect(quantityInput.value).toBe('2');
+      36 |     });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.click (static/js/jsbag_incdec_remove.test.js:33:25)
+
+  console.error
+    Error: Not implemented: HTMLFormElement.prototype.requestSubmit
+        at module.exports (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+        at HTMLFormElementImpl.requestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+        at HTMLFormElementImpl._doRequestSubmit (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+        at HTMLButtonElementImpl._activationBehavior (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+        at HTMLButtonElementImpl._dispatch (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+        at fireAnEvent (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+        at HTMLButtonElementImpl.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+        at HTMLButtonElement.click (/workspace/ecofriendlynetwork/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+        at Object.click (/workspace/ecofriendlynetwork/static/js/jsbag_incdec_remove.test.js:44:25)
+        at Promise.then.completed (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+        at _runTest (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:121:9)
+        at run (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/workspace/ecofriendlynetwork/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/workspace/ecofriendlynetwork/node_modules/jest-runner/build/runTest.js:444:34) {
+      type: 'not implemented'
+    }
+
+      42 |
+      43 |         const decrementButton = document.querySelector('.decrement-qty');
+    > 44 |         decrementButton.click();
+         |                         ^
+      45 |
+      46 |         expect(quantityInput.value).toBe('1');
+      47 |     });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at HTMLFormElementImpl.requestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:113:5)
+      at HTMLFormElementImpl._doRequestSubmit (node_modules/jsdom/lib/jsdom/living/nodes/HTMLFormElement-impl.js:79:10)
+      at HTMLButtonElementImpl._activationBehavior (node_modules/jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js:23:14)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:252:26)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
+      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:108:34)
+      at Object.click (static/js/jsbag_incdec_remove.test.js:44:25)
+
+ FAIL  static/js/jsbag_incdec_remove.test.js
+  Item quantity and removal management
+    ✕ increments item quantity (79 ms)
+    ✕ decrements item quantity (11 ms)
+    ✕ removes item and reloads page (4 ms)
+
+  ● Item quantity and removal management › increments item quantity
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "2"
+    Received: "1"
+
+      33 |         incrementButton.click();
+      34 |
+    > 35 |         expect(quantityInput.value).toBe('2');
+         |                                     ^
+      36 |     });
+      37 |
+      38 |     test('decrements item quantity', () => {
+
+      at Object.toBe (static/js/jsbag_incdec_remove.test.js:35:37)
+
+  ● Item quantity and removal management › decrements item quantity
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "1"
+    Received: "2"
+
+      44 |         decrementButton.click();
+      45 |
+    > 46 |         expect(quantityInput.value).toBe('1');
+         |                                     ^
+      47 |     });
+      48 |
+      49 |     // Assuming you implement fetch mocking for the remove item test
+
+      at Object.toBe (static/js/jsbag_incdec_remove.test.js:46:37)
+
+  ● Item quantity and removal management › removes item and reloads page
+
+    TypeError: Cannot assign to read only property 'reload' of object '[object Location]'
+
+      58 |         const removeButton = document.querySelector('.remove-item');
+      59 |         // Mock reload to verify it's called
+    > 60 |         global.location.reload = jest.fn();
+         |                               ^
+      61 |
+      62 |         removeButton.click();
+      63 |
+
+      at Object.<anonymous> (static/js/jsbag_incdec_remove.test.js:60:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        1.37 s
+Ran all test suites.
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+ FAIL  static/js/jsbag_incdec_remove.test.js
+  Item quantity and removal management
+    ✕ increments item quantity (2 ms)
+    ✕ decrements item quantity
+    ✕ removes item and reloads page
+
+  ● Item quantity and removal management › increments item quantity
+
+    TypeError: Cannot redefine property: reload
+        at Function.defineProperty (<anonymous>)
+
+      14 |     beforeEach(() => {
+      15 |         // Reset the mock for location.reload before each test
+    > 16 |         Object.defineProperty(window.location, 'reload', {
+         |                ^
+      17 |             configurable: true,
+      18 |             value: jest.fn(),
+      19 |         });
+
+      at Object.defineProperty (static/js/jsbag_incdec_remove.test.js:16:16)
+
+  ● Item quantity and removal management › decrements item quantity
+
+    TypeError: Cannot redefine property: reload
+        at Function.defineProperty (<anonymous>)
+
+      14 |     beforeEach(() => {
+      15 |         // Reset the mock for location.reload before each test
+    > 16 |         Object.defineProperty(window.location, 'reload', {
+         |                ^
+      17 |             configurable: true,
+      18 |             value: jest.fn(),
+      19 |         });
+
+      at Object.defineProperty (static/js/jsbag_incdec_remove.test.js:16:16)
+
+  ● Item quantity and removal management › removes item and reloads page
+
+    TypeError: Cannot redefine property: reload
+        at Function.defineProperty (<anonymous>)
+
+      14 |     beforeEach(() => {
+      15 |         // Reset the mock for location.reload before each test
+    > 16 |         Object.defineProperty(window.location, 'reload', {
+         |                ^
+      17 |             configurable: true,
+      18 |             value: jest.fn(),
+      19 |         });
+
+      at Object.defineProperty (static/js/jsbag_incdec_remove.test.js:16:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        1.238 s
+Ran all test suites.
+
+gitpod /workspace/ecofriendlynetwork (main) $ npm test
+
+> ecofriendlynetwork@1.0.0 test
+> jest
+
+ FAIL  static/js/jsbag_incdec_remove.test.js
+  ● increments item quantity
+
+    TypeError: Cannot read properties of null (reading 'click')
+
+      47 |
+      48 |         const incrementButton = document.querySelector('.increment-qty');
+    > 49 |         incrementButton.click();
+         |                         ^
+      50 |
+      51 |         // If there's any asynchronous logic, you might need to wait for it before asserting
+      52 |         // For synchronous checks, directly assert the expected outcome
+
+      at click (static/js/jsbag_incdec_remove.test.js:49:25)
+      at call (static/js/jsbag_incdec_remove.test.js:2:1)
+      at Generator.tryCatch (static/js/jsbag_incdec_remove.test.js:2:1)
+      at Generator._invoke [as next] (static/js/jsbag_incdec_remove.test.js:2:1)
+      at asyncGeneratorStep (static/js/jsbag_incdec_remove.test.js:2:1)
+      at asyncGeneratorStep (static/js/jsbag_incdec_remove.test.js:2:1)
+      at _next (static/js/jsbag_incdec_remove.test.js:2:1)
+      at Object.<anonymous> (static/js/jsbag_incdec_remove.test.js:2:1)
+
+  ● decrements item quantity
+
+    TypeError: Cannot set properties of null (setting 'value')
+
+      57 |         // Ensure the quantity is set to a value that can be decremented
+      58 |         const quantityInput = document.querySelector('#id_qty_1');
+    > 59 |         quantityInput.value = '2';
+         |                            ^
+      60 |
+      61 |         const decrementButton = document.querySelector('.decrement-qty');
+      62 |         decrementButton.click();
+
+      at Object.<anonymous> (static/js/jsbag_incdec_remove.test.js:59:28)
+
+  ● removes item and reloads page
+
+    TypeError: Cannot assign to read only property 'reload' of object '[object Location]'
+
+      76 |         const removeButton = document.querySelector('.remove-item');
+      77 |         // Mock reload to verify it's called
+    > 78 |         global.location.reload = jest.fn();
+         |                               ^
+      79 |
+      80 |         removeButton.click();
+      81 |
+
+      at Object.<anonymous> (static/js/jsbag_incdec_remove.test.js:78:31)
+
+
+  ● Test suite failed to run
+
+    Invalid: beforeEach() may not be used in a describe block containing no tests.
+
+      12 |
+      13 | describe('Item quantity and removal management', () => {
+    > 14 |     beforeEach(() => {
+         |     ^
+      15 |         // Backup the original location
+      16 |         const originalLocation = window.location;
+      17 |     
+
+      at beforeEach (static/js/jsbag_incdec_remove.test.js:14:5)
+      at Object.describe (static/js/jsbag_incdec_remove.test.js:13:1)
+
+  ● Test suite failed to run
+
+    Invalid: afterEach() may not be used in a describe block containing no tests.
+
+      32 |     });
+      33 |     
+    > 34 |     afterEach(() => {
+         |     ^
+      35 |         // Restore the original window.location after each test to avoid side effects
+      36 |         window.location = location;
+      37 |     });
+
+      at afterEach (static/js/jsbag_incdec_remove.test.js:34:5)
+      at Object.describe (static/js/jsbag_incdec_remove.test.js:13:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        1.219 s
+Ran all test suites.
