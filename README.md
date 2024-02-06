@@ -296,7 +296,19 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
     ![Sign up page desktop view](documentation/signupdesktop.webp)
 
-## High Fidelity Prototype
+## High Fidelity Prototypes
+
+- **Home Page**
+
+![Home HFD Prototype](documentation/hfdphome.webp)
+
+- **Products Page**
+
+![Products HFD Prototype](documentation/hfdpproducts.webp)
+
+- **Product Details Page**
+
+![Product Detail HFD Prototype](documentation/hfpdproddetail.webp)
 
 ## Features
 ### Existing Features
