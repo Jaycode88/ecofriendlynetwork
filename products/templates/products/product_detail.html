@@ -71,8 +71,30 @@
                         <p><i class="fas fa-heart text-red"></i><small class="text-muted"> Favorited by {{ favorites_count }} users</small></p>
                         <small class="ml-13">
                             <a href="{% url 'edit_product' product.id %}">Edit</a>
-                            <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                            <a href="#" class="text-danger" data-toggle="modal" data-target="#modal-delete-{{product.id}}">Delete</a>
                         </small>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal-delete-{{product.id}}" tabindex="-1" aria-labelledby="modal-delete-{{product.id}}-label" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modal-delete-{{product.id}}-label">Delete Product</h1>
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fas fa-close"></i>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    Are you sure you want to delete {{product.name}}?
+                                    <br>
+                                    <small class="text-muted">This is permanent and can not be undone!</small>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                    <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Yes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     {% endif %}
 
                     <!-- Product Description -->

@@ -137,7 +137,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
     - enabledisable_buttons_script.js
     ![Enable/Disable Buttons Script JS Valid](documentation/qbsjsvalid.webp)
 
-    - bag_incdec_remove.js
+    - bag.html
     ![Bag JS Valid](documentation/bagjsvalid.webp)
     N.B The 'handleEnableDisable' Is defined in the 'enabledisable_buttons_script.js'(Above), Which is included in the 'bag.html'. 
 
@@ -787,6 +787,21 @@ To Generate the HTML report the command ``coverage html
 
 I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
 To view the full Testing report, please [Click Here](documentation/pythoncoveragereport.pdf).
+
+##### Unit Tests
+
+| App | Class | Test Name | Result |
+| --- | --- | --- | --- |
+| bag | TestBagViews | | Pass |
+| | | setUp | Pass |
+| | | test_view_bag | Pass |
+| | | test_add_to_bag | Pass |
+| | | test_adjust_bag | Pass |
+| | | test_remove_from_bag | Pass |
+| blog | TestPostModel | | Pass |
+| | | setUp | Pass |
+| | | test_post_str | Pass |
+
 
 ## Bugs
 ### Fixed Bugs
