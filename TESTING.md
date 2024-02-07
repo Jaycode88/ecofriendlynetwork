@@ -225,68 +225,68 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 |Browser|page|Expected Look|Expected Function|Screenshot|
 |-------|----|-------------|-----------------|----------|
 **Chrome**
-||Home|y|y|[View](documentation/chromehome.webp)|
-||Sign Up|y|y|[View](documentation/chromesignup.webp)|
-||Sign In|y|y|[View](documentation/chromesignin.webp)|
-||Products|y|y|[View](documentation/chromeproducts.webp)|
-||Product Deatail|y|y|[View](documentation/chromeproductdetail.webp)|
-||Blog|y|y|[View](documentation/chromeblog.webp)|
-||Blog Detail|y|y|[View](documentation/chromeblogdetail.webp)|
-||Profile|y|y|[View](documentation/chromeprofile.webp)|
-||Shopping Bag|y|y|[View](documentation/chromebag.webp)|
-||Checkout|y|y|[View](documentation/chromecheckout.webp)|
-||Checkout Success|y|y|[View](documentation/chromechecksuccess.webp)|
-||Add Product|y|y|[View](documentation/chromeaddproduct.webp)|
-||Edit Product|y|y|[View](documentation/chromeeditproduct.webp)|
-||Add Blog|y|y|[View](documentation/chromeaddblog.webp)|
-||Edit Blog|y|y|[View](documentation/chromeeditblog.webp)|
-||Order Stats|y|y|[View](documentation/chromeorderstats.webp)|
-||Product Stats|y|y|[View](documentation/chromesalesstats.webp)|
-||View Order|y|y|[View](documentation/chromevieworder.webp)|
-||Log Out|y|y|[View](documentation/chromesignout.webp)|
-||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
+||Home|y|y|![Chrome Home](documentation/chromehome.webp)|
+||Sign Up|y|y|![View](documentation/chromesignup.webp)|
+||Sign In|y|y|![View](documentation/chromesignin.webp)|
+||Products|y|y|![View](documentation/chromeproducts.webp)|
+||Product Deatail|y|y|![View](documentation/chromeproductdetail.webp)|
+||Blog|y|y|![View](documentation/chromeblog.webp)|
+||Blog Detail|y|y|![View](documentation/chromeblogdetail.webp)|
+||Profile|y|y|![View](documentation/chromeprofile.webp)|
+||Shopping Bag|y|y|![View](documentation/chromebag.webp)|
+||Checkout|y|y|![View](documentation/chromecheckout.webp)|
+||Checkout Success|y|y|![View](documentation/chromechecksuccess.webp)|
+||Add Product|y|y|![View](documentation/chromeaddproduct.webp)|
+||Edit Product|y|y|![View](documentation/chromeeditproduct.webp)|
+||Add Blog|y|y|![View](documentation/chromeaddblog.webp)|
+||Edit Blog|y|y|![View](documentation/chromeeditblog.webp)|
+||Order Stats|y|y|![View](documentation/chromeorderstats.webp)|
+||Product Stats|y|y|![View](documentation/chromesalesstats.webp)|
+||View Order|y|y|![View](documentation/chromevieworder.webp)|
+||Log Out|y|y|![View](documentation/chromesignout.webp)|
+||Password Reset|y|y|![View](documentation/chromeforgot.webp)|
 **Firefox**
-||Home|y|y|[View](documentation/firehome.webp)|
-||Sign Up|y|y|[View](documentation/firesignup.webp)|
-||Sign In|y|y|[View](documentation/firesignin.webp)|
-||Products|y|y|[View](documentation/fireproducts.webp)|
-||Product Detail|y|y|[View](documentation/fireproductdetail.webp)|
-||Blog|y|y|[View](documentation/fireblog.webp)|
-||Blog Detail|y|y|[View](documentation/fireblogdetail.webp)|
-||Profile|y|y|[View](documentation/fireprof.webp)|
-||Shopping Bag|y|y|[View](documentation/firebag.webp)|
-||Checkout|y|y|[View](documentation/firecheckout.webp)|
-||Checkout Success|y|y|[View](documentation/firechecksuccess.webp)|
-||Add Product|y|y|[View](documentation/fireaddprod.webp)|
-||Edit Product|y|y|[View](documentation/fireeditprod.webp)|
-||Add Blog|y|y|[View](documentation/fireaddblog.webp)|
-||Edit Blog|y|y|[View](documentation/fireeditblog.webp)|
-||Order Stats|y|y|[View](documentation/fireorderstats.webp)|
-||Product Stats|y|y|[View](documentation/fireproductstats.webp)|
-||View Order|y|y|[View](documentation/firevieworder.webp)|
-||Log Out|y|y|[View](documentation/firelogout.webp)|
-||Password Reset|y|y|[View](documentation/fireforgot.webp)|
+||Home|y|y|![View](documentation/firehome.webp)|
+||Sign Up|y|y|![View](documentation/firesignup.webp)|
+||Sign In|y|y|![View](documentation/firesignin.webp)|
+||Products|y|y|![View](documentation/fireproducts.webp)|
+||Product Detail|y|y|![View](documentation/fireproductdetail.webp)|
+||Blog|y|y|![View](documentation/fireblog.webp)|
+||Blog Detail|y|y|![View](documentation/fireblogdetail.webp)|
+||Profile|y|y|![View](documentation/fireprof.webp)|
+||Shopping Bag|y|y|![View](documentation/firebag.webp)|
+||Checkout|y|y|![View](documentation/firecheckout.webp)|
+||Checkout Success|y|y|![View](documentation/firechecksuccess.webp)|
+||Add Product|y|y|![View](documentation/fireaddprod.webp)|
+||Edit Product|y|y|![View](documentation/fireeditprod.webp)|
+||Add Blog|y|y|![View](documentation/fireaddblog.webp)|
+||Edit Blog|y|y|![View](documentation/fireeditblog.webp)|
+||Order Stats|y|y|![View](documentation/fireorderstats.webp)|
+||Product Stats|y|y|![View](documentation/fireproductstats.webp)|
+||View Order|y|y|![View](documentation/firevieworder.webp)|
+||Log Out|y|y|![View](documentation/firelogout.webp)|
+||Password Reset|y|y|![View](documentation/fireforgot.webp)|
 **Edge**
-||Home|y|y|[View](documentation/edgehome.webp)|
-||Sign Up|y|y|[View](documentation/edgesignup.webp)|
-||Sign In|y|y|[View](documentation/edgesignin.webp)|
-||Products|y|y|[View](documentation/edgeproducts.webp)|
-||Product Deatail|y|y|[View](documentation/edgeproddetail.webp)|
-||Blog|y|y|[View](documentation/edgeblog.webp)|
-||Blog Detail|y|y|[View](documentation/edgeblogdetail.webp)|
-||Profile|y|y|[View](documentation/edgeprof.webp)|
-||Shopping Bag|y|y|[View](documentation/edgebag.webp)|
-||Checkout|y|y|[View](documentation/edgecheckout.webp)|
-||Checkout Success|y|y|[View](documentation/edgecheckoutsuccess.webp)|
-||Add Product|y|y|[View](documentation/edgeaddprod.webp)|
-||Edit Product|y|y|[View](documentation/edgeeditprod.webp)|
-||Add Blog|y|y|[View](documentation/edgeaddblog.webp)|
-||Edit Blog|y|y|[View](documentation/edgeeditblog.webp)|
-||Order Stats|y|y|[View](documentation/edgeorderstats.webp)|
-||Product Stats|y|y|[View](documentation/edgeprodstats.webp)|
-||View Order|y|y|[View](documentation/edgevieworder.webp)|
-||Log Out|y|y|[View](documentation/edgelogout.webp)|
-||Password Reset|y|y|[View](documentation/edgeforgot.webp)|
+||Home|y|y|![View](documentation/edgehome.webp)|
+||Sign Up|y|y|![View](documentation/edgesignup.webp)|
+||Sign In|y|y|![View](documentation/edgesignin.webp)|
+||Products|y|y|![View](documentation/edgeproducts.webp)|
+||Product Deatail|y|y|![View](documentation/edgeproddetail.webp)|
+||Blog|y|y|![View](documentation/edgeblog.webp)|
+||Blog Detail|y|y|![View](documentation/edgeblogdetail.webp)|
+||Profile|y|y|![View](documentation/edgeprof.webp)|
+||Shopping Bag|y|y|![View](documentation/edgebag.webp)|
+||Checkout|y|y|![View](documentation/edgecheckout.webp)|
+||Checkout Success|y|y|![View](documentation/edgecheckoutsuccess.webp)|
+||Add Product|y|y|![View](documentation/edgeaddprod.webp)|
+||Edit Product|y|y|![View](documentation/edgeeditprod.webp)|
+||Add Blog|y|y|![View](documentation/edgeaddblog.webp)|
+||Edit Blog|y|y|![View](documentation/edgeeditblog.webp)|
+||Order Stats|y|y|![View](documentation/edgeorderstats.webp)|
+||Product Stats|y|y|![View](documentation/edgeprodstats.webp)|
+||View Order|y|y|![View](documentation/edgevieworder.webp)|
+||Log Out|y|y|![View](documentation/edgelogout.webp)|
+||Password Reset|y|y|![View](documentation/edgeforgot.webp)|
 
 
 ### Responsiveness
@@ -296,68 +296,68 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Device | Page | Expected look | Expected Function | Image |
 |--------|------|---------------|-------------------|-------|
 **Desktop 22"**
-||Home|y|y|[View](documentation/chromehome.webp)|
-||Sign Up|y|y|[View](documentation/chromesignup.webp)|
-||Sign In|y|y|[View](documentation/chromesignin.webp)|
-||Products|y|y|[View](documentation/chromeproducts.webp)|
-||Product Deatail|y|y|[View](documentation/chromeproductdetail.webp)|
-||Blog|y|y|[View](documentation/chromeblog.webp)|
-||Blog Detail|y|y|[View](documentation/chromeblogdetail.webp)|
-||Profile|y|y|[View](documentation/chromeprofile.webp)|
-||Shopping Bag|y|y|[View](documentation/chromebag.webp)|
-||Checkout|y|y|[View](documentation/chromecheckout.webp)|
-||Checkout Success|y|y|[View](documentation/chromechecksuccess.webp)|
-||Add Product|y|y|[View](documentation/chromeaddproduct.webp)|
-||Edit Product|y|y|[View](documentation/chromeeditproduct.webp)|
-||Add Blog|y|y|[View](documentation/chromeaddblog.webp)|
-||Edit Blog|y|y|[View](documentation/chromeeditblog.webp)|
-||Order Stats|y|y|[View](documentation/chromeorderstats.webp)|
-||Product Stats|y|y|[View](documentation/chromesalesstats.webp)|
-||View Order|y|y|[View](documentation/chromevieworder.webp)|
-||Log Out|y|y|[View](documentation/chromesignout.webp)|
-||Password Reset|y|y|[View](documentation/chromeforgot.webp)|
+||Home|y|y|![View](documentation/chromehome.webp)|
+||Sign Up|y|y|![View](documentation/chromesignup.webp)|
+||Sign In|y|y|![View](documentation/chromesignin.webp)|
+||Products|y|y|![View](documentation/chromeproducts.webp)|
+||Product Deatail|y|y|![View](documentation/chromeproductdetail.webp)|
+||Blog|y|y|![View](documentation/chromeblog.webp)|
+||Blog Detail|y|y|![View](documentation/chromeblogdetail.webp)|
+||Profile|y|y|![View](documentation/chromeprofile.webp)|
+||Shopping Bag|y|y|![View](documentation/chromebag.webp)|
+||Checkout|y|y|![View](documentation/chromecheckout.webp)|
+||Checkout Success|y|y|![View](documentation/chromechecksuccess.webp)|
+||Add Product|y|y|![View](documentation/chromeaddproduct.webp)|
+||Edit Product|y|y|![View](documentation/chromeeditproduct.webp)|
+||Add Blog|y|y|![View](documentation/chromeaddblog.webp)|
+||Edit Blog|y|y|![View](documentation/chromeeditblog.webp)|
+||Order Stats|y|y|![View](documentation/chromeorderstats.webp)|
+||Product Stats|y|y|![View](documentation/chromesalesstats.webp)|
+||View Order|y|y|![View](documentation/chromevieworder.webp)|
+||Log Out|y|y|![View](documentation/chromesignout.webp)|
+||Password Reset|y|y|![View](documentation/chromeforgot.webp)|
 **Galaxy S20"** 
-||Home|y|y|[View](documentation/mobhome.jpg)|
-||Sign Up|y|y|[View](documentation/mobsignup.jpg)|
-||Sign In|y|y|[View](documentation/mobsignin.jpg)|
-||Products|y|y|[View](documentation/mobproducts.jpg)|
-||Product Deatail|y|y|[View](documentation/mobproddetail.jpg)|
-||Blog|y|y|[View](documentation/mobblog.jpg)|
-||Blog Detail|y|y|[View](documentation/mobblogdetail.jpg)|
-||Profile|y|y|[View](documentation/mobprof.jpg)|
-||Shopping Bag|y|y|[View](documentation/mobbag.jpg)|
-||Checkout|y|y|[View](documentation/mobcheckout.jpg)|
-||Checkout Success|y|y|[View](documentation/mobcheckoutsuccess.jpg)|
-||Add Product|y|y|[View](documentation/mobaddprod.jpg)|
-||Edit Product|y|y|[View](documentation/mobeditprod.jpg)|
-||Add Blog|y|y|[View](documentation/mobaddblog.jpg)|
-||Edit Blog|y|y|[View](documentation/mobeditblog.jpg)|
-||Order Stats|y|y|[View](documentation/moborderstats.jpg)|
-||Product Stats|y|y|[View](documentation/mobprodstats.jpg)|
-||View Order|y|y|[View](documentation/mobvieworder.jpg)|
-||Log Out|y|y|[View](documentation/mobsignout.jpg)|
-||Password Reset|y|y|[View](documentation/mobforgot.jpg)|
+||Home|y|y|![View](documentation/mobhome.jpg)|
+||Sign Up|y|y|![View](documentation/mobsignup.jpg)|
+||Sign In|y|y|![View](documentation/mobsignin.jpg)|
+||Products|y|y|![View](documentation/mobproducts.jpg)|
+||Product Deatail|y|y|![View](documentation/mobproddetail.jpg)|
+||Blog|y|y|![View](documentation/mobblog.jpg)|
+||Blog Detail|y|y|![View](documentation/mobblogdetail.jpg)|
+||Profile|y|y|![View](documentation/mobprof.jpg)|
+||Shopping Bag|y|y|![View](documentation/mobbag.jpg)|
+||Checkout|y|y|![View](documentation/mobcheckout.jpg)|
+||Checkout Success|y|y|![View](documentation/mobcheckoutsuccess.jpg)|
+||Add Product|y|y|![View](documentation/mobaddprod.jpg)|
+||Edit Product|y|y|![View](documentation/mobeditprod.jpg)|
+||Add Blog|y|y|![View](documentation/mobaddblog.jpg)|
+||Edit Blog|y|y|![View](documentation/mobeditblog.jpg)|
+||Order Stats|y|y|![View](documentation/moborderstats.jpg)|
+||Product Stats|y|y|![View](documentation/mobprodstats.jpg)|
+||View Order|y|y|![View](documentation/mobvieworder.jpg)|
+||Log Out|y|y|![View](documentation/mobsignout.jpg)|
+||Password Reset|y|y|![View](documentation/mobforgot.jpg)|
 **Laptop 16"** 
-||Home|y|y|[View](documentation/laphome.webp)|
-||Sign Up|y|y|[View](documentation/lapsignup.webp)|
-||Sign In|y|y|[View](documentation/lapsignin.webp)|
-||Products|y|y|[View](documentation/lapproducts.webp)|
-||Product Deatail|y|y|[View](documentation/lapproddetail.webp)|
-||Blog|y|y|[View](documentation/lapblog.webp)|
-||Blog Detail|y|y|[View](documentation/lapblogdetail.webp)|
-||Profile|y|y|[View](documentation/lapprof.webp)|
-||Shopping Bag|y|y|[View](documentation/lapbag.webp)|
-||Checkout|y|y|[View](documentation/lapcheckout.webp)|
-||Checkout Success|y|y|[View](documentation/lapchecksuccess.webp)|
-||Add Product|y|y|[View](documentation/lapaddprod.webp)|
-||Edit Product|y|y|[View](documentation/lapeditprod.webp)|
-||Add Blog|y|y|[View](documentation/lapaddblog.webp)|
-||Edit Blog|y|y|[View](documentation/lapeditblog.webp)|
-||Order Stats|y|y|[View](documentation/laporderstats.webp)|
-||Product Stats|y|y|[View](documentation/lapprodstats.webp)|
-||View Order|y|y|[View](documentation/lapvieworder.webp)|
-||Log Out|y|y|[View](documentation/lapsignout.webp)|
-||Password Reset|y|y|[View](documentation/lapforgot.webp)|
+||Home|y|y|![View](documentation/laphome.webp)|
+||Sign Up|y|y|![View](documentation/lapsignup.webp)|
+||Sign In|y|y|![View](documentation/lapsignin.webp)|
+||Products|y|y|![View](documentation/lapproducts.webp)|
+||Product Deatail|y|y|![View](documentation/lapproddetail.webp)|
+||Blog|y|y|![View](documentation/lapblog.webp)|
+||Blog Detail|y|y|![View](documentation/lapblogdetail.webp)|
+||Profile|y|y|![View](documentation/lapprof.webp)|
+||Shopping Bag|y|y|![View](documentation/lapbag.webp)|
+||Checkout|y|y|![View](documentation/lapcheckout.webp)|
+||Checkout Success|y|y|![View](documentation/lapchecksuccess.webp)|
+||Add Product|y|y|![View](documentation/lapaddprod.webp)|
+||Edit Product|y|y|![View](documentation/lapeditprod.webp)|
+||Add Blog|y|y|![View](documentation/lapaddblog.webp)|
+||Edit Blog|y|y|![View](documentation/lapeditblog.webp)|
+||Order Stats|y|y|![View](documentation/laporderstats.webp)|
+||Product Stats|y|y|![View](documentation/lapprodstats.webp)|
+||View Order|y|y|![View](documentation/lapvieworder.webp)|
+||Log Out|y|y|![View](documentation/lapsignout.webp)|
+||Password Reset|y|y|![View](documentation/lapforgot.webp)|
 
 ### CRUD (create, read, update, delete) Testing
 
@@ -786,7 +786,13 @@ To Generate the HTML report the command ``coverage html
 #### Results
 
 I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
-To view the full Testing report, please [Click Here](documentation/pythoncoveragereport.pdf).
+To view the full Testing report, please [Click Here](documentation/pythoncoveragereport.pdf)or view screenshots below.
+
+![Coverage Report 1](documentation/coverage1.webp)
+
+![Coverage Report 2](documentation/coverage2.webp)
+
+![Coverage Report 3](documentation/coverage3.webp)
 
 ##### Unit Tests
 

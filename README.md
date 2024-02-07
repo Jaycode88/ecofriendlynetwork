@@ -424,6 +424,19 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
 	![Toasts](documentation/toast.webp)
 
+- **Error Pages**
+	The website is designed to be as resilient and user-friendly as the environment we strive to protect. However, on the rare occasion that something does go awry, our custom error pages are there to ensure a smooth user experience, even when navigating through digital hiccups.
+
+	- **404 Not Found**
+	This page appears when a user tries to access a page that doesn’t exist or has been moved.
+
+	![Error 404](documentation/error404.webp)
+
+	- **500 Internal Server Error**
+	Encountering this page means the site is experiencing temporary technical difficulties. Our message reassures users that our team is already working on a solution, staying true to our commitment to sustainability by 'recycling' the error into a fix.
+
+	![Error 500](documentation/error500.webp)
+
 #### Super User Only Features
 - **Add & Edit Products**
 	- This form allows super users to add and edit products.
