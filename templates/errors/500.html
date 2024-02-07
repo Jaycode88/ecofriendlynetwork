@@ -1,26 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+{% block page_header %}
+    <!-- Header Container: Left Empty, for positioning of other elements on page -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    An error has occurred. Please try again.
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" 
-                            class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                                Return to shop
-                        </a>
-                    </h4>
-                </div>
+{% endblock %}
+{% block content %}
+<!-- Overlay: To Remove background image -->
+<div class="overlay"></div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                Error 500
+            </h1>
+            <p>Oops! We've hit a snag in our eco-system. Rest assured,
+                our team is on it—recycling this error into a solution.
+                Thanks for your patience as we work to make our digital space
+                as resilient as our planet.</p>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}" 
+                        class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
+                            Return to shop
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
