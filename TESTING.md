@@ -370,7 +370,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Password Reset|y|y|![View](documentation/lapforgot.webp)|
 
 - **Responsinator**
-[Responsinator](http://www.responsinator.com/) Is an online tool for testing responsiveness on a range of devices. I use this to test responsiveness on devices I do not own. To view results for the home page [Click Here]() From this result you are able to navigate through the website on each device offered.
+[Responsinator](http://www.responsinator.com/) Is an online tool for testing responsiveness on a range of devices. I tested every page of the Eco Friendly Network site. To view results for the home page  [Click Here](http://www.responsinator.com/?url=ecofriendlynetwork-82b71b042579.herokuapp.com%2F) From this result you are able to navigate through the website on each device offered.
 
 ### CRUD (create, read, update, delete) Testing
 

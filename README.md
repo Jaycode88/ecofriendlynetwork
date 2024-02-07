@@ -355,7 +355,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	![products](documentation/products.webp)
 
 - **Back to top button**
-	- This is included on products page to assist users with scrolling
+	- This is included on products & Blog pages to assist users with scrolling
 	- The button only appears when the user starts to scroll
 	- This function is in an includes file so it can be used on other pages/features as they are added.
 
@@ -409,6 +409,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- Each blog tile contains an Image, The blog title and excepert as well as the date posted and the author.
 	- Link and icon displayed for users to add blog to favorites.
 	- Links for superuser's only to edit and delete posts
+	- Includes "back to top button" featured above.
 
 	![Blog List](documentation/blog.webp)
 
