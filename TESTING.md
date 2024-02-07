@@ -807,7 +807,61 @@ To view the full Testing report, please [Click Here](documentation/pythoncoverag
 | blog | TestPostModel | | Pass |
 | | | setUp | Pass |
 | | | test_post_str | Pass |
-
+| |TestFavoriteModel| | Pass |
+| | | setUp | Pass |
+| | | test_favorite_str | Pass |
+| | TestBlogViews | | Pass |
+| | | setUp | Pass |
+| | | test_blog_list_view | Pass |
+| | | test_blog_detail_view | Pass |
+| | | test_add_post_view_with_superuser | Pass |
+| | | test_edit_post_view_with_superuser | Pass |
+| | | test_delete_post_view_with_superuser | Pass|
+| | | test_add_to_favorite_posts | Pass |
+| | | test_favorite_posts_list_view | Pass |
+| | | test_remove_from_favorite_posts | Pass |
+| | TestPostForm| | Pass |
+| | | test_post_form_valid | Pass|
+| | | test_post_form_invalid | Pass |
+| checkout | TestOrderModel | | Pass |
+| | | setUp | Pass |
+| | | test_order_str | Pass |
+| |TestOrderLineItemModel| | Pass |
+| | | setUp | Pass |
+| | | test_order_line_item_str | Pass |
+| | TestCheckoutViews | | Pass |
+| | | setUp | Pass |
+| | | test_checkout_page_with_items | Pass |
+| | | test_checkout_page_without_items | Pass |
+| Home | HomeViewsTestCase | | Pass |
+| | | test_index_view_exists | Pass |
+| | | test_index_view_uses_correct_template | Pass |
+| Products | TestCategoryModel | | Pass |
+| | | test_category_str | Pass |
+| | TestProductModel | | Pass |
+| | | test_product_str | Pass |
+| | TestViews | | Pass |
+| | | setUp | Pass |
+| | | test_all_products_view | Pass |
+| | | test_product_detail_view | Pass |
+| | | test_add_product_view | Pass |
+| | | test_add_product_view_superuser | Pass |
+| | TestProductForm | | Pass |
+| | | test_product_form | Pass |
+| | TestFavoriteModel | | Pass |
+| | | test_favorite_str | Pass |
+| profiles | TestProfileViews | | Pass |
+| | | setUp | Pass |
+| | | test_profile_view | Pass |
+| | | test_order_history_view | Pass |
+| sales_stats | TestProductSalesStatsModel | | Pass |
+| | | setUp | Pass |
+| | | test_product_sales_stats_str | Pass |
+| | TestSalesStatsViews | | Pass |
+| | | setUp | Pass |
+| | | test_sales_stats_view | Pass |
+| | | test_manage_orders_view | Pass |
+| | | test_order_detail_view | Pass |
 
 ## Bugs
 ### Fixed Bugs
@@ -859,3 +913,6 @@ In an ideal scenario in which I had more time to complete I would of liked to lo
 - **Blog posts**
 It is known to me that it is required for the user to use html in order to achieve layout wishes when typing in the text area.
 How ever I noticed that It is nessacery to leave the last paragraph closing tag out. As if included it causes a validation error for the blog detail pages due to 2 closing tags.
+
+- **Quantity Selection**
+With the qauntity selectors on both the bag and product detail pages if the user enters an amount in the input box and presses return the number they inputed is decremented by 1 this is due to the return button activating the decrement button. I have been advised that this is a common issue. I only noticed this at the very end stages of testing my project, In an ideal situation in which I had more time I would have like to look into this further.
