@@ -525,43 +525,46 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 ## Defensive Programming
 
 **General Site Interaction**
-|User Status|User Action|Expected Result|Pass/Fail|
-|-----------|-----------|---------------|---------|
-|All Users|Click on any navigation link|Correct page loads|Pass|
-|All Users|Attempt to access a restricted page (e.g., admin page) without proper privileges|Access denied message shown, or redirected to login|Pass|
+|User Status|User Action|Expected Result|Pass/Fail| Image |
+|-----------|-----------|---------------|---------|-------|
+|All Users|Click on any navigation link|Correct page loads|Pass|-|
+|All Users|Attempt to access a restricted page (e.g., admin page) without proper privileges|Access denied message shown, or redirected to login|Pass| ![Error Toast](documentation/toasterror.webp)
+| All Users|Attempt to load a non existent page| 404 Error page displayed | Pass | ![404](documentation/error404.webp)
+|All Users | Internal Server Error Event | Error 500 page displayed | pass | ![500](documentation/error500.webp)
 
 **Product Interaction**
-|User Status|User Action|Expected Result|Pass/Fail|
-|-----------|-----------|---------------|---------|
-|All Users|	View a product detail|	Product details are displayed correctly	|Pass|
-|All Users|	Add a product to cart|	Product is added to the cart	|Pass|
+|User Status|User Action|Expected Result|Pass/Fail | Image |
+|-----------|-----------|---------------|---------|--------|
+|All Users|	View a product detail|	Product details are displayed correctly	|Pass|![product detail](documentation/productdetail.webp)
+|All Users|	Add a product to cart|	Product is added to the cart with toast message |Pass| ![Add to bag toast](documentation/addtobagtoast.webp)|
+|Registered & non-registered| Attempts to add or edit a product | Access denied message or Directed to Sign in | pass | ![access Denied](documentation/toasterror.webp)|
 
 **User Account Interaction**
-|User Status|User Action|Expected Result|Pass/Fail|
-|-----------|-----------|---------------|---------|
-|Non-Registered|	Attempt to access profile|	Redirected to login |	Pass|
-|Registered|	Update profile information|	Profile updated successfully|	Pass|
-|Registered|	Attempt an invalid action in profile (e.g., invalid form data)|Appropriate error message shown|	Pass|
+|User Status|User Action|Expected Result|Pass/Fail| Image |
+|-----------|-----------|---------------|---------|-------|
+|Non-Registered|	Attempt to access profile|	Redirected to login | Pass | ![login](documentation/signin.webp)
+|Registered|	Update profile information|	Profile updated successfully|Pass| ![profile update](documentation/profileupdatetoast.webp)|
+
 
 **Blog Interaction**
-|User Status|User Action|Expected Result|Pass/Fail|
-|-----------|-----------|---------------|---------|
-|All Users|	Read a blog post|	Blog post displayed correctly|	Pass|
-|Admins|	Attempt to post an invalid blog entry|	Error message or rejection of submission|	Pass|
-|Non-Admins|	Attempt to edit/delete a blog post|	Access denied message or Directed to Sign in|	Pass|
+|User Status|User Action|Expected Result|Pass/Fail| Image |
+|-----------|-----------|---------------|---------|-------|
+|All Users|	Read a blog post|Blog post displayed correctly|Pass| ![blog post](documentation/blogdetail.webp)|
+|Admins|	Attempt to post an invalid blog entry|	Error message or rejection of submission|Pass| ![Blog Reject](documentation/blogerror.webp) |
+|Non-Admins|	Attempt to edit/delete a blog post|	Access denied message or Directed to Sign in|	Pass| ![Blog denied](documentation/blogerror1.webp)
 
 **Checkout Process**
-|User Status|User Action|Expected Result|Pass/Fail|
-|-----------|-----------|---------------|---------|
-|Registered|	Complete a purchase	Order |processed successfully|Pass|
-|Registered|	Attempt checkout with invalid data|	Error message shown and checkout prevented	|Pass|
-|Non-Registered|	Attempt to checkout| allowed as a guest 	|Pass|
+|User Status|User Action|Expected Result|Pass/Fail| Image |
+|-----------|-----------|---------------|---------|-------|
+|Registered|Complete a purchase	Order |processed successfully|Pass|![Checkout success](documentation/chromechecksuccess.webp)
+|Registered|	Attempt checkout with invalid data|	Error message shown and checkout prevented	|Pass| ![checkout error](documentation/nobagerror.webp)
+|Non-Registered|	Attempt to checkout| allowed as a guest |Pass|![Guest Checkout](documentation/guestcheckou.webp)
 
 **Admin & Stats Pages**
-|User Status|User Action|Expected Result|Pass/Fail|
-|-----------|-----------|---------------|---------|
-|Admins|	Access and interact with admin/stats pages|	Pages load and function correctly|	Pass|
-|Non-Admins|	Attempt to access admin/stats pages|	Access denied message shown or Directed to Sign In|	Pass|
+|User Status|User Action|Expected Result|Pass/Fail| Image |
+|-----------|-----------|---------------|---------|-------|
+|Admins|	Access and interact with admin/stats pages|	Pages load and function correctly|	Pass|![admin page](documentation/productstats.webp)
+|Non-Admins|	Attempt to access admin/stats pages|	Access denied message shown or Directed to Sign In|	Pass|  ![Error Toast](documentation/toasterror.webp) |
 
 ## User Story Testing
 
@@ -786,7 +789,7 @@ To Generate the HTML report the command ``coverage html
 #### Results
 
 I  managed to reach coverage of 78% In a real world scenario in which I had a Little more time to complete I would of liked to Reach 100% coverage.
-To view the full Testing report, please [Click Here](documentation/pythoncoveragereport.pdf)or view screenshots below.
+To view the full Testing report, please [Click Here](documentation/pythoncoveragereport.pdf) or view screenshots below.
 
 ![Coverage Report 1](documentation/coverage1.webp)
 
