@@ -313,8 +313,8 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 ## Features
 ### Existing Features
 - **Navigation Bar**	
-	- The navigation bar is a central feature that enhances the user experience by providing easy access to key functionalities and content within Eco Friendly Network. Whether on a desktop or a mobile device, users can seamlessly navigate through the application with the help of this feature.
-	- The Nav Bar consist of:
+	- The navigation bar is a central feature that enhances the user experience by providing easy access to key functionalities and content within Eco Friendly Network. Whether on a desktop or a mobile device, users can seamlessly navigate through the application with the help of this feature. The Nav Bar consist of:
+
 	- The Brand Logo text: which when clicked directs the user to the homepage 
 	- A product search form along with product category and blog viewing options
 	-  A shopping bag subtotal and link
@@ -375,7 +375,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- Each product line item consists of the product thumbnail image, Title Price, Quantity with selection/Remove and line total/sub total
 	- The Quantity selector automatically updates totals without the need for the use to click an update button, This was implemented for ease of use
 	- After the list of items the bag total, delivery cost and grand total is displayed followed by the procced to checkout and back to shopping buttons
-	- If the Free delivery amaount is not reached a note is displayed to advise the customer of what they need to spend to get free delivery.
+	- If the Free delivery amount is not reached a note is displayed to advise the customer of what they need to spend to get free delivery.
 
 	![Shopping Bag](documentation/shopbag.webp)
 
@@ -393,7 +393,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	This feature ensures secure and efficient payment processing through Stripe. It integrates Stripe's comprehensive API to handle transactions, providing users with a seamless checkout experience. Webhooks are employed to maintain order integrity, capturing events such as successful payments and failures. This system guarantees that orders are only finalized when payment is confirmed, enhancing reliability and user trust.
 
 - **Order Confirmation**
-	- This page displays an ordery complete summary after a succesful checkout
+	- This page displays a complete order summary after a succesful checkout
 	- Button to return to shop to see latest deals.
 
 	![Order Confirmation](documentation/ordersummary.webp)
@@ -404,7 +404,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	![Order Confirmation Email](documentation/emailconf.webp)
 
 - **Blog List**
-	- This page provides a list of all blog posts in a grid layout suitable for the viewong device
+	- This page provides a list of all blog posts in a grid layout suitable for the viewing device
 	- This page is also used to display the user's favorite blogs which is accesible via the blog dropdown menu.
 	- Each blog tile contains an Image, The blog title and excepert as well as the date posted and the author.
 	- Link and icon displayed for users to add blog to favorites.
@@ -426,14 +426,17 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	![Toasts](documentation/toast.webp)
 
 - **Error Pages**
+
 	The website is designed to be as resilient and user-friendly as the environment we strive to protect. However, on the rare occasion that something does go awry, our custom error pages are there to ensure a smooth user experience, even when navigating through digital hiccups.
 
 	- **404 Not Found**
+
 	This page appears when a user tries to access a page that doesn’t exist or has been moved.
 
 	![Error 404](documentation/error404.webp)
 
 	- **500 Internal Server Error**
+
 	Encountering this page means the site is experiencing temporary technical difficulties. Our message reassures users that our team is already working on a solution, staying true to our commitment to sustainability by 'recycling' the error into a fix.
 
 	![Error 500](documentation/error500.webp)
@@ -449,7 +452,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
 - **Add & Edit Blog Posts**
 	- This form allows super users to add and edit blog posts.
-	- The content section for the blog post enables blogs to be written in HTML format To aquire the correct spacing/paragraphing required. Any content not written with HTML structuring will be displayed as on continuous piece with no paragraph seperation or sub headings etc.
+	- The content section for the blog post enables blogs to be written in HTML format To aquire the correct spacing/paragraphing required. Any content not written with HTML structuring will be displayed as a continuous piece with no paragraph seperation or sub headings etc.
 	- The Edit Blog form is the same as Add Blog except it is prefilled with the selected blogs content.
 	- The Add Blog page can be accessed via the "Blog" dropdown nav menu
 	- The Edit Blog page can be accessed via the links on the blog list & detail pages
@@ -471,6 +474,15 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- This page was implemented to give Admin an accessible area where they can get required statistics helping them make stock decisions such as wether to discontinue a product or discount etc.
 
 	![Product Statistics](documentation/productstats.webp)
+
+- **Confirm Delete modals**
+	- The Modals are provided by Bootstrap
+	- These modals appear when a super user attempts to delete a product or blog post.
+	- This serves the purpose of protecting accidental clicks and confirming the user action.
+
+	![Delete Post Modal](documentation/deletepostmodal.webp)
+
+	![Delete Product Modal](documentation/deleteprodmodal.webp)
 
 ### Future Features
 
