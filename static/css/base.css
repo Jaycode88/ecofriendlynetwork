@@ -369,14 +369,14 @@ input[name='q']::placeholder {
     }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 429px) {
     .header-container {
-        padding-top: 85px;
+        padding-top: 60px;
     }
 
     body {
         min-height: 100vh;
-        padding-top: 85px;
+        padding-top: 115px;
     }
 
     .welcome-text {
@@ -384,7 +384,18 @@ input[name='q']::placeholder {
     }
 }
 
-@media (max-width: 363px) {
+@media (max-width: 398px) {
+    .header-container {
+        padding-top: 115px;
+    }
+
+    body {
+        min-height: 100vh;
+        padding-top: 115px;
+    }
+}
+
+@media (max-width: 329px) {
     .header-container {
         padding-top: 115px;
     }

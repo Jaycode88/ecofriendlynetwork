@@ -43,6 +43,10 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
         ![Profile Results Pass](documentation/profilevalid.webp)
 
+    - [Confirm Delete Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fprofile%2Fdelete_profile%2F)
+
+        ![Delete profile results](documentation/deleteprofvalid.webp)
+
     - [Shopping Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fecofriendlynetwork-82b71b042579.herokuapp.com%2Fbag%2F)
 
         ![Shopping Bag Results Pass](documentation/bagvalid.webp)
@@ -233,6 +237,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Blog|y|y|![View](documentation/chromeblog.webp)|
 ||Blog Detail|y|y|![View](documentation/chromeblogdetail.webp)|
 ||Profile|y|y|![View](documentation/chromeprofile.webp)|
+||Delete Profile|Y|Y|![view](documentation/chromedeleteprof.webp)|
 ||Shopping Bag|y|y|![View](documentation/chromebag.webp)|
 ||Checkout|y|y|![View](documentation/chromecheckout.webp)|
 ||Checkout Success|y|y|![View](documentation/chromechecksuccess.webp)|
@@ -254,6 +259,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Blog|y|y|![View](documentation/fireblog.webp)|
 ||Blog Detail|y|y|![View](documentation/fireblogdetail.webp)|
 ||Profile|y|y|![View](documentation/fireprof.webp)|
+||Delete Profile|Y|Y|![view](documentation/firedeleteprof.webp)|
 ||Shopping Bag|y|y|![View](documentation/firebag.webp)|
 ||Checkout|y|y|![View](documentation/firecheckout.webp)|
 ||Checkout Success|y|y|![View](documentation/firechecksuccess.webp)|
@@ -275,6 +281,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Blog|y|y|![View](documentation/edgeblog.webp)|
 ||Blog Detail|y|y|![View](documentation/edgeblogdetail.webp)|
 ||Profile|y|y|![View](documentation/edgeprof.webp)|
+||Delete Profile|Y|Y|![view](documentation/edgedeleteprof.webp)|
 ||Shopping Bag|y|y|![View](documentation/edgebag.webp)|
 ||Checkout|y|y|![View](documentation/edgecheckout.webp)|
 ||Checkout Success|y|y|![View](documentation/edgecheckoutsuccess.webp)|
@@ -304,6 +311,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Blog|y|y|![View](documentation/chromeblog.webp)|
 ||Blog Detail|y|y|![View](documentation/chromeblogdetail.webp)|
 ||Profile|y|y|![View](documentation/chromeprofile.webp)|
+||Delete Profile|Y|Y|![view](documentation/chromedeleteprof.webp)|
 ||Shopping Bag|y|y|![View](documentation/chromebag.webp)|
 ||Checkout|y|y|![View](documentation/chromecheckout.webp)|
 ||Checkout Success|y|y|![View](documentation/chromechecksuccess.webp)|
@@ -325,6 +333,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Blog|y|y|![View](documentation/mobblog.jpg)|
 ||Blog Detail|y|y|![View](documentation/mobblogdetail.jpg)|
 ||Profile|y|y|![View](documentation/mobprof.jpg)|
+||Delete Profile|Y|Y|![view](documentation/mobdeleteprof.jpg)|
 ||Shopping Bag|y|y|![View](documentation/mobbag.jpg)|
 ||Checkout|y|y|![View](documentation/mobcheckout.jpg)|
 ||Checkout Success|y|y|![View](documentation/mobcheckoutsuccess.jpg)|
@@ -346,6 +355,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||Blog|y|y|![View](documentation/lapblog.webp)|
 ||Blog Detail|y|y|![View](documentation/lapblogdetail.webp)|
 ||Profile|y|y|![View](documentation/lapprof.webp)|
+||Delete Profile|Y|Y|![view](documentation/laptopdeleteprof.png)|
 ||Shopping Bag|y|y|![View](documentation/lapbag.webp)|
 ||Checkout|y|y|![View](documentation/lapcheckout.webp)|
 ||Checkout Success|y|y|![View](documentation/lapchecksuccess.webp)|
@@ -358,6 +368,9 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ||View Order|y|y|![View](documentation/lapvieworder.webp)|
 ||Log Out|y|y|![View](documentation/lapsignout.webp)|
 ||Password Reset|y|y|![View](documentation/lapforgot.webp)|
+
+- **Responsinator**
+[Responsinator](http://www.responsinator.com/) Is an online tool for testing responsiveness on a range of devices. I use this to test responsiveness on devices I do not own. To view results for the home page [Click Here]() From this result you are able to navigate through the website on each device offered.
 
 ### CRUD (create, read, update, delete) Testing
 
@@ -508,6 +521,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |Blog| ![Lighthouse Blog Desktop](documentation/lightblogdesk.webp)| ![Lighthouse Blog Mobile](documentation/lightblogmob.webp) |
 |Blog Detail| ![Lighthouse Blog Detail Desktop](documentation/lightblogdetaildesk.webp)| ![Lighthouse Blog Detail Mobile](documentation/lightblogdetailmob.webp) |
 |Profile| ![Lighthouse Profile Desktop](documentation/lightprofdesk.webp)| ![Lighthouse Profile Mobile](documentation/lightprofmob.webp) |
+|Delete Profile| ![Lighthouse delete profile desktop](documentation/delprofdesk.webp)| ![Lighthouse delete profile mobile](documentation/delprofmob.webp)|
 |Shopping Bag|![Lighthouse Bag Desktop](documentation/lightbagdesk.webp)| ![Lighthouse Bag Mobile](documentation/lightbagmob.webp) |
 |Checkout Page|![Lighthouse Checkout Desktop](documentation/lightcheckdesk.webp)| ![Lighthouse Checkout Mobile](documentation/lightcheckmob.webp) |
 |Checkout Success|![Lighthouse Checkout Success Desktop](documentation/lightchecksuccessdesk.webp)| ![Lighthouse Checkout Success Mobile](documentation/lightchecksuccessmob.webp) |
@@ -537,13 +551,15 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |-----------|-----------|---------------|---------|--------|
 |All Users|	View a product detail|	Product details are displayed correctly	|Pass|![product detail](documentation/productdetail.webp)
 |All Users|	Add a product to cart|	Product is added to the cart with toast message |Pass| ![Add to bag toast](documentation/addtobagtoast.webp)|
-|Registered & non-registered| Attempts to add or edit a product | Access denied message or Directed to Sign in | pass | ![access Denied](documentation/toasterror.webp)|
+|Registered & non-registered| Attempts to add, edit or delete a product | Access denied message or Directed to Sign in | pass | ![access Denied](documentation/toasterror.webp)|
+| Admin| Attempts to delete product | Confirm delete modal is shown| Pass | ![Delete product modal](documentation/deleteprodmodal.webp)|
 
 **User Account Interaction**
 |User Status|User Action|Expected Result|Pass/Fail| Image |
 |-----------|-----------|---------------|---------|-------|
 |Non-Registered|	Attempt to access profile|	Redirected to login | Pass | ![login](documentation/signin.webp)
 |Registered|	Update profile information|	Profile updated successfully|Pass| ![profile update](documentation/profileupdatetoast.webp)|
+|Registered| Attempts to delete profile| Confirm delete profile page is shown | Pass | ![Confirm delete profile](documentation/confirmprofdelete.webp)
 
 
 **Blog Interaction**
@@ -551,7 +567,8 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |-----------|-----------|---------------|---------|-------|
 |All Users|	Read a blog post|Blog post displayed correctly|Pass| ![blog post](documentation/blogdetail.webp)|
 |Admins|	Attempt to post an invalid blog entry|	Error message or rejection of submission|Pass| ![Blog Reject](documentation/blogerror.webp) |
-|Non-Admins|	Attempt to edit/delete a blog post|	Access denied message or Directed to Sign in|	Pass| ![Blog denied](documentation/blogerror1.webp)
+|Registered & non-registered |	Attempt to edit/delete a blog post|	Access denied message or Directed to Sign in|	Pass| ![Blog denied](documentation/blogerror1.webp) |
+| Admin| Attempts to delete blog post | Confirm delete modal is shown| Pass | ![Delete post modal](documentation/deletepostmodal.webp)|
 
 **Checkout Process**
 |User Status|User Action|Expected Result|Pass/Fail| Image |
