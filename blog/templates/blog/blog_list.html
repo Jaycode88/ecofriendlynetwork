@@ -70,8 +70,30 @@
                                     <!-- links to edit and delete the post for superusers -->
                                         <small class="ml-13">
                                             <a href="{% url 'edit_post' post.id %}">Edit</a>
-                                            <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>
+                                            <a href="#" class="text-danger" data-toggle="modal" data-target="#modal-delete-{{post.id}}">Delete</a>
                                         </small>
+                                        <!--Confirm delete Post Modal -->
+                                        <div class="modal fade" id="modal-delete-{{post.id}}" tabindex="-1" aria-labelledby="modal-delete-{{post.id}}-label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="modal-delete-{{post.id}}-label">Delete Post</h1>
+                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                                        <i class="fas fa-close"></i>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                    Are you sure you want to delete {{post.title}}?
+                                                    <br>
+                                                    <small class="text-muted">This is permanent and can not be undone!</small>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                                    <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Yes</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     {% endif %}
                                 </div>
                             </div>
