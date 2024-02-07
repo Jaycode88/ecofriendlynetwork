@@ -466,7 +466,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 |'Street Address 1' must accept text|80|Yes|Yes|Yes|Yes|
 |'Street Address 2' should accept text|80|No|Yes|Yes|Yes|
 |'Town or City' field must accept text and is required|40|Yes|Yes|Yes|Yes|
-|'Postal Code' field should accept alphanumeric characters|20|No|Yes|Yes|Yes|
+|'Postal Code' field should accept alphanumeric characters|20|Yes|Yes|Yes|Yes|
 |'Country' field should be a dropdown of countries|-|Yes|Yes|Yes|Yes|
 |'County, State or Locality' should accept text|80|No|Yes|Yes|Yes|
 |Option to save information to profile works correctly for authenticated users|-|-|Yes|Yes|Yes|

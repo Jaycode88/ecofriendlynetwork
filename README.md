@@ -341,7 +341,7 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- Displays user's list of placed orders
 	- Gives users the option to delete their profile.
 
-![My Profile](documentation/profile.webp)
+	![My Profile](documentation/profile.webp)
 
 - **Products View**
 	- This page displays products in a grid layout suitable for the viewing device.
@@ -350,8 +350,16 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 	- All results in this view can be sorted via many factors contained in the "sort by" menu
 	- Each product contains tags providing rating, category and wether the product is in their favorites
 	- For superusers only, It also displays the total amount of favorites a product has by users as well as links to edit and delete a product
+	- Includes "back to top button" featured below.
 
 	![products](documentation/products.webp)
+
+- **Back to top button**
+	- This is included on products page to assist users with scrolling
+	- The button only appears when the user starts to scroll
+	- This function is in an includes file so it can be used on other pages/features as they are added.
+
+	![Back To Top Button](documentation/backtotop.webp)
 
 - **Product Detail Page**
 	- This page provides the user with a description of a product aswell as the information tags that were included on the products page
@@ -452,6 +460,9 @@ All of my fonts were provided by [Google Fonts](https://fonts.google.com/)
 
 ### Future Features
 
+- **Pagination**
+	The Store only currently has A few starter products, As the range of products increases there will be a lot displayed on the products page. I believe it will be nessacerry to add Pagination to enhace the user experience. This also applys to the Blog page as the amount of Blog posts increase.
+
 - **Blog Search and Filter Functionality**
 	As the number of blog posts on Eco Friendly Network increases, introducing a search feature will greatly enhance user experience. This functionality will allow users to quickly find blogs by keywords, authors, or topics, making the content more accessible and navigable.
 
@@ -505,6 +516,13 @@ The Following graphs show connections between the different models.
 	![Checkout and Profile Graphs](documentation/checkoutprofconnections.webp)
 
 The Models flow charts were created with [Diagrams.net](https://app.diagrams.net/)
+
+## Marketing & Branding
+I have Created a Facebook Page for Eco Friendly Network [View Here](https://www.facebook.com/Ecofriendlynetwork/), The page is created to be used as a crucial marketing channel with a singular focus: to direct people to The Eco Friendly Network Store. With the page I aim to increase brand awareness and drive traffic to the store, where customers can explore and purchase products.
+
+![Facebook Page](documentation/fbpage.webp)
+
+In practice, the plan is to  leverage a mix of engaging posts, targeted promotions, and compelling calls-to-action (CTAs) to guide the Facebook audience toward the store.
 
 ## CRUD Functionality
 ### Sales Stats
