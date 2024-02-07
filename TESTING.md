@@ -95,7 +95,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
         ![Password Reset Results Pass](documentation/forgotvalid.webp)
 
-on the Profile, Add Product, Edit Product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order and Forgot Password pages you will see an info note in the validation results I have discussed this in the Unfixed Bugs section.
+on the Profile, Add Product, Edit Product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order, Forgot Password and confirm delete profile pages you will see an info note in the validation results I have discussed this in the Unfixed Bugs section.
 
 ### CSS
 
@@ -402,10 +402,10 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 |UPDATE Favorite Product|No(As Intended)|No(As Intended)|No(As Intended)||
 |DELETE Favorite Product|Yes|Yes|No(As Intended)|
 **Favorite Blog Posts**
-|CREATE a Favorite Product|Yes|Yes|No(As Intended)||
-|READ Favorite Product|Yes|Yes|No(As Intended)||
-|UPDATE Favorite Product|No(As Intended)|No(As Intended)|No(As Intended)||
-|DELETE Favorite Product|Yes|Yes|No(As Intended)|
+|CREATE a Favorite Post|Yes|Yes|No(As Intended)||
+|READ Favorite Post|Yes|Yes|No(As Intended)||
+|UPDATE Favorite Post|No(As Intended)|No(As Intended)|No(As Intended)||
+|DELETE Favorite Post|Yes|Yes|No(As Intended)|
 
 ### Form Validation Testing
 
@@ -592,6 +592,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 - **Achieved:** Yes
 - **Details:** The website's navigation is designed to be intuitive, with clear categories and a search function. Users can easily locate eco-friendly products.
 - **Evidence:**
+
 ![Nav Bar Desktop](documentation/navbardesktop.webp)
 ![Nav Bar Mobile](documentation/navbarmobile.webp)
 
@@ -600,13 +601,15 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 - **Achieved:** Yes
 - **Details:** Each product page includes detailed descriptions, high-quality images.
 - **Evidence**
+
 ![Product Detail](documentation/productdetail.webp)
 
 **I want to easily create an account, so I can track my orders, save my preferences, and have a personalized shopping experience.**
 
 - **Achieved:** Yes
 - **Details:** Users can easily sign up and create an account, Once a user has an account they can track their orders as well as store favorite products and blog posts.
-- **Evidence:** 
+- **Evidence:**
+
 ![Sign Up](documentation/signup.webp)
 
 **I want to access information about sustainability practices and product sourcing, so that I can make informed and environmentally-conscious purchasing decisions.**
@@ -614,6 +617,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 - **Achieved:** Yes
 - **Details:** The blog post is the main area utilised for displaying open information on the sourcing of our propducts. Individual product descriptions also contain some infomation regarding the sustainability and sourcing of this ingridients/materials used.
 - **Evidence:**
+
 ![Blog Post](documentation/fireblogdetail.webp)
 ![Product Detail](documentation/productdetail.webp)
 
@@ -625,6 +629,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
     - User Feedback: Throughout the checkout process, users receive clear feedback. For instance, form validation messages inform users of any missed or incorrectly filled fields. After completing a purchase, users receive a confirmation message with order details, both on the website and via email.
     - Error Handling: In case of any issues during the checkout (e.g., payment decline), the system provides users with an understandable error message and suggestions for how to proceed, ensuring users are not left confused or uncertain.
 - **Evidence**
+
 ![CheckOut](documentation/checkout.webp)
 ![Order Confirmation](documentation/ordersummary.webp)
 ![Secure Connection](documentation/secureconnection.webp)
@@ -633,6 +638,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 - **Achieved:** Yes
 - **Details:** Users can checkout as a guest without having to sign up first.
 - **Evidence**
+
 ![Guest Checkout](documentation/guestcheckout.webp)
 
 ### As a returning user....
@@ -642,6 +648,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 - **Achieved:** Yes
 - **Details:** Returning users can effortlessly manage their accounts and track their orders through their user profile.
 - **Evidence:**
+
 ![Profile](documentation/profile.webp)
 
 **I want the website to be responsive and user-friendly on my smartphone or tablet, so I can shop conveniently on the go.**
@@ -654,9 +661,10 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 **I want to receive updates on promotions, new eco-friendly products, and sustainability initiatives, so I can stay engaged with the brand.**
 
 - **Achieved:** Yes
-- **Details:** The Users can view new products via the new arrivals category link, As well as keep up to date on latest news and engagement via the blog.
+- **Details:** The Users can view new products via the new arrivals category link, As well as keep up to date on latest news and engagement via the blog and Facebook page.
 - **Evidence**
 ![Blog](documentation/blog.webp)
+![Facebook page](documentation/fbpage.webp)
 
 ### As a site Admin.....
 
@@ -670,14 +678,14 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 **I want the ability to easily label products as 'Clearance', 'New Arrival', or 'Special Deals', so I can effectively promote specific items and attract customer interest, leveraging these categories as key marketing strategies alongside the blog.**
 
 - **Achieved:** Yes
-- **Details:** Admin can Edit product categories to add them to clearance or New Arrivals etc. Admin also has the ability to post blog posts with the Purpose of propmoting a particular product or range.
+- **Details:** Admin can Edit product categories to add them to clearance or New Arrivals etc. Admin also has the ability to post blog posts with the Purpose of promoting a particular product or range.
 - **Evidence**
-![Blog](documentation/blog.webp)
+![Categories](documentation/categories.webp)
 
 **I want to access analytics and insights about user behavior and sales trends, so I can make data-driven decisions to improve the website and product offerings**
 
 - **Achieved:** Yes
-- **Details:**As an admin, I have access to a comprehensive analytics dashboard that provides in-depth insights into user behavior and sales trends. This dashboard includes key metrics such as  product popularity, sales figures, and other relevant data. The analytics tool allows me to track the performance of various products and identify trends, helping me understand which items are well-received and which may need further promotion or improvement.
+- **Details:** As an admin, I have access to a comprehensive analytics dashboard that provides in-depth insights into user behavior and sales trends. This dashboard includes key metrics such as  product popularity, sales figures, and other relevant data. The analytics tool allows me to track the performance of various products and identify trends, helping me understand which items are well-received and which may need further promotion or improvement.
 - **Evidence**
 ![Product Stats](documentation/productstats.webp)
 ![Order Stats](documentation/chromeorderstats.webp)
@@ -887,18 +895,22 @@ To view the full Testing report, please [Click Here](documentation/pythoncoverag
 ### Fixed Bugs
 
 - **Increment/Decrement Buttons**
+
     When Attempting to create the functionality for the shopping bag to be updated upon the click of the increment or decrement button being pushed rather than needing a submit button: I came accross great difficulty in that when i was pressing the increment or decrement buttons the no. of items value would increment or decrement by 2 rather than 1 When I tried to fix this I would get varying results mainly the buttons not disabling and enabling correctly or the increment and decrements going in values of 2. After a lot of time debugging I realised it was due to using the quantity input script in the bag template as I was changing the function it was nessacerry to completely  rewrite the code for the bag template and leave the quantity input script for the product details page only.
 
 - **Custom Clearable file input**
+
     I was recieving the following error when attempting to load my add or edit product pages:
     ![File Input Error](documentation/customfileerror.webp)
     I found it was due to line 43/44 in my checkouts webhooks.py I had attempted to seperate lines to comply with PEP8 but I found This effected the code so the line had to be complete as one with a # noqa after it.
     ![File Input Fix](documentation/customfilefix.webp)
 
 - **Email Confirmation**
+
     I found that on my deployed site order confirmation emails were not being sent. After much time looking over code and not finding the issue my mentor suggested checking that the webhook endpoint was correct in my Stripe settings. My mentor was right my Stripe webhook endpoint was still set to my site preview rather than my deployed site.
 
 - **Sales Stats Favorites Count**
+
     The application was displaying inconsistent counts of how many users had marked a product as a favorite in the sales_stats app compared to the products app. The sales_stats app's count of favorites per product was incorrect, potentially leading to misleading data representation in the sales statistics.
 
     The discrepancy was caused by the way the total_favorites was calculated in the sales_stats view. Initially, the count of favorites might have included duplicate counts or was affected by other filters applied to the sales data, such as date ranges.
@@ -907,32 +919,38 @@ To view the full Testing report, please [Click Here](documentation/pythoncoverag
     ![Sales Stats Favorites Fix](documentation/favoritesfix.webp )
 
 - **Signup Html Validation Error**
-When attempting to validate HTML on the sign up page I was recieving the following error:
-![Sign up HTML validation error](documentation/signuperror.webp).
-It was suggested that the problem was due to an incompatability between the versions of packages I had installed particuraly Allauth, Django and Crispy Forms,  but when checking this I could not find an issue.
-The only other option I had was to manually render the form in the signup.html rather than use crispy forms.
-![Sign up html error fix](documentation/signupfix.webp)
+
+    When attempting to validate HTML on the sign up page I was recieving the following error:
+    ![Sign up HTML validation error](documentation/signuperror.webp).
+    It was suggested that the problem was due to an incompatability between the versions of packages I had installed particuraly Allauth, Django and Crispy Forms,  but when checking this I could not find an issue.
+    The only other option I had was to manually render the form in the signup.html rather than use crispy forms.
+    ![Sign up html error fix](documentation/signupfix.webp)
 
 ## Unfixed Bugs
 - **validation issues**
-Whilst validating the HTML for the Profile, Add Prduct, Edit product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order and Forgot Password pages, I recieved and info note(not an error) Regarding avoiding trailing slashes on void elements(see images)
-![Profile Valid info image](documentation/profilebug.webp)
-![Add Product Valid info image](documentation/addproductbug.webp)
-![Edit Product Valid info image](documentation/editproductbug.webp)
-![Add Blog Valid info image](documentation/addblogbug.webp)
-![Edit Blog Valid info image](documentation/editblogbug.webp)
-![Order Stats Valid info image](documentation/orderstatsbug.webp)
-![Product Stats Valid info image](documentation/productstatsbug.webp)
-![View Order Valid info image](documentation/vieworderbug.webp)
-![Forgot Password Valid info image](documentation/forgotbug.webp)
 
-I suspect this is due to a mis match in compatability between the versions of packages I have installed but as mentioned before I could not pin point this. As the validation note is only an info point and not a validation error or warning, I chose not to modify all the forms in a similar manner of which I did with the Signup error in the interest of completing the project on time.
+    Whilst validating the HTML for the Profile, Add Prduct, Edit product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order, Forgot Password and confirm delete profile pages, I recieved and info note(not an error) Regarding avoiding trailing slashes on void elements(see images)
+    ![Profile Valid info image](documentation/profilebug.webp)
+    ![Add Product Valid info image](documentation/addproductbug.webp)
+    ![Edit Product Valid info image](documentation/editproductbug.webp)
+    ![Add Blog Valid info image](documentation/addblogbug.webp)
+    ![Edit Blog Valid info image](documentation/editblogbug.webp)
+    ![Order Stats Valid info image](documentation/orderstatsbug.webp)
+    ![Product Stats Valid info image](documentation/productstatsbug.webp)
+    ![View Order Valid info image](documentation/vieworderbug.webp)
+    ![Forgot Password Valid info image](documentation/forgotbug.webp)
+    ![Delete profile results](documentation/deleteprofvalid.webp)
 
-In an ideal scenario in which I had more time to complete I would of liked to look further into this and resolve the issue completely.
+    I suspect this is due to a mis match in compatability between the versions of packages I have installed but as mentioned before I could not pin point this. As the validation note is only an info point and not a validation error or warning, I chose not to modify all the forms in a similar manner of which I did with the Signup error in the interest of completing the project on time.
+
+    In an ideal scenario in which I had more time to complete I would of liked to look further into this and resolve the issue completely.
 
 - **Blog posts**
-It is known to me that it is required for the user to use html in order to achieve layout wishes when typing in the text area.
-How ever I noticed that It is nessacery to leave the last paragraph closing tag out. As if included it causes a validation error for the blog detail pages due to 2 closing tags.
+
+    It is known to me that it is required for the user to use html in order to achieve layout wishes when typing in the text area.
+    How ever I noticed that It is nessacery to leave the last paragraph closing tag out. As if included it causes a validation error for the blog detail pages due to 2 closing tags.
 
 - **Quantity Selection**
-With the qauntity selectors on both the bag and product detail pages if the user enters an amount in the input box and presses return the number they inputed is decremented by 1 this is due to the return button activating the decrement button. I have been advised that this is a common issue. I only noticed this at the very end stages of testing my project, In an ideal situation in which I had more time I would have like to look into this further.
+
+    With the qauntity selectors on both the bag and product detail pages if the user enters an amount in the input box and presses return the number they inputed is decremented by 1 this is due to the return button activating the decrement button. I have been advised that this is a common issue. I only noticed this at the very end stages of testing my project, In an ideal situation in which I had more time I would have like to look into this further.
+
