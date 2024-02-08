@@ -18,6 +18,7 @@ body {
     width: 1.5rem;
 }
 
+/* logo */
 .logo-font {
     text-transform: uppercase;
     font-family: 'Allan', sans-serif;
@@ -27,6 +28,7 @@ body {
     width: fit-content;
 }
 
+/* anchor links */
 a {
     color: #0044cc;
 }
@@ -43,6 +45,7 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
+/* Buttons */
 .shop-now-button {
     background: #a8671a;
     border: 2px solid #d3d4d5;
@@ -83,12 +86,27 @@ a:hover, a:focus {
     border: 2px solid #678760;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Links */ 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 .nav-i:hover,
 .nav-i:active,
 .nav-i:focus {
     color: #d3d4d5 !important;
 }
 
+/*  Colouring */
 .text-red {
     color: #dc3545 !important;
 }
@@ -121,6 +139,7 @@ a:hover, a:focus {
     background:#a8671a;
 }
 
+/* overlay to hide background image */
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -140,24 +159,15 @@ a.category-badge > span.badge:hover {
     color: #000 !important;
 }
 
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
 
 /* forms */
 
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+.prod-input {
+    min-width: 40px !important;
 }
 
 /* shopping bag */
@@ -168,6 +178,11 @@ input[name='q']::placeholder {
 .grand-total-text {
     font-size: 1.33em;
 }
+
+.bag-input {
+    min-width: 40px !important;
+}
+
 
 /* -- bootstrap toasts -- */
 
@@ -285,7 +300,7 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border-color: #d3d4d5;
     border-radius: 0;
 }
 
@@ -311,7 +326,14 @@ input[name='q']::placeholder {
 }
 
 /* -- Media Queries -- */
+@media (max-width: 611px) {
+    .cust-size {
+        max-width: 100%;
+    }
+}
 
+/* Container & page spacing */ 
+/* --------------------------- */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
@@ -357,11 +379,6 @@ input[name='q']::placeholder {
     
 }
 
-@media (max-width: 611px) {
-    .cust-size {
-        max-width: 100%;
-    }
-}
 
 @media (max-width: 464px) {
     .index-main-container {
@@ -422,5 +439,24 @@ input[name='q']::placeholder {
     /* Center the buttons horizontally */
     .text-right {
         text-align: center !important;
+    }
+}
+
+/* bag responsiveness */
+@media (max-width: 410px) {
+    .name-column {
+        display: none;
+    }
+
+    
+}
+
+@media (max-width: 345px) {
+    .price-column {
+        display: none;
+    }
+    /* product page quantity slelector */
+    .prod-input {
+        min-width: 50px !important;
     }
 }

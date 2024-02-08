@@ -34,8 +34,8 @@
                             <thead class="text-black">
                                 <tr>
                                     <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
+                                    <th scope="col" class="name-column"></th>
+                                    <th scope="col" class="price-column">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
@@ -44,7 +44,7 @@
                                 <!-- Loop through each item in the bag -->
                                 {% for item in bag_items %}
                                     <tr>
-                                        <th scope="row" class="p-3 w-25">
+                                        <th scope="row" class="p-3 w-25  name-column">
                                             {% if item.product.image  %}
                                                 <!-- Display product image if available, else show a default image -->
                                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
@@ -57,7 +57,7 @@
                                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                         </td>
-                                        <td class="py-3">
+                                        <td class="py-3 price-column">
                                             <!-- Display the product price -->
                                             <p class="my-0">£{{ item.product.price }}</p>
                                         </td>
@@ -78,7 +78,7 @@
                                                             </button>
                                                         </div>
                                                         <!-- Input field to display and adjust quantity -->
-                                                        <input class="form-control form-control-sm qty_input" type="number"
+                                                        <input class="form-control form-control-sm qty_input bag-input" type="number"
                                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                             data-item_id="{{ item.item_id }}" aria-label="Quantity Input"
                                                             id="id_qty_{{ item.item_id }}">
