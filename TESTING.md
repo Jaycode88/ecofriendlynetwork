@@ -930,6 +930,7 @@ To view the full Testing report, please [Click Here](documentation/pythoncoverag
 - **validation issues**
 
     Whilst validating the HTML for the Profile, Add Prduct, Edit product, Add Blog, Edit Blog, Order Stats, Product Stats, View Order, Forgot Password and confirm delete profile pages, I recieved and info note(not an error) Regarding avoiding trailing slashes on void elements(see images)
+    
     ![Profile Valid info image](documentation/profilebug.webp)
     ![Add Product Valid info image](documentation/addproductbug.webp)
     ![Edit Product Valid info image](documentation/editproductbug.webp)
